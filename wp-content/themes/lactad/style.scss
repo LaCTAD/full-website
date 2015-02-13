@@ -1,0 +1,35 @@
+/* Vendors */
+@import
+	'assets/scss/vendors/normalize';
+
+/* Config */
+@import
+	'assets/scss/config/config';
+
+/* Base */
+
+
+/* Utils */
+@import
+	'assets/scss/utils/media-queries';
+
+/* Layout */
+/* Components */
+/* Pages */
+
+
+
+
+.site-content {
+	color: blue;
+	@include respond-to('small') {
+		color: red;
+	}
+}
+
+.site-title a {
+	color: red;
+	@include respond-to('small') {
+		color: green;
+	}
+}
