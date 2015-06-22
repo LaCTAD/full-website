@@ -1,0 +1,64 @@
+/* TYPOGRAPHY */
+body {
+	font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.sub-headline {
+  font-weight: normal;
+  font-size: 1.3em;
+  margin: 2em 0;
+}
+
+h1, h2, h3 {
+  color: $color-primary-light;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $color-lactad;
+}
+
+h2 a {
+  color: $color-primary-light;
+  transition: all .3s;
+  &:hover {
+    color: $color-lactad;
+  }
+}
+
+a,
+a:active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: darken($color-lactad, 10%);
+  &:hover {
+    color: darken($color-lactad, 20%);
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.light {
+  color: white;
+}

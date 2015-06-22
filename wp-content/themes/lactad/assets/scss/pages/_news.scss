@@ -1,0 +1,134 @@
+/*.post-list-container {
+  border-right: 1px solid $color-text-light;
+  @include respond-to('medium') {
+    border-bottom: 1px solid $color-text-light;
+    border-right: none;
+  }
+}*/
+
+.post-list,
+.event-list {
+  margin-bottom: 22.5px;
+  list-style: none;
+}
+
+.post-list li,
+.event-list li {
+  padding: 7.5px 0;
+}
+
+.post-list li {
+  margin-bottom: 7.5px;
+}
+
+.post-list li:last-child {
+  margin-bottom: 0;
+}
+
+.event-list li a {
+  font-size: 1.5em;
+}
+
+.post-date {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.post-title {
+  margin-bottom: 0;
+}
+
+.post-entry {
+  font-size: .9em;
+}
+
+.post-details {
+  font-size: .8em;
+}
+
+.post-content {
+  margin-top: 30px;
+  img {
+    max-width:100%;
+    height:auto;
+  }
+  p {
+    line-height: 1.5em;
+  }
+}
+
+.event-date {
+  position: relative;
+  float: left;
+  margin-right: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.event-month {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  z-index: 1;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  background: $color-primary;
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.event-day {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  border: 1px solid $color-text-light;
+  z-index: 0;
+  font-size: 1.5em;
+}
+
+.event-location {
+  font-size: 0.8em;
+  @include respond-to('medium') {
+    display: none;
+  }
+}
+
+.event-details {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  color: $color-primary;
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.event-description {
+  margin: 30px 0;
+}
+
+.event-map {
+  margin-top: 30px;
+  background: #f5f7f7;
+  @include respond-to('medium') {
+    margin-top: 15px;
+  }
+}
+
+.event .row:last-child {
+  margin-bottom: 30px;
+}
+
+.news {
+  background-color: lighten(#ecf0f1, 3%);
+  // border-top: 1px solid $color-text-light;
+}

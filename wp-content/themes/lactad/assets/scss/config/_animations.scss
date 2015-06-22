@@ -1,0 +1,262 @@
+/* ANIMATIONS */
+
+/* VIEW */
+.view.ng-enter,
+.view.ng-leave {
+  z-index: 1;
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.view.ng-enter {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+}
+.view.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.view.ng-leave {
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+}
+.view.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.slide-left.view.ng-enter {
+  position: absolute;
+  left: 100px;
+  width: 100%;
+  opacity: 0;
+}
+
+.slide-left.view.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+
+.slide-left.view.ng-leave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+.slide-left.view.ng-leave.ng-leave-active {
+  left: 100px;
+  opacity: 0;
+}
+
+/* MENU BUTTONS */
+.menu > li > a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.menu > li:nth-child(1) > a:before {
+  background: $color-lactad;
+}
+
+.menu > li:nth-child(2) > a:before {
+  background: $color-biocel;
+}
+
+.menu > li:nth-child(3) > a:before {
+  background: $color-genomica;
+}
+
+.menu > li:nth-child(4) > a:before {
+  background: $color-proteomica;
+}
+
+.menu > li:nth-child(5) > a:before {
+  background: $color-bioinfo;
+}
+
+.menu > li:hover > a,
+.menu > li > a.active {
+  &:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+/* CUSTOM LOADER */
+$dotSize: 4px;
+
+.helix {
+  transform: rotate(-45deg);
+}
+
+.dots {
+  display: inline-block;
+  position: relative;
+
+  &:not(:last-child){
+    margin-right: $dotSize*1.5;
+  }
+
+  &:before, &:after {
+    content: "";
+    display: inline-block;
+    width: $dotSize;
+    height: $dotSize;
+    border-radius: 50%;
+
+    position: absolute;
+  }
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      &:before {
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+
+        -webkit-animation: animBefore 1s linear infinite;
+        animation: animBefore 1s linear infinite;
+
+        -webkit-animation-delay: $i*-0.9s;
+        animation-delay: $i*-0.9s;
+
+        background-color: $color-secondary;
+      }
+
+      &:after {
+        -webkit-transform: translateY(200%);
+        transform: translateY(200%);
+
+        -webkit-animation: animAfter 1s linear infinite;
+        animation: animAfter 1s linear infinite;
+
+        -webkit-animation-delay: $i*-0.9s;
+        animation-delay: $i*-0.9s;
+
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes animBefore {
+  0% {
+    -webkit-transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+
+  25% {
+    -webkit-transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+
+  50% {
+    -webkit-transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+
+  75% {
+    -webkit-transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+
+  100% {
+    -webkit-transform: scale(1) translateY(-200%);
+    z-index: -1;
+  }
+}
+@keyframes animBefore {
+  0% {
+    transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+
+  25% {
+    transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+
+  50% {
+    transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+
+  75% {
+    transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+
+  100% {
+    transform: scale(1) translateY(-200%);
+    z-index: -1;
+  }
+}
+@-webkit-keyframes animAfter {
+  0% {
+    -webkit-transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+
+  25% {
+    -webkit-transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+
+  50% {
+    -webkit-transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+
+  75% {
+    -webkit-transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1) translateY(200%);
+    z-index: 1;
+  }
+}
+@keyframes animAfter {
+  0% {
+    transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+
+  25% {
+    transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+
+  50% {
+    transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+
+  75% {
+    transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(200%);
+    z-index: 1;
+  }
+}

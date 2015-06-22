@@ -1,0 +1,44 @@
+.faq-list {
+  list-style: none;
+}
+
+.faq {
+  cursor: pointer;
+
+}
+
+.faq-icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: $color-secondary;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  i {
+    font-size: .81em;
+    color: white;
+  }
+}
+
+.faq-question {
+  padding: 15px 0;
+  // border-top: 1px solid lighten($color-text-light, 5%);
+  display: inline-table;
+  max-width: 90%;
+  margin-left: 7.5px;
+  &.active {
+    color: $color-secondary;
+  }
+}
+
+.page-faq {
+  .faq-question {
+    max-width: 100%;
+  }
+}
+
+.faq-answer {
+  display: none;
+  margin: 0 0 15px 30px;
+}

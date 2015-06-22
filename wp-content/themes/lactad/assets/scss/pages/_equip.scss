@@ -1,0 +1,26 @@
+.equipments {
+  // background-color: lighten(#ecf0f1, 3%);
+}
+
+.equip {
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.equip-img {
+  text-align: center;
+}
+
+.equip-content {
+  padding: 0;
+  @include respond-to('medium') {
+    text-align: center;
+  }
+}
+
+.equipments .content {
+  padding: 15px 45px;
+  @include respond-to('medium') {
+    padding: 15px 30px;
+  }
+}

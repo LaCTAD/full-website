@@ -1,0 +1,27 @@
+<div class="page">
+  <section class="subheader subheader-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="headline">{{'PAGES.PRESS.NAME' | translate}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row" ng-repeat="clipping in clippings">
+        <div class="clip">
+          <div class="col-xs-12 col-sm-4 clip-image">
+            <img ng-src="{{clipping.featured_image.source}}" height="50px">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <div class="post-date">{{clipping.date_published | date:'dd/MM/yyyy'}}</div>
+            <a class="post-title" href="{{clipping.external_link}}" target="_blank">{{clipping.title}}</a>
+            <div class="post-entry" ng-bind-html="(clipping.content | htmlToPlaintext | limitTo:100) + '...'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,50 @@
+<div class="page">
+  <section class="subheader subheader-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="headline">{{'PAGES.CONTACT.NAME' | translate}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h2 translate="{{'PAGES.CONTACT.TITLE1' | translate }}"></h2>
+          <p translate="{{'PAGES.CONTACT.TEXT1' | translate}}"></p>
+          <form method="post" action="send.php">
+            <input required="required" name="name" type="text" placeholder="{{'PAGES.CONTACT.TITLE3' | translate}}" />
+            <input required="required" name="email" type="email" placeholder="E-mail" />
+            <input required="required" name="subject" type="text" placeholder="{{'PAGES.CONTACT.TITLE4' | translate}}" />
+            <textarea required="required" name="message" rows="5" placeholder="{{'PAGES.CONTACT.TITLE5' | translate}}"></textarea>
+            <input name="file" type="file" />
+            <input name="type" type="hidden" value="contact">
+            <button type="submit" class="btn-border-dark">{{'PAGES.CONTACT.BUTTON_SEND' | translate}}</button>
+          </form>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h2 translate="{{'PAGES.CONTACT.TITLE2' | translate}}"></h2>
+          <ul class="contact-details">
+            <li>
+              <i class="fa fa-map-marker"></i> Universidade Estadual de Campinas – Unicamp
+              <br>
+              Av. Dr. André Tosello, 550, Cidade Universitária Zeferino Vaz – Barão Geraldo
+              <br>
+              CEP: 13083-886
+            </li>
+            <li><i class="fa fa-phone"></i> +55 19 3521-5234</li>
+          </ul>
+          <br>
+          <div class="well" translate="{{'PAGES.CONTACT.TEXT2' | translate}}"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="300" style="" src="https://maps.google.com/maps?hl=en&q=avenida dr andre tosello, 550, cidade universitaria, campinas, brasil&ie=UTF8&t=m&z=17&iwloc=B&output=embed"></iframe>
+  </section>
+</div>

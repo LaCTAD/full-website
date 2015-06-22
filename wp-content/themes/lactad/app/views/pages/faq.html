@@ -1,0 +1,18 @@
+<div class="page-faq" ui-view>
+  <section class="subheader {{page.id == 'biologia-celular' ? 'biocel' : (page.id == 'genomica' ? 'genomica' : (page.id == 'proteomica' ? 'proteomica' : (page.id == 'bioinformatica' ? 'bioinfo' : '')))}}">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 light">
+          <div class="headline">FAQ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div ng-include src="root+'app/views/partials/faq.html'"></div>
+      </div>
+    </div>
+  </div>
+</div>

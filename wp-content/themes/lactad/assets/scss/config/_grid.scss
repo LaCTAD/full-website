@@ -1,0 +1,72 @@
+/* GRID */
+%grid {
+  display: table-cell;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  height: 100%;
+  vertical-align: middle;
+}
+
+@function grid-calc($grid-column) {
+  @return ((100% / $grid-columns) * $grid-column);
+}
+
+@for $column from 1 through $grid-columns {
+  .grid-#{$column} {
+    @extend %grid;
+    width: grid-calc($column);
+    padding: 0 $grid-padding;
+    @include respond-to('medium') {
+      padding: 0;
+      display: table;
+      width: 100%;
+    }
+    &.grid-locked {
+      display: inline-block;
+      @include respond-to('medium') {
+        display: inline-block;
+        padding: 0 $grid-padding;
+        width: grid-calc($column);
+      }
+    }
+  }
+}
+
+.container {
+  margin: 0 -15px;
+}
+
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  max-width: $grid-width;
+  margin: 0 auto;
+}
+
+.grid-offset {
+  @extend %grid;
+  @include respond-to('small') {
+    display: none;
+  }
+  &:before {
+    content: '';
+  }
+}
+
+.grid-flex {
+  @extend %grid;
+}
+
+.grid-fixed {
+  display: inline-block;
+  @include respond-to('medium') {
+    display: table;
+    width: 100%;
+  }
+}
+
+.content {
+  padding: 15px 30px;
+}

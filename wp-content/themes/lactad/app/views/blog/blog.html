@@ -1,0 +1,20 @@
+<div ui-view>
+  <div class="page">
+    <div class="subheader subheader-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="headline">{{page.name}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div ng-include src="root+'app/views/blog/blog.list.html'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

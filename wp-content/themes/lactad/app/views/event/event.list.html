@@ -1,0 +1,21 @@
+<ul class="event-list" ng-controller="EventController">
+  <li ng-repeat="event in events | limitTo:3">
+    <div class="event-date">
+      <div class="event-day">{{event.event.date | date:'dd'}}</div>
+      <div class="event-month">{{event.event.date | date:'MMM'}}</div>
+    </div>
+    <div class="post-date">
+      {{event.terms.category[0].name}}
+    </div>
+    <a ui-sref="app.page.single({ page: 'eventos', single: event.slug })" ng-show="language != 'en' || event.english.english_title == false">
+      {{event.title}}
+    </a>
+    <a ui-sref="app.page.single({ page: 'events', single: event.english.english_slug })" ng-show="language == 'en' && event.english_title != false">
+      {{event.english.english_title}}
+    </a>
+    <div class="event-location">
+      <i class='fa fa-map-marker'></i>
+      <span ng-bind-html="(event.event.location | htmlToPlaintext | limitTo:35) + '...'"></span>
+    </div>
+  </li>
+</ul>

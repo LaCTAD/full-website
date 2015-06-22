@@ -1,0 +1,113 @@
+.services {
+  padding-bottom: 30px;
+}
+
+.service {
+  @include respond-to('medium') {
+    padding: 0 15px 15px 15px;
+  }
+}
+
+.sidemenu {
+  margin-top: 6px;
+  list-style: none;
+  li {
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid lighten($color-text-light, 8%);
+    color: $color-text;
+    transition: all .3s;
+    &:hover {
+      color: darken($color-text, 30%);
+      border-left: 2px solid darken($color-text, 10%);
+    }
+    &:first-child {
+      border-top: 1px solid lighten($color-text-light, 8%);
+    }
+  }
+  &.active li:first-child,
+  li.active {
+    color: $color-primary;
+    border-left: 2px solid $color-primary;
+  }
+  &.biocel.active li:first-child,
+  &.biocel li.active {
+    color: $color-biocel;
+    border-left: 2px solid $color-biocel;
+  }
+  &.genomica.active li:first-child,
+  &.genomica li.active {
+    color: $color-genomica;
+    border-left: 2px solid $color-genomica;
+  }
+  &.proteomica.active li:first-child,
+  &.proteomica li.active {
+    color: $color-proteomica;
+    border-left: 2px solid $color-proteomica;
+  }
+  &.bioinfo.active li:first-child,
+  &.bioinfo li.active {
+    color: $color-bioinfo;
+    border-left: 2px solid $color-bioinfo;
+  }
+  @include respond-to('medium') {
+    margin-top: 0;
+  }
+}
+
+.dropdown {
+  width: 100%;
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
+
+.dropdown-text {
+  cursor: pointer;
+  padding: 15px;
+  border: 1px solid lighten($color-text-light, 8%);
+  border-radius: 3px;
+  .fa {
+    margin-top: 3px;
+  }
+  &:hover {
+    background: $color-text-lightest;
+  }
+}
+
+.dropdown-content {
+  margin-top: -1px;
+  border: 1px solid lighten($color-text-light, 8%);
+  list-style: none;
+  li {
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+    border: none;
+    border-top: 1px solid lighten($color-text-light, 8%);
+    color: $color-text;
+    transition: all .3s;
+    &:hover {
+      color: darken($color-text, 30%);
+      background: $color-text-lightest;
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.item-content {
+  h2 {
+    margin-top: 0;
+    @include respond-to('medium') {
+      margin-top: 0.83em;
+    }
+  }
+}
+
+.item-image {
+  margin-bottom: 15px;
+  text-align: center;
+}

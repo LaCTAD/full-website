@@ -1,0 +1,69 @@
+<div class="page">
+
+  <section class="subheader subheader-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="headline">{{'PAGES.ABOUT.NAME' | translate}}</div>
+          <div class="sub-headline">
+            {{'PAGES.ABOUT.DESC' | translate}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <h2 translate="{{'PAGES.ABOUT.TITLE1'}}"></h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div translate="{{'PAGES.ABOUT.TEXT1'}}"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div translate="{{'PAGES.ABOUT.TEXT2'}}"></div>
+          <br>
+          <div class="well" translate="{{'PAGES.ABOUT.TEXT3'}}" ng-click="showModalAbout()"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+      <h2 translate="{{'PAGES.ABOUT.TITLE2'}}"></h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <h3 style="color: {{page.color}}" translate="{{'PAGES.ABOUT.TITLE3'}}"></h3>
+          <div translate="{{'PAGES.ABOUT.TEXT4'}}"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <h3 style="color: {{page.color}}" translate="{{'PAGES.ABOUT.TITLE4'}}"></h3>
+          <div translate="{{'PAGES.ABOUT.TEXT5'}}"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <h3 style="color: {{page.color}}" translate="{{'PAGES.ABOUT.TITLE5'}}"></h3>
+          <div translate="{{'PAGES.ABOUT.TEXT6'}}"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="financing">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h2 translate="{{'PAGES.ABOUT.TITLE6'}}"></h2>
+          <div translate="{{'PAGES.ABOUT.TEXT7'}}"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h2 translate="{{'PAGES.TEAM.NAME'}}"></h2>
+          <div ng-include src="root+'app/views/partials/members.html'"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div ng-include src="root+'app/views/partials/news.html'"></div>
+
+</div>

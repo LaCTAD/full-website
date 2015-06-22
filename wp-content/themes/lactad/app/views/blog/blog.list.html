@@ -1,0 +1,15 @@
+<ul class="post-list" ng-controller="BlogController">
+  <li ng-repeat="post in posts | limitTo:3">
+    <div class="post-date">
+      {{post.date_gmt | date:'dd/MM/yy'}}
+    </div>
+    <a class="post-title" ui-sref="app.page.single({ page: 'blog', single: post.slug })" ng-show="language != 'en' || post.english.english_title == false">
+      {{post.title}}
+    </a>
+    <a class="post-title" ui-sref="app.page.single({ page: 'blog', single: post.english.english_slug })" ng-show="language == 'en' && post.english.english_title != false">
+      {{post.english.english_title}}
+    </a>
+    <div class="post-entry" ng-bind-html="(post.content | htmlToPlaintext | limitTo:100) + '...'" ng-show="language != 'en' || post.english.english_title == false"></div>
+    <div class="post-entry" ng-bind-html="(post.english.english_content | htmlToPlaintext | limitTo:100) + '...'" ng-show="language == 'en' && post.english.english_title != false"></div>
+  </li>
+</ul>

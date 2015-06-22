@@ -1,0 +1,13 @@
+<section class="members" ng-controller="MembersController">
+  <div class="row">
+      <div class="col-xs-4 member" ng-repeat="member in members | orderBy:'-member.job'">
+        <img ng-src="{{member.member.photo.url}}" width="100%" ng-if="member.member.photo"/>
+        <img ng-src="{{root+'assets/img/profile.png'}}" width="100%" ng-if="!member.member.photo"/>
+        <div class="member-job" style="color: {{page.color}}">{{member.member.job}}</div>
+        <div class="member-name">{{member.title}}</div>
+      </div>
+      <div class="col-xs-12" ng-if="members.length == 0">
+        Nenhum membro cadastrado.
+      </div>
+  </div>
+</section>

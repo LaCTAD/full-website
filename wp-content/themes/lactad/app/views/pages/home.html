@@ -1,0 +1,51 @@
+<div class="home">
+
+  <section class="subheader">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-7 light">
+          <div class="headline">{{'PAGES.INDEX.HEADLINE' | translate}}</div>
+          <div class="sub-headline">{{'PAGES.INDEX.SUBHEADLINE' | translate}}</div>
+          <a class="btn-border" ui-sref="app.page({ page: pages.about.slug, single: null })" translate="{{'PAGES.INDEX.BUTTON_ABOUT'}}"></a>
+          <a class="btn-border" ui-sref="app.page({ page: pages.contact.slug, single: null })" translate="{{'PAGES.INDEX.BUTTON_CONTACT'}}"></a>
+        </div>
+        <div class="col-xs-12 col-sm-5"></div>
+      </div>
+    </div>
+  </section>
+
+  <div ng-include src="root+'app/views/partials/news.html'"></div>
+
+  <section class="statistics">
+    <div class="container">
+      <h2>LaCTAD <small>em números</small></h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <div class="number-container">
+            <div class="number">80</div>
+            <div class="number-unit">Dados</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="number-container">
+            <div class="number">20</div>
+            <div class="number-unit">Dados</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="number-container">
+            <div class="number">10.91</div>
+            <div class="number-unit">Terabases Sequenciadas</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="number-container">
+            <div class="number">15</div>
+            <div class="number-unit">Dados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

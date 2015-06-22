@@ -1,0 +1,57 @@
+<div class="page">
+  <div ui-view>
+
+    <section class="subheader {{page.id == 'biologia-celular' ? 'biocel' : (page.id == 'genomica' ? 'genomica' : (page.id == 'proteomica' ? 'proteomica' : (page.id == 'bioinformatica' ? 'bioinfo' : '')))}}">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 light">
+            <div class="headline">{{page.name}}</div>
+            <div class="sub-headline">
+              {{page.desc}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" ng-show="services.length > 0">
+      <div class="container">
+        <h2 translate="{{pages.services.name}}"></h2>
+        <div class="row" ng-repeat="row in (services.length/3 | array)">
+          <div ng-class="services.length > 2 ? 'col-sm-4' : 'col-sm-6'" class="col-xs-12 service" ng-repeat="service in services.slice(3*$index, 3*$index + 3)">
+            <h3 ng-if="language == 'en' && post.english.english_title != false"><a style="color: {{page.color}}" ui-sref="app.page.single({ page: page.slug, single: pages.services.slug, item: service.english.english_slug })" ng-bind-html="service.english.english_title"></a></h3>
+            <h3 ng-if="language != 'en' || post.english.english_title == false"><a style="color: {{page.color}}" ui-sref="app.page.single({ page: page.slug, single: pages.services.slug, item: service.slug })" ng-bind-html="service.title"></a></h3>
+            <div ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="(service.excerpt | limitTo:133) + '...'"></div>
+            <div ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="(service.english.english_content | limitTo:133) + '...'"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="equipments" ng-show="equipments.length > 0">
+      <div class="container">
+        <h2 translate="{{pages.equipments.name}}"></h2>
+        <div class="row">
+            <div ng-include src="root+'app/views/partials/equipment.html'"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="members" ng-show="faqs.length > 0 || members.length > 0">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h2><a ui-sref="app.page({ page: page.slug, single: 'faq'})">FAQ</a></h2>
+            <div ng-include src="root+'app/views/partials/faq.html'"></div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h2>{{pages.teams.name}}</h2>
+            <div ng-include src="root+'app/views/partials/members.html'"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div ng-include src="root+'app/views/partials/news.html'"></div>
+
+  </div>
+</div>

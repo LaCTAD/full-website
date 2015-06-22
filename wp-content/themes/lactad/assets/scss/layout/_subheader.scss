@@ -1,0 +1,109 @@
+/* SUBHEADER */
+.subheader {
+  min-height: 320px;
+  background: #eeeeee;
+}
+
+.page .subheader {
+  min-height: 80px;
+  &.biocel {
+    position: relative;
+    background: url('assets/img/biocel.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+    background-color: #ffffff;
+    background-blend-mode: luminosity, normal;
+    color: white;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      background: rgba($color-biocel, .9);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &.genomica {
+    position: relative;
+    background: url('assets/img/genomica.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+    background-color: #ffffff;
+    background-blend-mode: luminosity, normal;
+    color: white;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      background: rgba($color-genomica, .8);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &.proteomica {
+    position: relative;
+    background: url('assets/img/proteomica.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+    background-color: #ffffff;
+    background-blend-mode: luminosity, normal;
+    color: white;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      background: rgba($color-proteomica, .8);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &.bioinfo {
+    position: relative;
+    background: url('assets/img/bioinfo.png') no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+    background-color: #ffffff;
+    background-blend-mode: luminosity, normal;
+    color: white;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      background: rgba($color-bioinfo, .8);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.slide {
+  padding: 15px;
+}
+
+.subheader-about {
+  position: relative;
+  background: url('assets/img/ext2.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  background-color: #ffffff;
+  background-blend-mode: luminosity, normal;
+  color: white;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background: rgba($color-lactad, .85);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

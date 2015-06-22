@@ -1,0 +1,69 @@
+<div class="page event-post">
+  <div class="subheader subheader-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="headline">{{pages.events.name}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <iframe class="event-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="300" ng-src="{{getIframeUrl(event.event.location)}}"></iframe>
+      </div>
+
+      <div class="col-xs-12 col-sm-8">
+        <h1 class="post-title" ng-if="language != 'en' || event.english.english_title == false">{{event.title}}</h1>
+        <h1 class="post-title" ng-if="language == 'en' && event.english.english_title != false">{{event.english.english_title}}</h1>
+        <div class="event-details"><i class="fa fa-map-marker"></i> {{event.event.location}}</div>
+        <div class="event-details"><i class="fa fa-calendar-o"></i> {{event.event.date | date:'dd/MM/yyyy'}}</div>
+        <a class="btn-border-dark" style="margin-bottom: 0;" href="" ng-click="showModalEvent()">{{'PAGES.EVENTS.BUTTON_REGISTER' | translate}}</a>
+        <div class="event-description" ng-bind-html="event.event.description" ng-show="language != 'en' || event.english.english_title == false"></div>
+        <div class="event-description" ng-bind-html="event.english.english_content" ng-show="language == 'en'"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <ul class="hide-medium sidemenu lactad" ng-class="{'active' : !hasItem}">
+          <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.goals.slug })" ui-sref-active="active">{{pages.events.subpages.goals.name}}</li>
+          <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.goals.slug })" ui-sref-active="active">{{pages.events.subpages.goals.name}}</li>
+          <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.schedule.slug })" ui-sref-active="active">{{pages.events.subpages.schedule.name}}</li>
+          <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.schedule.slug })" ui-sref-active="active">{{pages.events.subpages.schedule.name}}</li>
+          <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.speakers.slug })" ui-sref-active="active">{{pages.events.subpages.speakers.name}}</li>
+          <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.speakers.slug })" ui-sref-active="active">{{pages.events.subpages.speakers.name}}</li>
+          <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.registered.slug })" ui-sref-active="active">{{pages.events.subpages.registered.name}}</li>
+          <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.registered.slug })" ui-sref-active="active">{{pages.events.subpages.registered.name}}</li>
+          <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.selected.slug })" ui-sref-active="active">{{pages.events.subpages.selected.name}}</li>
+          <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.selected.slug })" ui-sref-active="active">{{pages.events.subpages.selected.name}}</li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-8 item-content">
+        <div class="dropdown show-medium" ng-click="show = true">
+          <div class="dropdown-text"><span style="color: {{page.color}}" ng-bind-html="activeItem.title"></span> <i class="fa fa-lg fa-angle-down pull-right"></i></div>
+          <ul class="dropdown-content" ng-show="show">
+            <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.goals.slug })" ui-sref-active="active">{{pages.events.subpages.goals.name}}</li>
+            <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.goals.slug })" ui-sref-active="active">{{pages.events.subpages.goals.name}}</li>
+            <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.schedule.slug })" ui-sref-active="active">{{pages.events.subpages.schedule.name}}</li>
+            <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.schedule.slug })" ui-sref-active="active">{{pages.events.subpages.schedule.name}}</li>
+            <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.speakers.slug })" ui-sref-active="active">{{pages.events.subpages.speakers.name}}</li>
+            <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.speakers.slug })" ui-sref-active="active">{{pages.events.subpages.speakers.name}}</li>
+            <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.registered.slug })" ui-sref-active="active">{{pages.events.subpages.registered.name}}</li>
+            <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.registered.slug })" ui-sref-active="active">{{pages.events.subpages.registered.name}}</li>
+            <li ng-if="language != 'en' || event.english.english_title == false" ui-sref="app.page.single({ page: page.slug, single: page.single, item: pages.events.subpages.selected.slug })" ui-sref-active="active">{{pages.events.subpages.selected.name}}</li>
+            <li ng-if="language == 'en' && event.english.english_title != false" ui-sref="app.page.single({ page: page.slug, single: page.english_single, item: pages.events.subpages.selected.slug })" ui-sref-active="active">{{pages.events.subpages.selected.name}}</li>
+          </ul>
+        </div>
+        <h2 ng-bind-html="activeItem.title"></h2>
+        <div ng-bind-html="activeItem.content"></div>
+      </div>
+    </div>
+  </div>
+
+</div>

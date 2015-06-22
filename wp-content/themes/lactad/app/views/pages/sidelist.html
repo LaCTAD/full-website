@@ -1,0 +1,46 @@
+<div ui-view>
+  <section class="subheader {{page.id == 'biologia-celular' ? 'biocel' : (page.id == 'genomica' ? 'genomica' : (page.id == 'proteomica' ? 'proteomica' : (page.id == 'bioinformatica' ? 'bioinfo' : '')))}}">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 light">
+          <div class="headline" ng-if="page.single != 'servicos'">{{page.single}}</div>
+          <div class="headline" ng-if="page.single == 'servicos'">Serviços</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="side-list" >
+        <div class="col-xs-12 col-sm-4">
+          <ul class="hide-medium sidemenu {{page.id == 'biologia-celular' ? 'biocel' : (page.id == 'genomica' ? 'genomica' : (page.id == 'proteomica' ? 'proteomica' : (page.id == 'bioinformatica' ? 'bioinfo' : '')))}}" ng-class="{'active' : !hasItem}">
+            <li ng-if="language != 'en' || post.english.english_title == false" ng-repeat="item in items" ng-bind-html="item.title" ui-sref="app.page.single({ page: page.slug, single: page.single, item: item.slug })" ui-sref-active="active"></li>
+            <li ng-if="language == 'en' && post.english.english_title != false" ng-repeat="item in items" ng-bind-html="item.english.english_title" ui-sref="app.page.single({ page: page.slug, single: page.single, item: item.english.english_slug })" ui-sref-active="active"></li>
+          </ul>
+          <div ng-show="items.length == 0">
+            Nenhum item cadastrado no momento.
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 item-content">
+          <div class="dropdown show-medium" ng-click="show = true">
+            <div ng-if="language != 'en' || post.english.english_title == false" class="dropdown-text"><span style="color: {{page.color}}" ng-bind-html="activeItem.title"></span> <i class="fa fa-lg fa-angle-down pull-right"></i></div>
+            <div ng-if="language == 'en' && post.english.english_title != false" class="dropdown-text"><span style="color: {{page.color}}" ng-bind-html="activeItem.english.english_title"></span> <i class="fa fa-lg fa-angle-down pull-right"></i></div>
+            <ul class="dropdown-content" ng-show="show">
+              <li ng-if="language != 'en' || post.english.english_title == false" ng-repeat="item in items" ng-bind-html="item.title" ui-sref="app.page.single({ page: page.slug, single: page.single, item: item.slug })" ui-sref-active="active"></li>
+              <li ng-if="language == 'en' && post.english.english_title != false" ng-repeat="item in items" ng-bind-html="item.english.english_title" ui-sref="app.page.single({ page: page.slug, single: page.single, item: item.english.english_slug })" ui-sref-active="active"></li>
+            </ul>
+          </div>
+          <h2 ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="activeItem.title"></h2>
+          <h2 ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_title"></h2>
+          <div class="item-image" ng-if="activeItem.image">
+            <img ng-src="{{activeItem.image.sizes.medium}}" height="{{ activeItem.image.height <= 300 ? 'auto' : '300' }}" width="{{ activeItem.image.height <= 300 ? '100%' : 'auto' }}"/>
+          </div>
+          <div ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="activeItem.content"></div>
+          <div ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/* Method to full height and vertical align */
+%full-height {
+  height: 100%;
+  vertical-align: middle;
+  &:before {
+    content: '';
+    display: table;
+    height: 100%;
+  }
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.hide-medium {
+  @include respond-to('medium') {
+    display: none;
+  }
+}
+
+.show-medium {
+  display: none;
+  @include respond-to('medium') {
+    display: table;
+  }
+}

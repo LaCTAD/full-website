@@ -1,0 +1,64 @@
+form {
+  margin-top: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  outline: none;
+  display: block;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid $color-text-light;
+  color: $color-primary;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  transition: all .3s;
+  box-sizing: border-box;
+  @include respond-to('medium') {
+    width: 100%;
+  }
+}
+
+input[type="date"],
+select {
+  color: $color-text;
+  background: white;
+}
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: $color-text;
+  margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+
+input[type="file"] {
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+button {
+  background: transparent;
+}
+
+form .btn-border-dark {
+  display: block;
+  width: 50%;
+  margin: 30px auto;
+}
+
+.contact-details {
+  list-style: none;
+  li {
+    margin: 15px 0;
+  }
+}

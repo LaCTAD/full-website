@@ -1,0 +1,118 @@
+/* COMMONS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML */
+html {
+  height: 100%;
+}
+
+/* BODY */
+body {
+  position: relative;
+  min-height: 100%;
+  background: white;
+  color: $color-text;
+  overflow-x: hidden;
+}
+
+section {
+  // min-height: 300px;
+}
+
+/* BUTTONS */
+.btn-border {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid white;
+  color: white;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  border-radius: 200px;
+  transition: all .3s;
+  &:hover {
+    color: $color-primary;
+    background: white;
+  }
+}
+
+.btn-border-dark {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  margin: 20px 0;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  border-radius: 200px;
+  transition: all .3s;
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}
+
+.btn-bio {
+  color: $color-biocel;
+  border-color: $color-biocel;
+  &:hover {
+    background-color: $color-biocel;
+    color: white;
+  }
+}
+
+.btn-genomica {
+  color: $color-genomica;
+  border-color: $color-genomica;
+  &:hover {
+    background-color: $color-genomica;
+    color: white;
+  }
+}
+
+.btn-proteomica {
+  color: $color-proteomica;
+  border-color: $color-proteomica;
+  &:hover {
+    background-color: $color-proteomica;
+    color: white;
+  }
+}
+
+.btn-bioinformatica {
+  color: $color-bioinfo;
+  border-color: $color-bioinfo;
+  &:hover {
+    background-color: $color-bioinfo;
+    color: white;
+  }
+}
+
+.tag {
+  float: left;
+  font-size: 0.8em;
+  padding: 3px 6px;
+  background: $color-text-light;
+  border-radius: 3px;
+  margin: 3px 0;
+  color: white;
+}
+
+.side-list {
+  margin: 30px 0;
+}
+
+.well {
+  cursor: pointer;
+  padding: 15px 30px;
+  margin-bottom: 15px;
+  background-color: $color-text-lightest;
+  border-radius: 5px;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  .fa {
+    margin-right: 7.5px;
+  }
+}

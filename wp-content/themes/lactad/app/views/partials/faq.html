@@ -1,0 +1,18 @@
+<section class="faqs" ng-controller="FaqController">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="faq-list">
+          <li class="faq" ng-repeat="faq in faqs" ng-click="questionToggle($event)">
+            <div class="faq-icon">
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="faq-question" style="color: {{page.color}}" href="" ng-if="language != 'en' || post.english.english_title == false">{{faq.title}}</div>
+            <div class="faq-question" style="color: {{page.color}}" href="" ng-if="language == 'en' && post.english.english_title != false">{{faq.english.english_title}}</div>
+            <div class="faq-answer" ng-bind-html="faq.content" ng-if="language != 'en' || faq.english.english_title == false"></div>
+            <div class="faq-answer" ng-bind-html="faq.english.english_content" ng-if="language == 'en' && faq.english.english_title != false"></div>
+          </li>
+        </ul>
+        <div ng-if="faqs.length == 0">Nenhuma pergunta cadastrada</div>
+      </div>
+  </div>
+</section>
