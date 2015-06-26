@@ -24,10 +24,10 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <span class="hidden-xs">
+          <span class="hidden-xs" style="margin-right: 15px;">
             <i class="fa fa-phone"></i> +55  19  3521-5234
-            <i class="fa fa-clock-o" style="margin-left: 15px;"></i> Horário de Funcionamento: Seg à Sex - 8h30 às 17h30
           </span>
+            <i class="fa fa-clock-o"></i> <span class="hidden-xs">Horário de Funcionamento:</span> Seg à Sex - 8h30 às 17h30
           <div class="pull-right">
             <a href="" ng-click="setLanguage('br')"><span class="flag br"></span> BR</a> |
             <a href="" ng-click="setLanguage('en')"><span class="flag us"></span> EN</a>
@@ -48,9 +48,9 @@
               <a ui-sref="app.page({ page: pages.about.slug, single: null })" ng-class="{'active' : isAbout()}">{{ pages.about.name }}</a>
               <ul class="submenu">
                 <li><a ui-sref="app.page({ page: pages.management.slug, single: null })">{{ pages.management.name }}</a></li>
+                <li><a ui-sref="app.page({ page: pages.press.slug, single: null })">{{ pages.press.name }}</a></li>
                 <li><a ui-sref="app.page({ page: 'blog', single: null })">{{ pages.blog.name }}</a></li>
                 <li><a ui-sref="app.page({ page: pages.events.slug, single: null })">{{ pages.events.name }}</a></li>
-                <li><a ui-sref="app.page({ page: pages.press.slug, single: null })">{{ pages.press.name }}</a></li>
                 <li><a ui-sref="app.page({ page: pages.contact.slug, single: null })">{{ pages.contact.name }}</a></li>
               </ul>
             </li>
@@ -61,7 +61,7 @@
                   <a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
-                <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li>
+                <!-- <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: 'faq', item: null })">FAQ</a></li>
               </ul>
             </li>
@@ -72,7 +72,7 @@
                   <a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
-                <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.teams.slug})">{{'PAGES.TEAM.NAME' | translate}}</a></li>
+                <!-- <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.teams.slug})">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: 'faq'})">FAQ</a></li>
               </ul>
             </li>
@@ -83,7 +83,7 @@
                   <a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
-                <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li>
+                <!-- <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: 'faq', item: null})">FAQ</a></li>
               </ul>
             </li>
@@ -94,64 +94,64 @@
                   <a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
-                <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li>
+                <!-- <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: 'faq', item: null })">FAQ</a></li>
               </ul>
             </li>
           </ul>
-          <a href="#" class="menu-trigger visible-xs">
-            <span class="menu-icon"></span>
-          </a>
         </div>
+        <a href="#" class="menu-trigger visible-xs">
+          <span class="menu-icon"></span>
+        </a>
       </div>
-      <ul class="menu-mobile">
-        <li>
-          <a href="">Sobre</a>
-          <ul class="submenu-mobile">
-            <li><a ui-sref="app.page({ page: 'blog', single: null })">Blog</a></li>
-            <li><a href="">Eventos</a></li>
-            <li><a href="">LaCTAD na mídia</a></li>
-            <li><a href="">Contato</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="">Biologia Celular</a>
-          <ul class="submenu-mobile">
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Equipamentos</a></li>
-                <li><a href="">Equipe</a></li>
-                <li><a href="">FAQ</a></li>
-              </ul>
-        </li>
-        <li>
-          <a href="">Genômica</a>
-          <ul class="submenu-mobile">
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Equipamentos</a></li>
-                <li><a href="">Equipe</a></li>
-                <li><a href="">FAQ</a></li>
-              </ul>
-        </li>
-        <li>
-          <a href="">Proteômica</a>
-          <ul class="submenu-mobile">
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Equipamentos</a></li>
-                <li><a href="">Equipe</a></li>
-                <li><a href="">FAQ</a></li>
-              </ul>
-        </li>
-        <li>
-          <a href="">Bioinformática</a>
-          <ul class="submenu-mobile">
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Equipamentos</a></li>
-                <li><a href="">Equipe</a></li>
-                <li><a href="">FAQ</a></li>
-              </ul>
-        </li>
-      </ul>
     </div>
+    <ul class="menu-mobile">
+      <li>
+        <a href="">Sobre</a>
+        <ul class="submenu-mobile">
+          <li><a ui-sref="app.page({ page: 'blog', single: null })">Blog</a></li>
+          <li><a href="">Eventos</a></li>
+          <li><a href="">LaCTAD na mídia</a></li>
+          <li><a href="">Contato</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">Biologia Celular</a>
+        <ul class="submenu-mobile">
+              <li><a href="">Serviços</a></li>
+              <li><a href="">Equipamentos</a></li>
+              <li><a href="">Equipe</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+      </li>
+      <li>
+        <a href="">Genômica</a>
+        <ul class="submenu-mobile">
+              <li><a href="">Serviços</a></li>
+              <li><a href="">Equipamentos</a></li>
+              <li><a href="">Equipe</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+      </li>
+      <li>
+        <a href="">Proteômica</a>
+        <ul class="submenu-mobile">
+              <li><a href="">Serviços</a></li>
+              <li><a href="">Equipamentos</a></li>
+              <li><a href="">Equipe</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+      </li>
+      <li>
+        <a href="">Bioinformática</a>
+        <ul class="submenu-mobile">
+              <li><a href="">Serviços</a></li>
+              <li><a href="">Equipamentos</a></li>
+              <li><a href="">Equipe</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+      </li>
+    </ul>
 	</header>
 
 	<main ui-view></main>

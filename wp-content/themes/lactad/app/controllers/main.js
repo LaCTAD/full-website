@@ -303,7 +303,7 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
   // Controls the mobile menu accordion
   jQuery('.menu-mobile > li > a').on('click', function(event) {
     event.preventDefault();
-    jQuery('.submenu-mobile').not(jQuery(this).next('.submenu-mobile')).slideUp();
+    //jQuery('.submenu-mobile').not(jQuery(this).next('.submenu-mobile')).slideUp();
     jQuery(this).next('.submenu-mobile').slideToggle();
   });
 

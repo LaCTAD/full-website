@@ -1,0 +1,24 @@
+<ul class="post-list" ng-controller="BlogController">
+  <li ng-repeat="post in posts | startFrom:currentPage*pageSize | limitTo:pageSize">
+    <div class="post-date">
+      {{post.date_gmt | date:'dd/MM/yy'}}
+    </div>
+    <a class="post-title" ui-sref="app.page.single({ page: 'blog', single: post.slug })" ng-show="language != 'en' || post.english.english_title == false">
+      {{post.title}}
+    </a>
+    <a class="post-title" ui-sref="app.page.single({ page: 'blog', single: post.english.english_slug })" ng-show="language == 'en' && post.english.english_title != false">
+      {{post.english.english_title}}
+    </a>
+    <div class="post-entry" ng-bind-html="(post.content | htmlToPlaintext | limitTo:200) + '...'" ng-show="language != 'en' || post.english.english_title == false"></div>
+    <div class="post-entry" ng-bind-html="(post.english.english_content | htmlToPlaintext | limitTo:200) + '...'" ng-show="language == 'en' && post.english.english_title != false"></div>
+  </li>
+</ul>
+<div class="btn-pagination" ng-show="numPages > 1">
+  <button ng-disabled="currentPage == 0" ng-click="currentPage = currentPage-1" class="btn-border-dark">
+    Anterior
+  </button>
+  <div class="hidden-xs">{{currentPage+1}}/{{numPages}}</div>
+  <button ng-disabled="currentPage >= numPages - 1" ng-click="currentPage=currentPage+1" class="btn-border-dark">
+    Próximo
+  </button>
+</div>

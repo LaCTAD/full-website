@@ -59,10 +59,26 @@ function my_scripts() {
   );
 
   wp_enqueue_script(
+    'jquery-animateNumber',
+    get_stylesheet_directory_uri() . '/app/components/jquery-animatenumber/jquery.animateNumber.min.js',
+    array('jquery'),
+    '0.0.10',
+    true
+  );
+
+  wp_enqueue_script(
     'owlcarousel',
     get_stylesheet_directory_uri() . '/app/components/owlcarousel/owl-carousel/owl.carousel.min.js',
     array('jquery'),
     '1.3.2',
+    true
+  );
+
+  wp_enqueue_script(
+    'moment',
+    get_stylesheet_directory_uri() . '/app/components/moment/min/moment.min.js',
+    array('jquery'),
+    '2.10.3',
     true
   );
 
@@ -361,6 +377,7 @@ function json_api_prepare_post( $post_response, $post, $context ) {
 
   if(get_post_type($post['ID']) == 'events') {
     $post_response['event']['date'] = get_field( "event_date", $post['ID'] );
+    $post_response['event']['register_close_date'] = get_field( "event_register_close_date", $post['ID'] );
     $post_response['event']['location'] = get_field( "event_location", $post['ID'] );
     $post_response['event']['description'] = get_field( "event_description", $post['ID'] );
     $post_response['event']['goals'] = get_field( "event_goals", $post['ID'] );

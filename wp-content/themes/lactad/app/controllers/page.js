@@ -24,4 +24,31 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
   };
 
+  $scope.contact = {};
+  $scope.contact.type = 'contact';
+
+  $scope.fileNameChanged = function(el) {
+    $scope.contact.file = el;
+    console.log(el);
+  }
+
+  $scope.sendMail = function() {
+    console.log($scope.contact);
+    console.log(root.root + 'send.php');
+    if($scope.contact.name != '' && $scope.contact.email != '' && $scope.contact.subject != '' && $scope.contact.message != '') {
+      jQuery.ajax({
+        type: "POST",
+        url: root.root + "send.php",
+        contentType: false,
+        cache: false,
+        processData:false,
+        data: $scope.contact,
+        success: function() {
+          console.log('sucesso!');
+          jQuery('.log-message').html("<p style='margin-bottom: 30px;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
+        }
+      });
+    }
+  }
+
 });

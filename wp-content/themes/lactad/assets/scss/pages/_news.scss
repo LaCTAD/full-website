@@ -12,6 +12,11 @@
   list-style: none;
 }
 
+.page .post-list,
+.page .event-list {
+  margin: 2em 0;
+}
+
 .post-list li,
 .event-list li {
   padding: 7.5px 0;

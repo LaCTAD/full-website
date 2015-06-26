@@ -1,5 +1,5 @@
 .pre-header {
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 1px solid $color-text-lightest;
   font-size: .8em;
 }
@@ -48,6 +48,8 @@ header {
 }
 
 .submenu {
+  border: 1px solid #eee;
+  border-top: none;
   display: none;
   position: absolute;
   z-index: 1;

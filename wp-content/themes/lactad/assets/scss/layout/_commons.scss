@@ -48,10 +48,31 @@ section {
   margin-right: 15px;
   border-radius: 200px;
   transition: all .3s;
+  outline: none;
   &:hover {
     background-color: $color-primary;
     color: white;
   }
+  &.disabled,
+  &[disabled='disabled'] {
+    background-color: $color-text-light;
+    border-color: $color-text-light;
+    color: $color-text;
+    cursor: default;
+    &:hover {
+      background-color: $color-text-light;
+      color: $color-text;
+    }
+  }
+}
+
+.btn-pagination {
+  text-align: center;
+}
+
+.btn-pagination div {
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .btn-bio {
