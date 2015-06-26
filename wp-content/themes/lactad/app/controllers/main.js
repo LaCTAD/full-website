@@ -25,11 +25,12 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
   }
 
   // Loader
-  /*$scope.$on('$stateChangeStart', function(event, toState, toParams) {
+  $scope.$on('$stateChangeStart', function(event, toState, toParams) {
     event.preventDefault();
     jQuery('.bkg').fadeIn('fast');
     centerLoader();
     if(jQuery('.menu-trigger').hasClass('close-nav')) {
+      console.log('fechou');
       jQuery('.menu-trigger').click();
     }
     $timeout(function() {
@@ -49,7 +50,7 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
     jQuery('.loader').css({'top': posY});
   }
 
-  centerLoader();*/
+  centerLoader();
 
   // Language setting
   $rootScope.setLanguage = function(lang) {
@@ -290,13 +291,15 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
 
   // Controls menu-mobile trigger icon
   jQuery('.menu-trigger').on('click', function(){
-    if(!jQuery(this).hasClass('close-nav')) {
-      //animate menu icon into a cross icon
-      jQuery(this).addClass('close-nav');
-      jQuery('.menu-mobile').stop().slideDown();
-    } else {
-      jQuery(this).removeClass('close-nav');
+    if(jQuery(this).hasClass('close-nav')) {
+      console.log('fecha!');
       jQuery('.menu-mobile, .submenu-mobile').stop().slideUp();
+      jQuery(this).removeClass('close-nav');
+    } else {
+      console.log('abre!');
+      //animate menu icon into a cross icon
+      jQuery('.menu-mobile').stop().slideDown();
+      jQuery(this).addClass('close-nav');
     }
   });
 

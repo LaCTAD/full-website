@@ -68,9 +68,7 @@
             <li>
               <a ui-sref="app.page({ page: pages.genomica.slug })" ui-sref-active="active">{{pages.genomica.name}}</a>
               <ul class="submenu">
-                <li>
-                  <a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a>
-                </li>
+                <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a></li>
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
                 <!-- <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.teams.slug})">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: 'faq'})">FAQ</a></li>
@@ -109,47 +107,49 @@
       <li>
         <a href="">Sobre</a>
         <ul class="submenu-mobile">
-          <li><a ui-sref="app.page({ page: 'blog', single: null })">Blog</a></li>
-          <li><a href="">Eventos</a></li>
-          <li><a href="">LaCTAD na mídia</a></li>
-          <li><a href="">Contato</a></li>
+          <li><a ui-sref="app.page({ page: pages.about.slug, single: null })">{{ pages.about.name }}</a></li>
+          <li><a ui-sref="app.page({ page: pages.management.slug, single: null })">{{ pages.management.name }}</a></li>
+          <li><a ui-sref="app.page({ page: pages.press.slug, single: null })">{{ pages.press.name }}</a></li>
+          <li><a ui-sref="app.page({ page: 'blog', single: null })">{{ pages.blog.name }}</a></li>
+          <li><a ui-sref="app.page({ page: pages.events.slug, single: null })">{{ pages.events.name }}</a></li>
+          <li><a ui-sref="app.page({ page: pages.contact.slug, single: null })">{{ pages.contact.name }}</a></li>
         </ul>
       </li>
       <li>
         <a href="">Biologia Celular</a>
         <ul class="submenu-mobile">
-              <li><a href="">Serviços</a></li>
-              <li><a href="">Equipamentos</a></li>
-              <li><a href="">Equipe</a></li>
-              <li><a href="">FAQ</a></li>
-            </ul>
+          <li><a ui-sref="app.page({ page: pages.biocel.slug })" ui-sref-active="active">{{pages.biocel.name}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: 'faq', item: null })">FAQ</a></li>
+        </ul>
       </li>
       <li>
         <a href="">Genômica</a>
         <ul class="submenu-mobile">
-              <li><a href="">Serviços</a></li>
-              <li><a href="">Equipamentos</a></li>
-              <li><a href="">Equipe</a></li>
-              <li><a href="">FAQ</a></li>
-            </ul>
+          <li><a ui-sref="app.page({ page: pages.genomica.slug })" ui-sref-active="active">{{pages.genomica.name}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: 'faq'})">FAQ</a></li>
+        </ul>
       </li>
       <li>
         <a href="">Proteômica</a>
         <ul class="submenu-mobile">
-              <li><a href="">Serviços</a></li>
-              <li><a href="">Equipamentos</a></li>
-              <li><a href="">Equipe</a></li>
-              <li><a href="">FAQ</a></li>
-            </ul>
+          <li><a ui-sref="app.page({ page: pages.proteomica.slug })" ui-sref-active="active">{{pages.proteomica.name}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: 'faq', item: null})">FAQ</a></li>
+        </ul>
       </li>
       <li>
         <a href="">Bioinformática</a>
         <ul class="submenu-mobile">
-              <li><a href="">Serviços</a></li>
-              <li><a href="">Equipamentos</a></li>
-              <li><a href="">Equipe</a></li>
-              <li><a href="">FAQ</a></li>
-            </ul>
+          <li><a ui-sref="app.page({ page: pages.bioinformatica.slug })" ui-sref-active="active">{{pages.bioinformatica.name}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.services.slug, item: null })">{{'PAGES.SERVICES.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.equipments.slug, item: null })">{{'PAGES.EQUIPS.NAME' | translate}}</a></li>
+          <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: 'faq', item: null })">FAQ</a></li>
+        </ul>
       </li>
     </ul>
 	</header>

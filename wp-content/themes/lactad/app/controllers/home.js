@@ -13,8 +13,14 @@ app.controller('HomeController', [
             jQuery(tween.elem).text(now.toFixed(2));
           }
         }, 2500);
-        jQuery(".number:not('#tera')").animateNumber({
-          number: 80
+        jQuery("#region").animateNumber({
+          number: 14
+        }, 2500);
+        jQuery("#research").animateNumber({
+          number: 206
+        }, 2500);
+        jQuery("#courses").animateNumber({
+          number: 15
         }, 2500);
         locked = 1;
       } else if (jQuery(this).scrollTop() == 0) {

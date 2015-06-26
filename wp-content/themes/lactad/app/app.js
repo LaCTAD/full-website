@@ -718,7 +718,6 @@ var app = angular.module('app', [
 .filter('startFrom', function() {
   return function(input, start) {
     if (!input || !input.length) { return; }
-    console.log('entrei no filtro!');
     return input.slice(start);
   }
 });
