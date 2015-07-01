@@ -16,7 +16,7 @@
 
     <section class="services" ng-show="services.length > 0">
       <div class="container">
-        <h2 translate="{{pages.services.name}}"></h2>
+        <h2><a translate="{{pages.services.name}}" ui-sref="app.page.single({ page: page.slug, single: pages.services.slug, item: null})"></a></h2>
         <div class="row" ng-repeat="row in (services.length/3 | array)">
           <div ng-class="services.length > 2 ? 'col-sm-4' : 'col-sm-6'" class="col-xs-12 service" ng-repeat="service in services.slice(3*$index, 3*$index + 3)">
             <h3 ng-if="language == 'en' && post.english.english_title != false"><a style="color: {{page.color}}" ui-sref="app.page.single({ page: page.slug, single: pages.services.slug, item: service.english.english_slug })" ng-bind-html="service.english.english_title"></a></h3>
@@ -29,7 +29,7 @@
 
     <section class="equipments" ng-show="equipments.length > 0">
       <div class="container">
-        <h2 translate="{{pages.equipments.name}}"></h2>
+        <h2><a translate="{{pages.equipments.name}}" ui-sref="app.page.single({ page: page.slug, single: pages.equipments.slug, item: null})"></a></h2>
         <div class="row">
             <div ng-include src="root+'app/views/partials/equipment.html'"></div>
         </div>
@@ -40,7 +40,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <h2><a ui-sref="app.page({ page: page.slug, single: 'faq'})">FAQ</a></h2>
+            <h2><a ui-sref="app.page.single({ page: page.slug, single: 'faq', item: null})">FAQ</a></h2>
             <div ng-include src="root+'app/views/partials/faq.html'"></div>
           </div>
           <div class="col-xs-12 col-sm-6">

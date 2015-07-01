@@ -29,10 +29,6 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
     event.preventDefault();
     jQuery('.bkg').fadeIn('fast');
     centerLoader();
-    if(jQuery('.menu-trigger').hasClass('close-nav')) {
-      console.log('fechou');
-      jQuery('.menu-trigger').click();
-    }
     $timeout(function() {
       $state.go(toState, toParams, {notify: false, reload: true}).then(function(state) {
         $rootScope.$broadcast('$stateChangeSuccess', state, null);
@@ -288,26 +284,5 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
   }
 
   footerOnBottom();
-
-  // Controls menu-mobile trigger icon
-  jQuery('.menu-trigger').on('click', function(){
-    if(jQuery(this).hasClass('close-nav')) {
-      console.log('fecha!');
-      jQuery('.menu-mobile, .submenu-mobile').stop().slideUp();
-      jQuery(this).removeClass('close-nav');
-    } else {
-      console.log('abre!');
-      //animate menu icon into a cross icon
-      jQuery('.menu-mobile').stop().slideDown();
-      jQuery(this).addClass('close-nav');
-    }
-  });
-
-  // Controls the mobile menu accordion
-  jQuery('.menu-mobile > li > a').on('click', function(event) {
-    event.preventDefault();
-    //jQuery('.submenu-mobile').not(jQuery(this).next('.submenu-mobile')).slideUp();
-    jQuery(this).next('.submenu-mobile').slideToggle();
-  });
 
 });

@@ -7,19 +7,19 @@ app.controller('HomeController', [
 
     jQuery(window).scroll(function() {
       if (jQuery(this).scrollTop() < 700 && locked == 0) {
-        jQuery('#tera').animateNumber({
+        jQuery('#tera').stop().animateNumber({
           number: 10.91,
           numberStep: function(now, tween) {
             jQuery(tween.elem).text(now.toFixed(2));
           }
         }, 2500);
-        jQuery("#region").animateNumber({
+        jQuery("#region").stop().animateNumber({
           number: 14
         }, 2500);
-        jQuery("#research").animateNumber({
+        jQuery("#research").stop().animateNumber({
           number: 206
         }, 2500);
-        jQuery("#courses").animateNumber({
+        jQuery("#courses").stop().animateNumber({
           number: 15
         }, 2500);
         locked = 1;

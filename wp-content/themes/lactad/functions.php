@@ -413,6 +413,10 @@ function json_api_prepare_post( $post_response, $post, $context ) {
     $post_response['member']['linkedin'] = get_field( "linkedin", $post['ID'] );
   }
 
+  if(get_post_type($post['ID']) == 'services') {
+    $post_response['iframe_url'] = get_field( "iframe_url", $post['ID'] );
+  }
+
   $post_response['english']['english_title'] = get_field( "english-title", $post['ID'] );
   $post_response['english']['english_slug'] = sanitizeStringForUrl(get_field("english-title", $post['ID']));
   $post_response['english']['english_content'] = get_field( "english-content", $post['ID'] );

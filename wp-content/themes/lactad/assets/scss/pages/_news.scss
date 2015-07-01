@@ -12,8 +12,8 @@
   list-style: none;
 }
 
-.page .post-list,
-.page .event-list {
+.post-item,
+.event-item {
   margin: 2em 0;
 }
 
@@ -135,5 +135,6 @@
 
 .news {
   background-color: lighten(#ecf0f1, 3%);
+  padding: 2em 0;
   // border-top: 1px solid $color-text-light;
 }

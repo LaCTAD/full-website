@@ -4,7 +4,6 @@
 
 .faq {
   cursor: pointer;
-
 }
 
 .faq-icon {
@@ -33,6 +32,9 @@
 }
 
 .page-faq {
+  .faqs {
+    margin: 2em 0;
+  }
   .faq-question {
     max-width: 100%;
   }

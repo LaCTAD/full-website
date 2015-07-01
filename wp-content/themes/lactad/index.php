@@ -39,10 +39,13 @@
 	<header>
 		<div class="container">
       <div class="row">
-        <div class="col-xs-1">
-          <a class="logo" ui-sref='app.home({lang: language})' rel="home"><?php bloginfo( 'name' ); ?></a>
+        <div class="pull-left">
+          <a class="logo" ui-sref='app.home({lang: language})' rel="home">
+            <img class="img-horizontal" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/lactad_horizontal.png" height="15">
+            <img class="img-vertical" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/lactad_vertical.png" height="78">
+          </a>
         </div>
-        <div class="col-xs-11">
+        <div class="pull-right">
           <ul class="menu hidden-xs">
             <li>
               <a ui-sref="app.page({ page: pages.about.slug, single: null })" ng-class="{'active' : isAbout()}">{{ pages.about.name }}</a>
@@ -200,6 +203,31 @@
   </div>
 
 <?php wp_footer(); ?>
+<script type="text/javascript">
+  jQuery(function() {
+    // Controls menu-mobile trigger icon
+    jQuery('.menu-trigger').on('click', function(){
+      jQuery(this).toggleClass('close-nav');
+      jQuery('.submenu-mobile').each(function() {
+        jQuery(this).slideUp();
+      });
+      jQuery('.menu-mobile').stop().slideToggle();
+    });
+
+    // Controls the mobile menu accordion
+    jQuery('.menu-mobile > li > a').on('click', function(event) {
+      event.preventDefault();
+      jQuery('.submenu-mobile').not(jQuery(this).next('.submenu-mobile')).each(function() {
+        jQuery(this).slideUp();
+      });
+      jQuery(this).next('.submenu-mobile').stop().slideToggle();
+    });
+
+    jQuery('.submenu-mobile > li > a').on('click', function(event) {
+      jQuery('.menu-trigger').click();
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -1,4 +1,17 @@
-app.controller('PageController', function($scope, $rootScope, $http, $state, $stateParams, $translate, $posts, page, language, ModalService) {
+app.controller('PageController', function($scope, $rootScope, $http, $state, $stateParams, $translate, $posts, page, language, ModalService, $sce) {
+
+  $scope.showModalService = function(url) {
+    ModalService.showModal({
+      templateUrl: root.views + "modals/service.modal.html",
+      controller: "ModalController"
+    }).then(function(modal) {
+      $rootScope.iframe_url = $sce.trustAsResourceUrl(url);
+      modal.element.modal();
+      modal.close.then(function(result) {
+        console.log(result);
+      });
+    });
+  }
 
   $scope.showModalAbout = function() {
     ModalService.showModal({

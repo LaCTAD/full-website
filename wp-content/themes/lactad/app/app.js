@@ -87,7 +87,9 @@ var app = angular.module('app', [
       SERVICES: {
         NAME: 'Services',
         SLUG: 'services',
-        DESC: 'Check out the reliable services offered by our {{page}} area'
+        DESC: 'Check out the reliable services offered by our {{page}} area',
+        BUTTON_REQUEST: 'Service Request',
+        TITLE_MODAL: 'Request for Service'
       },
       EQUIPS: {
         NAME: 'Equipments',
@@ -210,7 +212,9 @@ var app = angular.module('app', [
       SERVICES: {
         NAME: 'Serviços',
         SLUG: 'servicos',
-        DESC: 'Confira os serviços oferecidos pela {{page}}'
+        DESC: 'Confira os serviços oferecidos pela {{page}}',
+        BUTTON_REQUEST: 'Solicitar Serviço',
+        TITLE_MODAL: 'Solicitação de Serviço'
       },
       EQUIPS: {
         NAME: 'Equipamentos',
