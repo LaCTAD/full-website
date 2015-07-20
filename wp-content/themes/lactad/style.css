@@ -1135,6 +1135,9 @@ footer {
 .post-list li {
   margin-bottom: 7.5px; }
 
+.event-list li {
+  margin-bottom: 30px; }
+
 .post-list li:last-child {
   margin-bottom: 0; }
 
@@ -1223,6 +1226,10 @@ footer {
 
 .event .row:last-child {
   margin-bottom: 30px; }
+
+.event-post h2 {
+  margin-top: 0;
+  margin-bottom: 7.5px; }
 
 .news {
   background-color: #f5f7f7;

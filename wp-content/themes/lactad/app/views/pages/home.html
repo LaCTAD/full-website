@@ -4,8 +4,8 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-7 light">
-          <div class="headline">{{'PAGES.INDEX.HEADLINE' | translate}}</div>
-          <div class="sub-headline">{{'PAGES.INDEX.SUBHEADLINE' | translate}}</div>
+          <div class="headline" translate="{{'PAGES.INDEX.HEADLINE'}}"></div>
+          <div class="sub-headline" translate="{{'PAGES.INDEX.SUBHEADLINE'}}"></div>
           <a class="btn-border" ui-sref="app.page({ page: pages.about.slug, single: null })" translate="{{'PAGES.INDEX.BUTTON_ABOUT'}}"></a>
           <a class="btn-border" ui-sref="app.page({ page: pages.contact.slug, single: null })" translate="{{'PAGES.INDEX.BUTTON_CONTACT'}}"></a>
         </div>
@@ -18,30 +18,30 @@
 
   <section class="statistics">
     <div class="container">
-      <h2>LaCTAD <small>em números</small></h2>
+      <h2>LaCTAD <small translate="{{'PAGES.INDEX.TITLE1'}}"></small></h2>
       <div class="row">
         <div class="col-xs-12 col-sm-3">
           <div class="number-container">
             <div id="region" class="number">0</div>
-            <div class="number-unit">Estados Atendidos</div>
+            <div class="number-unit" translate="{{'PAGES.INDEX.TITLE2'}}"></div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3">
           <div class="number-container">
             <div id="research" class="number">0</div>
-            <div class="number-unit">Pesquisadores Satisfeitos</div>
+            <div class="number-unit" translate="{{'PAGES.INDEX.TITLE3'}}"></div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3">
           <div class="number-container">
             <div id="tera" class="number">0</div>
-            <div class="number-unit">Terabases Sequenciadas</div>
+            <div class="number-unit" translate="{{'PAGES.INDEX.TITLE4'}}"></div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3">
           <div class="number-container">
             <div id="courses" class="number">0</div>
-            <div class="number-unit">Cursos Oferecidos</div>
+            <div class="number-unit" translate="{{'PAGES.INDEX.TITLE5'}}"></div>
           </div>
         </div>
       </div>
