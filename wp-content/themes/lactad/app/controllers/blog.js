@@ -2,7 +2,8 @@ app.controller('BlogController', [
   '$scope',
   '$rootScope',
   '$posts',
-  function($scope, $rootScope, $posts) {
+  '$state',
+  function($scope, $rootScope, $posts, $state) {
 
   $rootScope.currentPage = 0;
   $rootScope.pageSize = 10;

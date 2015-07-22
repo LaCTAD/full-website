@@ -21,6 +21,11 @@ var app = angular.module('app', [
         SUBHEADLINE: 'We work in the areas of Cell Biology, Genomics, Proteomics and Bioinformatics offering high quality services to the entire scientific community and private companies',
         BUTTON_ABOUT: 'About Us',
         BUTTON_CONTACT: 'Contact Us',
+        TITLE1: 'in Numbers',
+        TITLE2: 'States Assisteds',
+        TITLE3: 'Satisfied Researchers',
+        TITLE4: 'Sequenced Terabases',
+        TITLE5: 'Concluded Courses'
       },
       ABOUT: {
         NAME: 'About',
@@ -146,6 +151,11 @@ var app = angular.module('app', [
         SUBHEADLINE: 'Atuamos nas áreas de Biologia Celular, Genômica, Proteômica e Bioinformática oferecendo serviços de alta qualidade para toda a comunidade científica e empresas privadas',
         BUTTON_ABOUT: 'Saiba mais',
         BUTTON_CONTACT: 'Entre em Contato',
+        TITLE1: 'em Números',
+        TITLE2: 'Estados Atendidos',
+        TITLE3: 'Pesquisadores Satisfeitos',
+        TITLE4: 'Terabases Sequenciadas',
+        TITLE5: 'Cursos Oferecidos'
       },
       MANAGEMENT: {
         NAME: 'Plano de Gestão',
@@ -261,7 +271,7 @@ var app = angular.module('app', [
 
   /* ROUTES */
   $locationProvider.html5Mode(true);
-  //$urlRouterProvider.otherwise('/404');
+  $urlRouterProvider.otherwise('/404');
   $stateProvider
     .state('app', {
       url: '/:lang',
@@ -276,124 +286,126 @@ var app = angular.module('app', [
       },
       resolve: {
         language: ['$rootScope', '$stateParams', '$translate', '$state', function($rootScope, $stateParams, $translate, $state) {
-          console.log('Resolving Language...');
-          $translate.use($stateParams.lang).then(function() {
-            $rootScope.language = $stateParams.lang;
-            $rootScope.pages = {
-              about: {
-                id: 'sobre',
-                name: $translate.instant('PAGES.ABOUT.NAME'),
-                slug: $translate.instant('PAGES.ABOUT.SLUG'),
-                color: '#2ecc71'
-              },
-              management: {
-                id: 'gestao',
-                name: $translate.instant('PAGES.MANAGEMENT.NAME'),
-                slug: $translate.instant('PAGES.MANAGEMENT.SLUG'),
-                desc: $translate.instant('PAGES.MANAGEMENT.DESC'),
-                color: '#2ecc71'
-              },
-              press: {
-                id: 'midia',
-                name: $translate.instant('PAGES.PRESS.NAME'),
-                slug: $translate.instant('PAGES.PRESS.SLUG'),
-                color: '#2ecc71'
-              },
-              contact: {
-                id: 'contato',
-                name: $translate.instant('PAGES.CONTACT.NAME'),
-                slug: $translate.instant('PAGES.CONTACT.SLUG'),
-                color: '#2ecc71'
-              },
-              biocel: {
-                id: 'biologia-celular',
-                name: $translate.instant('PAGES.BIOCEL.NAME'),
-                slug: $translate.instant('PAGES.BIOCEL.SLUG'),
-                desc: $translate.instant('PAGES.BIOCEL.DESC'),
-                color: '#f39c12'
-              },
-              genomica: {
-                id: 'genomica',
-                name: $translate.instant('PAGES.GENOMA.NAME'),
-                slug: $translate.instant('PAGES.GENOMA.SLUG'),
-                desc: $translate.instant('PAGES.GENOMA.DESC'),
-                color: '#3498db'
-              },
-              proteomica: {
-                id: 'proteomica',
-                name: $translate.instant('PAGES.PROTEOMA.NAME'),
-                slug: $translate.instant('PAGES.PROTEOMA.SLUG'),
-                desc: $translate.instant('PAGES.PROTEOMA.DESC'),
-                color: '#e74c3c'
-              },
-              bioinformatica: {
-                id: 'bioinformatica',
-                name: $translate.instant('PAGES.BIOINFO.NAME'),
-                slug: $translate.instant('PAGES.BIOINFO.SLUG'),
-                desc: $translate.instant('PAGES.BIOINFO.DESC'),
-                color: '#9b59b6'
-              },
-              blog: {
-                id: 'blog',
-                name: $translate.instant('PAGES.BLOG.NAME'),
-                slug: $translate.instant('PAGES.BLOG.SLUG'),
-                color: '#2ecc71'
-              },
-              events: {
-                id: 'events',
-                name: $translate.instant('PAGES.EVENTS.NAME'),
-                slug: $translate.instant('PAGES.EVENTS.SLUG'),
-                color: '#2ecc71',
-                subpages: {
-                  goals: {
-                    name: $translate.instant('PAGES.EVENTS.SUBPAGES.GOALS.NAME'),
-                    slug: $translate.instant('PAGES.EVENTS.SUBPAGES.GOALS.SLUG'),
-                  },
-                  schedule: {
-                    name: $translate.instant('PAGES.EVENTS.SUBPAGES.SCHEDULE.NAME'),
-                    slug: $translate.instant('PAGES.EVENTS.SUBPAGES.SCHEDULE.SLUG'),
-                  },
-                  speakers: {
-                    name: $translate.instant('PAGES.EVENTS.SUBPAGES.SPEAKERS.NAME'),
-                    slug: $translate.instant('PAGES.EVENTS.SUBPAGES.SPEAKERS.SLUG'),
-                  },
-                  registered: {
-                    name: $translate.instant('PAGES.EVENTS.SUBPAGES.REGISTERED.NAME'),
-                    slug: $translate.instant('PAGES.EVENTS.SUBPAGES.REGISTERED.SLUG'),
-                  },
-                  selected: {
-                    name: $translate.instant('PAGES.EVENTS.SUBPAGES.SELECTED.NAME'),
-                    slug: $translate.instant('PAGES.EVENTS.SUBPAGES.SELECTED.SLUG'),
+          if($stateParams.lang == 'en' || $stateParams.lang == 'br') {
+            console.log('Resolving Language...');
+            $translate.use($stateParams.lang).then(function() {
+              $rootScope.language = $stateParams.lang;
+              $rootScope.pages = {
+                about: {
+                  id: 'sobre',
+                  name: $translate.instant('PAGES.ABOUT.NAME'),
+                  slug: $translate.instant('PAGES.ABOUT.SLUG'),
+                  color: '#2ecc71'
+                },
+                management: {
+                  id: 'gestao',
+                  name: $translate.instant('PAGES.MANAGEMENT.NAME'),
+                  slug: $translate.instant('PAGES.MANAGEMENT.SLUG'),
+                  desc: $translate.instant('PAGES.MANAGEMENT.DESC'),
+                  color: '#2ecc71'
+                },
+                press: {
+                  id: 'midia',
+                  name: $translate.instant('PAGES.PRESS.NAME'),
+                  slug: $translate.instant('PAGES.PRESS.SLUG'),
+                  color: '#2ecc71'
+                },
+                contact: {
+                  id: 'contato',
+                  name: $translate.instant('PAGES.CONTACT.NAME'),
+                  slug: $translate.instant('PAGES.CONTACT.SLUG'),
+                  color: '#2ecc71'
+                },
+                biocel: {
+                  id: 'biologia-celular',
+                  name: $translate.instant('PAGES.BIOCEL.NAME'),
+                  slug: $translate.instant('PAGES.BIOCEL.SLUG'),
+                  desc: $translate.instant('PAGES.BIOCEL.DESC'),
+                  color: '#f39c12'
+                },
+                genomica: {
+                  id: 'genomica',
+                  name: $translate.instant('PAGES.GENOMA.NAME'),
+                  slug: $translate.instant('PAGES.GENOMA.SLUG'),
+                  desc: $translate.instant('PAGES.GENOMA.DESC'),
+                  color: '#3498db'
+                },
+                proteomica: {
+                  id: 'proteomica',
+                  name: $translate.instant('PAGES.PROTEOMA.NAME'),
+                  slug: $translate.instant('PAGES.PROTEOMA.SLUG'),
+                  desc: $translate.instant('PAGES.PROTEOMA.DESC'),
+                  color: '#e74c3c'
+                },
+                bioinformatica: {
+                  id: 'bioinformatica',
+                  name: $translate.instant('PAGES.BIOINFO.NAME'),
+                  slug: $translate.instant('PAGES.BIOINFO.SLUG'),
+                  desc: $translate.instant('PAGES.BIOINFO.DESC'),
+                  color: '#9b59b6'
+                },
+                blog: {
+                  id: 'blog',
+                  name: $translate.instant('PAGES.BLOG.NAME'),
+                  slug: $translate.instant('PAGES.BLOG.SLUG'),
+                  color: '#2ecc71'
+                },
+                events: {
+                  id: 'events',
+                  name: $translate.instant('PAGES.EVENTS.NAME'),
+                  slug: $translate.instant('PAGES.EVENTS.SLUG'),
+                  color: '#2ecc71',
+                  subpages: {
+                    goals: {
+                      name: $translate.instant('PAGES.EVENTS.SUBPAGES.GOALS.NAME'),
+                      slug: $translate.instant('PAGES.EVENTS.SUBPAGES.GOALS.SLUG'),
+                    },
+                    schedule: {
+                      name: $translate.instant('PAGES.EVENTS.SUBPAGES.SCHEDULE.NAME'),
+                      slug: $translate.instant('PAGES.EVENTS.SUBPAGES.SCHEDULE.SLUG'),
+                    },
+                    speakers: {
+                      name: $translate.instant('PAGES.EVENTS.SUBPAGES.SPEAKERS.NAME'),
+                      slug: $translate.instant('PAGES.EVENTS.SUBPAGES.SPEAKERS.SLUG'),
+                    },
+                    registered: {
+                      name: $translate.instant('PAGES.EVENTS.SUBPAGES.REGISTERED.NAME'),
+                      slug: $translate.instant('PAGES.EVENTS.SUBPAGES.REGISTERED.SLUG'),
+                    },
+                    selected: {
+                      name: $translate.instant('PAGES.EVENTS.SUBPAGES.SELECTED.NAME'),
+                      slug: $translate.instant('PAGES.EVENTS.SUBPAGES.SELECTED.SLUG'),
+                    }
                   }
+                },
+                services: {
+                  id: 'services',
+                  name: $translate.instant('PAGES.SERVICES.NAME'),
+                  slug: $translate.instant('PAGES.SERVICES.SLUG'),
+                  color: ''
+                },
+                equipments: {
+                  id: 'equipments',
+                  name: $translate.instant('PAGES.EQUIPS.NAME'),
+                  slug: $translate.instant('PAGES.EQUIPS.SLUG'),
+                  color: ''
+                },
+                teams: {
+                  id: 'members',
+                  name: $translate.instant('PAGES.TEAM.NAME'),
+                  slug: $translate.instant('PAGES.TEAM.SLUG'),
+                  color: ''
+                },
+                faq: {
+                  id: 'faq',
+                  name: 'FAQ',
+                  slug: 'faqs',
+                  color: ''
                 }
-              },
-              services: {
-                id: 'services',
-                name: $translate.instant('PAGES.SERVICES.NAME'),
-                slug: $translate.instant('PAGES.SERVICES.SLUG'),
-                color: ''
-              },
-              equipments: {
-                id: 'equipments',
-                name: $translate.instant('PAGES.EQUIPS.NAME'),
-                slug: $translate.instant('PAGES.EQUIPS.SLUG'),
-                color: ''
-              },
-              teams: {
-                id: 'members',
-                name: $translate.instant('PAGES.TEAM.NAME'),
-                slug: $translate.instant('PAGES.TEAM.SLUG'),
-                color: ''
-              },
-              faq: {
-                id: 'faq',
-                name: 'FAQ',
-                slug: 'faqs',
-                color: ''
               }
-            }
-          });
-           return $stateParams.lang;
+            });
+            return $stateParams.lang;
+          }
         }]
       }
     })
@@ -401,6 +413,11 @@ var app = angular.module('app', [
       url: '',
       templateUrl: root.views + 'pages/home.html',
       controller: 'HomeController'
+    })
+    .state('error', {
+      url: '/404',
+      templateUrl: root.views + 'pages/error.html',
+      controller: 'ErrorController'
     })
     .state('app.page', {
       url: '/:page',
@@ -465,25 +482,30 @@ var app = angular.module('app', [
                 $rootScope.clippings = data;
               });
               break;
-            default:
-              switch($stateParams.page) {
-                case 'cell-biology':
-                case 'biologia-celular':
-                  $rootScope.page = $rootScope.pages.biocel;
-                  break;
-                case 'genomica':
-                case 'genomics':
-                  $rootScope.page = $rootScope.pages.genomica;
-                  break;
-                case 'proteomics':
-                case 'proteomica':
-                  $rootScope.page = $rootScope.pages.proteomica;
-                  break;
-                case 'bioinformatics':
-                case 'bioinformatica':
-                  $rootScope.page = $rootScope.pages.bioinformatica;
-                  break;
-              }
+            case 'cell-biology':
+            case 'biologia-celular':
+              $rootScope.page = $rootScope.pages.biocel;
+              $posts.category('services', $rootScope.page.id).then(function(data) {
+                $rootScope.services = data;
+              });
+              break;
+            case 'genomica':
+            case 'genomics':
+              $rootScope.page = $rootScope.pages.genomica;
+              $posts.category('services', $rootScope.page.id).then(function(data) {
+                $rootScope.services = data;
+              });
+              break;
+            case 'proteomics':
+            case 'proteomica':
+              $rootScope.page = $rootScope.pages.proteomica;
+              $posts.category('services', $rootScope.page.id).then(function(data) {
+                $rootScope.services = data;
+              });
+              break;
+            case 'bioinformatics':
+            case 'bioinformatica':
+              $rootScope.page = $rootScope.pages.bioinformatica;
               $posts.category('services', $rootScope.page.id).then(function(data) {
                 $rootScope.services = data;
               });
@@ -527,8 +549,10 @@ var app = angular.module('app', [
             if(language == 'en') {
               $posts.type('events').then(function(data) {
                 $rootScope.event = null;
+                $rootScope.noEventEng = true;
                 for(var i = 0; i < data.length; i++) {
                   if(data[i].english.english_slug == $stateParams.single) {
+                    $rootScope.noEventEng = false;
                     $rootScope.event = data[i];
                     $rootScope.registrationOpen = moment().isBefore($rootScope.event.event.register_close_date);
                     $rootScope.page.single = $rootScope.event.slug;
@@ -577,13 +601,87 @@ var app = angular.module('app', [
                     }
                   }
                 }
+                if($rootScope.noEventEng == true) {
+                  $posts.typeName('events', $stateParams.single).then(function(data) {
+                    $rootScope.event = data[0];
+                    $rootScope.registrationOpen = moment().isBefore($rootScope.event.event.register_close_date);
+                    $rootScope.page.single = $rootScope.event.slug;
+                    $rootScope.page.english_single = $rootScope.event.slug;
+                    $rootScope.activeItem = {};
+                    if($stateParams.item) {
+                      $rootScope.hasItem = true;
+                      switch($stateParams.item) {
+                        case 'goals':
+                          if($rootScope.event.english.english_goals) {
+                            $rootScope.activeItem.content = $rootScope.event.english.english_goals;
+                          } else {
+                            $rootScope.activeItem.content = '<p>Sorry. This information is only avaiable in Portuguese.</p>';
+                          }
+                          $rootScope.activeItem.title = "Goals";
+                          $rootScope.page.item = 'objetivo';
+                          $rootScope.page.english_item = 'goals';
+                          break;
+                        case 'schedule':
+                          if($rootScope.event.english.english_schedule) {
+                            $rootScope.activeItem.content = $rootScope.event.english.english_schedule;
+                          } else {
+                            $rootScope.activeItem.content = '<p>Sorry. This information is only avaiable in Portuguese.</p>';
+                          }
+                          $rootScope.activeItem.title = "Schedule";
+                          $rootScope.page.item = 'programacao';
+                          $rootScope.page.english_item = 'schedule';
+                          break;
+                        case 'speakers':
+                          if($rootScope.event.english.english_speakers) {
+                            $rootScope.activeItem.content = $rootScope.event.english.english_speakers;
+                          } else {
+                            $rootScope.activeItem.content = '<p>Sorry. This information is only avaiable in Portuguese.</p>';
+                          }
+                          $rootScope.activeItem.title = "Speakers";
+                          $rootScope.page.item = 'palestrantes';
+                          $rootScope.page.english_item = 'speakers';
+                          break;
+                        case 'registered':
+                          if($rootScope.event.english.english_registered_users) {
+                            $rootScope.activeItem.content = $rootScope.event.english.english_registered_users;
+                          } else {
+                            $rootScope.activeItem.content = '<p>Sorry. This information is only avaiable in Portuguese.</p>';
+                          }
+                          $rootScope.activeItem.title = "Registered";
+                          $rootScope.page.item = 'inscritos';
+                          $rootScope.page.english_item = 'registered';
+                          break;
+                        case 'selected':
+                          if($rootScope.event.english.english_selected_users) {
+                            $rootScope.activeItem.content = $rootScope.event.english.english_selected_users;
+                          } else {
+                            $rootScope.activeItem.content = '<p>Sorry. This information is only avaiable in Portuguese.</p>';
+                          }
+                          $rootScope.activeItem.title = "Selected";
+                          $rootScope.page.item = 'selecionados';
+                          $rootScope.page.english_item = 'selected';
+                          break;
+                      }
+                    } else {
+                      $rootScope.hasItem = false;
+                      $rootScope.activeItem.content = '<p>Sorry. This information is only avaiable in Portuguese.</p>';
+                      $rootScope.activeItem.title = "Goals";
+                      $rootScope.page.item = 'objetivo';
+                      $rootScope.page.english_item = 'goals';
+                    }
+                  });
+                }
               });
             } else {
               $posts.typeName('events', $stateParams.single).then(function(data) {
                 $rootScope.event = data[0];
                 $rootScope.registrationOpen = moment().isBefore($rootScope.event.event.register_close_date);
                 $rootScope.page.single = $rootScope.event.slug;
-                $rootScope.page.english_single = $rootScope.event.english.english_slug;
+                if($rootScope.event.english.english_slug) {
+                  $rootScope.page.english_single = $rootScope.event.english.english_slug;
+                } else {
+                  $rootScope.page.english_single = $rootScope.event.slug;
+                }
                 $rootScope.activeItem = {};
                 if($stateParams.item) {
                   $rootScope.hasItem = true;
@@ -630,14 +728,23 @@ var app = angular.module('app', [
             }
           } else if(page.slug == 'blog') {
             if(language == 'en') {
+              $rootScope.noEng = true;
               $posts.all().then(function(data) {
                 $rootScope.post = null;
                 for(var i = 0; i < data.length; i++) {
                   if(data[i].english.english_slug == $stateParams.single) {
+                    $rootScope.noEng = false;
                     $rootScope.post = data[i];
                     $rootScope.page.single = $rootScope.post.slug;
-                    $rootScope.page.english_single = $rootScope.post.english.english_slug;
+                    $rootScope.page.english_single = $rootScope.page.single;
                   }
+                }
+                if($rootScope.noEng == true) {
+                  $posts.name($stateParams.single).then(function(data) {
+                    $rootScope.post = data[0];
+                    $rootScope.page.single = $rootScope.post.slug;
+                    $rootScope.page.english_single = $rootScope.post.slug;
+                  });
                 }
               });
             } else {
@@ -645,6 +752,13 @@ var app = angular.module('app', [
                 $rootScope.post = data[0];
                 $rootScope.page.single = $rootScope.post.slug;
                 $rootScope.page.english_single = $rootScope.post.english.english_slug;
+                if($rootScope.post.english.english_slug) {
+                  $rootScope.noEng = false;
+                  $rootScope.page.english_single = $rootScope.post.english.english_slug;
+                } else {
+                  $rootScope.noEng = true;
+                  $rootScope.page.english_single = $rootScope.post.slug;
+                }
               });
             }
           } else {

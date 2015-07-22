@@ -1,5 +1,9 @@
 app.controller('PageController', function($scope, $rootScope, $http, $state, $stateParams, $translate, $posts, page, language, ModalService, $sce) {
 
+  if(page == null) {
+    $state.go('error');
+  }
+
   $scope.showModalService = function(url) {
     ModalService.showModal({
       templateUrl: root.views + "modals/service.modal.html",

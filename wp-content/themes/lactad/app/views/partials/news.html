@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 post-list-container">
-        <h2><a ui-sref="app.page({ page: 'blog' })">{{pages.blog.name}}</a></h2>
+        <h2><a ui-sref="app.page({ page: 'blog' })" translate="{{pages.blog.name}}"></a></h2>
         <div ng-include src="root+'app/views/blog/blog.list.html'"></div>
       </div>
       <div class="col-xs-12 col-sm-6 ">
         <h2>
-          <a ui-sref="app.page({ page: 'eventos' })" ng-show="language != 'en'">{{'PAGES.EVENTS.NAME' | translate}}</a>
-          <a ui-sref="app.page({ page: 'events' })" ng-show="language == 'en'">{{'PAGES.EVENTS.NAME' | translate}}</a>
+          <a ui-sref="app.page({ page: 'eventos' })" ng-show="language != 'en'" translate="{{'PAGES.EVENTS.NAME'}}"></a>
+          <a ui-sref="app.page({ page: 'events' })" ng-show="language == 'en'" translate="{{'PAGES.EVENTS.NAME'}}"></a>
         </h2>
         <div ng-include src="root+'app/views/event/event.list.html'"></div>
       </div>

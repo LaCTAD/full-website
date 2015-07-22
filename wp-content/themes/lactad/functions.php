@@ -101,6 +101,14 @@ function my_scripts() {
 
   /* Loading controllers */
   wp_enqueue_script(
+    'error',
+    get_stylesheet_directory_uri() . '/app/controllers/error.js',
+    array('app'),
+    null,
+    true
+  );
+
+  wp_enqueue_script(
     'main',
     get_stylesheet_directory_uri() . '/app/controllers/main.js',
     array('app'),

@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-  <div class="post-item">
+  <div class="post-item" ng-if="!noEng || language == 'br'">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -21,6 +21,15 @@
         <div class="col-xs-12">
           <div class="post-content" ng-bind-html="post.content" ng-show="language != 'en' || post.english.english_title == false"></div>
           <div class="post-content" ng-bind-html="post.english.english_content" ng-show="language == 'en' && post.english.english_title != false"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="post-item" ng-if="noEng && language == 'en'">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          Sorry. This post is only avaiable in <a href="" ng-click="setLanguage('br')">Portuguese</a>.
         </div>
       </div>
     </div>

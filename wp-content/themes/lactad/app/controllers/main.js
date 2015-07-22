@@ -24,6 +24,11 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
     }
   }
 
+  // Errors
+  if($stateParams.lang != 'en' && $stateParams.lang != 'br') {
+    $state.go('error');
+  }
+
   // Loader
   $scope.$on('$stateChangeStart', function(event, toState, toParams) {
     event.preventDefault();
