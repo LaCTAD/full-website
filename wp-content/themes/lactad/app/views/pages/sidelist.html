@@ -32,8 +32,10 @@
                 <li ng-if="language == 'en' && post.english.english_title != false" ng-repeat="item in items" ng-bind-html="item.english.english_title" ui-sref="app.page.single({ page: page.slug, single: page.single, item: item.english.english_slug })" ui-sref-active="active"></li>
               </ul>
             </div>
+
             <h2 ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="activeItem.title"></h2>
             <h2 ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_title"></h2>
+
             <div ng-if="page.single == 'servicos' || page.single == 'services'">
               <button class="btn-border-dark" href="" ng-class="{'disabled' : !activeItem.iframe_url}" ng-disabled="!activeItem.iframe_url" ng-click="showModalService(activeItem.iframe_url)" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}"></button>
             </div>
@@ -41,8 +43,14 @@
             <div class="item-image" ng-if="activeItem.image">
               <img ng-src="{{activeItem.image.sizes.medium}}" height="{{ activeItem.image.height <= 300 ? 'auto' : '300' }}" width="{{ activeItem.image.height <= 300 ? '100%' : 'auto' }}"/>
             </div>
+
             <div ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="activeItem.content"></div>
             <div ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_content"></div>
+
+            <div ng-if="page.id == 'biologia-celular' &&  (page.single == 'servicos' || page.single == 'services')">
+              <iframe src="https://www.google.com/calendar/embed?src=lactad.formularios%40gmail.com&ctz=America/Sao_Paulo" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+
           </div>
         </div>
       </div>
