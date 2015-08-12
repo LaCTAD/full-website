@@ -232,6 +232,9 @@ h2 a {
   h2 a:hover {
     color: #2ecc71; }
 
+small {
+  font-size: 0.8em; }
+
 a,
 a:active,
 a:focus {
@@ -733,10 +736,12 @@ table {
   table thead {
     background: #d9dcde; }
     table thead th {
-      border: 1px solid white; }
+      border: 1px solid white;
+      padding: 7.5px; }
   table tbody td {
     border: 1px solid #d9dcde;
-    padding: 7.5px; }
+    padding: 7.5px;
+    text-align: center; }
 
 .modal-backdrop {
   transition: all 1s;

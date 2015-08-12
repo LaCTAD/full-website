@@ -146,12 +146,14 @@ table {
     background: $color-text-light;
     th {
       border: 1px solid white;
+      padding: 7.5px;
     }
   }
   tbody {
     td {
       border: 1px solid $color-text-light;
       padding: 7.5px;
+      text-align: center;
     }
   }
 }
