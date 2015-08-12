@@ -12,6 +12,44 @@
 
   <section class="content">
     <div class="container">
+      <div class="row" ng-if="page.id == 'biologia-celular' &&  (page.single == 'servicos' || page.single == 'services')">
+        <div class="col-xs-12">
+          <div ng-if="language != 'en'">
+            <h3>Nossos custos de Biologia Celular – válidos a partir de 01/04/2015</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Serviço</th>
+                  <th>Acadêmico UNICAMP</th>
+                  <th>Acadêmico Externo</th>
+                  <th>Não Acadêmico (Empresas)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Microscopia Confocal</th>
+                  <th>R$ 75,00 / hora</th>
+                  <th>R$ 92,00 / hora</th>
+                  <th>R$ 255,00 / hora</th>
+                </tr>
+                <tr>
+                  <th>Imunoensaio Multiplex*</th>
+                  <th>R$ 150,00 / placa</th>
+                  <th>R$ 184,00 / placa</th>
+                  <th>R$ 450,00 / placa</th>
+                </tr>
+                <tr>
+                  <th>Citometria de Fluxo</th>
+                  <th>R$ 95,00 / hora</th>
+                  <th>R$ 117,00 / hora</th>
+                  <th>R$ 285,00 / hora</th>
+                </tr>
+              </tbody>
+            </table>
+            <b>* Valor não inclui os reagentes.</b>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="side-list" >
           <div class="col-xs-12 col-sm-4">
