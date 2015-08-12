@@ -727,6 +727,7 @@ body {
     margin-right: 7.5px; }
 
 table {
+  font-size: 0.9em;
   width: 100%;
   margin-bottom: 15px; }
   table thead {
