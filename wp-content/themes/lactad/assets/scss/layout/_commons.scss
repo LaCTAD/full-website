@@ -137,3 +137,20 @@ section {
     margin-right: 7.5px;
   }
 }
+
+table {
+  width: 100%;
+  margin-bottom: 15px;
+  thead {
+    background: $color-text-light;
+    th {
+      border: 1px solid white;
+    }
+  }
+  tbody {
+    td {
+      border: 1px solid $color-text-light;
+      padding: 7.5px;
+    }
+  }
+}
