@@ -3,6 +3,7 @@ require_once('assets/php/PHPMailer/class.phpmailer.php');
 
 if($_POST['type'] == 'contact') {
   $email = new PHPMailer();
+  $email->IsSMTP();
   $email->From      = $_POST['email'];
   $email->FromName  = $_POST['name'];
   $email->Subject   = $_POST['subject'];
@@ -10,7 +11,17 @@ if($_POST['type'] == 'contact') {
   $email->AddAddress( 'dsfugimoto@gmail.com' );
   $email->AddAttachment( $_POST['file'] );
 
-  return $email->Send();
+  $send = $email->Send();
+
+  $email->ClearAllRecipients();
+  $email->ClearAttachments();
+  // Exibe uma mensagem de resultado
+  if ($send) {
+    echo "E-mail enviado com sucesso!";
+  } else {
+    echo "Não foi possível enviar o e-mail.";
+    echo "<b>Informações do erro:</b> " . $email->ErrorInfo;
+  }
 }
 
 ?>
