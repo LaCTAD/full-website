@@ -53,13 +53,11 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     $scope.contact['g-recaptcha-response'] = grecaptcha.getResponse();
     console.log($scope.contact);
     if($scope.contact.name != '' && $scope.contact.email != '' && $scope.contact.subject != '' && $scope.contact.message != '') {
+      var formData = new FormData($scope.contact);
       jQuery.ajax({
         type: "POST",
         url: root.root + "send.php",
-        cache: false,
-        contentType: false,
-        processData: false,
-        data: $scope.contact,
+        data: formData,
         success: function() {
           if($scope.contact['g-recaptcha-response'].length != 0) {
             console.log('sucesso!');
@@ -68,7 +66,10 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
             console.log('erro!');
             jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Erro ao enviar a mensagem!</b> Por favor, preencha o Captcha corretamente!</p>");
           }
-        }
+        },
+        cache: false,
+        contentType: false,
+        processData: false
       });
     }
   }

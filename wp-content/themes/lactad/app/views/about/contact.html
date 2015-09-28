@@ -15,7 +15,7 @@
         <div class="col-xs-12 col-sm-6">
           <h2 translate="{{'PAGES.CONTACT.TITLE1' | translate }}"></h2>
           <p translate="{{'PAGES.CONTACT.TEXT1' | translate}}"></p>
-          <form method="POST">
+          <form method="POST" enctype="multipart/form-data">
             <input required="required" name="name" ng-model="contact.name" type="text" placeholder="{{'PAGES.CONTACT.TITLE3' | translate}}" />
             <input required="required" name="email" ng-model="contact.email" type="email" placeholder="E-mail" />
             <input required="required" name="subject" ng-model="contact.subject" type="text" placeholder="{{'PAGES.CONTACT.TITLE4' | translate}}" />
