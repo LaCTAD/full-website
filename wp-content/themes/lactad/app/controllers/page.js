@@ -56,9 +56,11 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       jQuery.ajax({
         type: "POST",
         url: root.root + "send.php",
+        cache: false,
+        contentType: false,
+        processData: false,
         data: $scope.contact,
         success: function() {
-          console.log();
           if($scope.contact['g-recaptcha-response'].length != 0) {
             console.log('sucesso!');
             jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
