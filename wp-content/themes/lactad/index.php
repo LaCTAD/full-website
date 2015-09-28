@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
 	<?php wp_head(); ?>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
   <div class="pre-header">
