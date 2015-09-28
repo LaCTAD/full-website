@@ -56,9 +56,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       jQuery.ajax({
         type: "POST",
         url: root.root + "send.php",
-        contentType: false,
-        cache: false,
-        processData:false,
+       
         data: $scope.contact,
         success: function() {
           console.log('sucesso!');
