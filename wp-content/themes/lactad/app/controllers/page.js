@@ -50,13 +50,11 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
   }
 
   $scope.sendMail = function() {
-    console.log($scope.contact);
-    console.log(root.root + 'send.php');
+    $scope.contact.g-recaptcha-response = grecaptcha.getResponse();
     if($scope.contact.name != '' && $scope.contact.email != '' && $scope.contact.subject != '' && $scope.contact.message != '') {
       jQuery.ajax({
         type: "POST",
         url: root.root + "send.php",
-       
         data: $scope.contact,
         success: function() {
           console.log('sucesso!');
