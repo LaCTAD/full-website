@@ -6,7 +6,7 @@
 	$email->From      = $_POST['email'];
 	$email->FromName  = $_POST['name'];
 	$email->Subject   = $_POST['subject'];
-	$email->Body      = $_POST['message'];
+	$email->Body      = "olar";
 	$email->AddAddress( 'dsfugimoto@gmail.com' );
 	$email->AddAttachment( $_POST['file'] );
 
