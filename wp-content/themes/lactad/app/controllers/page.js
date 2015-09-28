@@ -57,6 +57,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
         url: root.root + "send.php",
         data: $scope.contact,
         success: function() {
+          console.log($scope.contact['g-recaptcha-response']);
           console.log('sucesso!');
           jQuery('.log-message').html("<p style='margin-bottom: 30px;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
         }
