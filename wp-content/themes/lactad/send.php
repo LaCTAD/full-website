@@ -3,10 +3,12 @@
 
     $email = new PHPMailer;
     $email->IsSendmail();
-    $email->setFrom($_POST['email'], $_POST['name']);
+    $email->setFrom("lactad@unicamp.br", "Site LaCTAD");
 	$email->Subject   = $_POST['subject'];
-	$email->Body      = "olar";
-	$email->AddAddress( 'dsfugimoto@gmail.com');
+	$email->Body      = $_POST['message'];
+	$email->AddAddress('dsfugimoto@gmail.com');
+	$email->AddAddress('bidu.pub@gmail.com');
+	$email->AddAddress('sandra.krauchenco@reitoria.unicamp.br');
 	$email->AddReplyTo($_POST['email'], $_POST['name']); 
 	$email->AddAttachment( $_POST['file'] );
 	$email->HeaderLine("Organization" , "LaCTAD"); 
@@ -31,21 +33,3 @@
 		echo "Não foi possível enviar o e-mail.";
 		echo "<b>Informações do erro:</b> " . $email->ErrorInfo;
 	}
-	echo "<table>";
- 
-
-
-    foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
-
-
-
-echo "</table>";
