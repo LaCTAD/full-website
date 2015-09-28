@@ -3,11 +3,11 @@
 
     $email = new PHPMailer;
     $email->IsSendmail();
-	$email->From      = $_POST['email'];
-	$email->FromName  = $_POST['name'];
+    $email->setFrom($_POST['email'], $_POST['name']);
 	$email->Subject   = $_POST['subject'];
 	$email->Body      = "olar";
-	$email->AddAddress( 'dsfugimoto@gmail.com' );
+	$email->AddAddress( 'dsfugimoto@gmail.com');
+	$email->AddReplyTo($_POST['email'], $_POST['name']); 
 	$email->AddAttachment( $_POST['file'] );
 	$email->HeaderLine("Organization" , "LaCTAD"); 
 	$email->HeaderLine("Content-Transfer-encoding" , "8bit");
