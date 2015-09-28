@@ -1,5 +1,5 @@
 <?php
-require_once('assets/php/PHPMailer/class.phpmailer.php');
+require_once('assets/php/PHPMailer/PHPMailerAutoload.php');
 
 if($_POST['type'] == 'contact') {
   $email = new PHPMailer();
