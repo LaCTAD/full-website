@@ -2,7 +2,8 @@
 require_once('assets/php/PHPMailer/PHPMailerAutoload.php');
 
 if($_POST['type'] == 'contact') {
-  $email = new PHPMailer();
+    $email = new PHPMailer();
+    $email->IsSendmail();
   $email->From      = $_POST['email'];
   $email->FromName  = $_POST['name'];
   $email->Subject   = $_POST['subject'];
