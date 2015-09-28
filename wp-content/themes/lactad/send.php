@@ -31,7 +31,7 @@
 		echo "Não foi possível enviar o e-mail.";
 		echo "<b>Informações do erro:</b> " . $email->ErrorInfo;
 	}
-	<table>
+	echo "<table>";
  
 
 
@@ -48,5 +48,4 @@
 
 
 
-</table>
-?>
+echo "</table>";
