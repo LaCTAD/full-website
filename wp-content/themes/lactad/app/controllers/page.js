@@ -53,10 +53,16 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     $scope.contact['g-recaptcha-response'] = grecaptcha.getResponse();
     console.log($scope.contact);
     if($scope.contact.name != '' && $scope.contact.email != '' && $scope.contact.subject != '' && $scope.contact.message != '') {
+      var formData = new FormData($scope.contact);
+      console.log(formData);
       jQuery.ajax({
         type: "POST",
         url: root.root + "send.php",
-        data: $scope.contact,
+        data: formData,
+        async: false,
+        cache: false,
+        contentType: false,
+        processData: false,
         success: function() {
           if($scope.contact['g-recaptcha-response'].length != 0) {
             console.log('sucesso!');
