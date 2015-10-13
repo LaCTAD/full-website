@@ -11,7 +11,7 @@
 		$email->Body      = $_POST['message'];
 		$email->AddAddress('dsfugimoto@gmail.com');
 		$email->AddAddress('bidu.pub@gmail.com');
-		$email->AddAddress('adm.lactad@reitoria.unicamp.br');
+		$email->AddAddress('lactad.adm@reitoria.unicamp.br');
 		$email->AddReplyTo($_POST['email'], $_POST['name']);
 		$email->AddAttachment( $_POST['file'] );
 		$email->HeaderLine("Organization" , "LaCTAD");
