@@ -6,12 +6,12 @@
 	if ($resp->isSuccess()) {
 	$email = new PHPMailer;
 	$email->IsSendmail();
-	  $email->setFrom("lactad@unicamp.br", "Site LaCTAD");
+	  $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
 		$email->Subject   = $_POST['subject'];
 		$email->Body      = $_POST['message'];
 		$email->AddAddress('dsfugimoto@gmail.com');
 		$email->AddAddress('bidu.pub@gmail.com');
-		$email->AddAddress('lactad.adm@reitoria.unicamp.br');
+		$email->AddAddress('adm.lactad@reitoria.unicamp.br');
 		$email->AddReplyTo($_POST['email'], $_POST['name']);
 		$email->AddAttachment( $_POST['file'] );
 		$email->HeaderLine("Organization" , "LaCTAD");
