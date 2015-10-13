@@ -1,11 +1,11 @@
 <?php
 	require('assets/php/recaptcha/src/autoload.php');
 	require_once('assets/php/PHPMailer/PHPMailerAutoload.php');
-	$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+	$recaptcha = new \ReCaptcha\ReCaptcha('6LcZfQcTAAAAADvQsJYFsGvgRdX68KOIIWN9D4NO');
 	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 	if ($resp->isSuccess()) {
-    $email = new PHPMailer;
-	  $email->IsSendmail();
+	$email = new PHPMailer;
+	$email->IsSendmail();
 	  $email->setFrom("lactad@unicamp.br", "Site LaCTAD");
 		$email->Subject   = $_POST['subject'];
 		$email->Body      = $_POST['message'];
