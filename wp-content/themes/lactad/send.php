@@ -1,7 +1,7 @@
 <?php
     require('assets/php/recaptcha/src/autoload.php');
     require_once('assets/php/PHPMailer/PHPMailerAutoload.php');
-    require('wp-config.php');
+    require('../../../wp-config.php');
 
     $emails = CONTACT_EMAILS;
     $emails = explode(', ', $emails);
