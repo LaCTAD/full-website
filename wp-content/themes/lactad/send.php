@@ -5,6 +5,7 @@
 
     $emails = CONTACT_EMAILS;
     $emails = explode(', ', $emails);
+
 	$recaptcha = new \ReCaptcha\ReCaptcha('6LcZfQcTAAAAADvQsJYFsGvgRdX68KOIIWN9D4NO');
 	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
     if ($resp->isSuccess())
@@ -14,9 +15,9 @@
         $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
         $email->Subject   = utf8_decode($_POST['subject']);
         $email->Body      = utf8_decode($_POST['message']);
-        foreach ($emails as $email)
+        foreach ($emails as $email_address)
         {
-            $email->AddAddress($email);
+            $email->AddAddress($email_address);
         }
         $email->AddReplyTo(utf8_decode($_POST['email']), utf8_decode($_POST['name']));
         $email->AddAttachment( $_POST['file'] );
@@ -44,4 +45,4 @@
     else
     {
         $errors = $resp->getErrorCodes();
-	}
+    }
