@@ -7,13 +7,13 @@
 	$email = new PHPMailer;
 	$email->IsSendmail();
 	  $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
-		$email->Subject   = $_POST['subject'];
-		$email->Body      = $_POST['message'];
+		$email->Subject   = utf8_decode($_POST['subject']);
+		$email->Body      = utf8_decode($_POST['message']);
 		$email->AddAddress('dsfugimoto@gmail.com');
 		$email->AddAddress('bidu.pub@gmail.com');
         $email->AddAddress('adm.lactad@reitoria.unicamp.br');
         $email->AddAddress('sandra.krauchenco@reitoria.unicamp.br');
-		$email->AddReplyTo($_POST['email'], $_POST['name']);
+		$email->AddReplyTo(utf8_decode($_POST['email']), utf8_decode($_POST['name']));
 		$email->AddAttachment( $_POST['file'] );
 		$email->HeaderLine("Organization" , "LaCTAD");
 		$email->HeaderLine("Content-Transfer-encoding" , "8bit");
