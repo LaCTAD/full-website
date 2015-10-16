@@ -2,3 +2,4 @@
 .htaccess
 wp-content/advanced-cache.php
 wp-config*
+wp-config.php
