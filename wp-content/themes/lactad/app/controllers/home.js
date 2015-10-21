@@ -1,13 +1,8 @@
 app.controller('HomeController', [
   '$scope',
   '$timeout',
-  'changes',
-  function($scope, $timeout, changes) {
+  function($scope, $timeout) {
     console.log("rota home");
-
-    $scope.changes = changes;
-    console.dir($scope.changes);
-
     var locked = 0;
 
     jQuery(window).scroll(function() {

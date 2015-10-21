@@ -414,10 +414,10 @@ var app = angular.module('app', [
       templateUrl: root.views + 'pages/home.html',
       controller: 'HomeController',
       resolve: {
-        changes: ['$posts', function($posts) {
+        changes: ['$posts' '$rootScope', function($posts, $rootScope) {
           // get mudancas-de-horario posts
           $posts.category('post', 'mudanca-de-horario').then(function(data) {
-            console.log(data);
+            $rootScope.changes = data;
             return data;
           });
         }]
