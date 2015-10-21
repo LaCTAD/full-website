@@ -219,6 +219,19 @@ function hide_admin_bar_from_front_end(){
 }
 add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
 
+/* Pre populating the category mudanca de horario */
+function insert_category() {
+  wp_insert_term(
+    'Mudança de Horário',
+    'category',
+    array(
+      'description' => 'Categoria usada para indicar que o post deve receber destaque por conter informações sobre mudança de horário de funcionamento.',
+      'slug'    => 'mudanca-de-horario'
+    )
+  );
+}
+add_action( 'after_setup_theme', 'insert_category' );
+
 /* Enabling post thumbnails */
 add_theme_support( 'post-thumbnails' );
 
