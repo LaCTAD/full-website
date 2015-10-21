@@ -13,5 +13,4 @@ app.controller('EventController', [
     $rootScope.numPages = Math.ceil($scope.events.length / $rootScope.pageSize);
   });
 
-
 }]);

@@ -20,6 +20,13 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
+  <div class="warning" ng-if="mudancas.length > 0">
+    <div class="row">
+      <div class="col-xs-12">
+      {{mudancas[0].title}}
+      </div>
+    </div>
+  </div>
   <div class="pre-header">
     <div class="container">
       <div class="row">
