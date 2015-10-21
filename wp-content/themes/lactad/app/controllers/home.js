@@ -1,9 +1,12 @@
 app.controller('HomeController', [
   '$scope',
   '$timeout',
-  '$posts',
-  function($scope, $timeout, $posts) {
+  'changes',
+  function($scope, $timeout, changes) {
     console.log("rota home");
+
+    $scope.changes = changes;
+
     var locked = 0;
 
     jQuery(window).scroll(function() {
@@ -27,12 +30,6 @@ app.controller('HomeController', [
       } else if (jQuery(this).scrollTop() == 0) {
         // locked = 0;
       }
-    });
-
-    // get mudancas-de-horario posts
-    $posts.category('post', 'mudanca-de-horario').then(function(data) {
-      $scope.mudancas = data;
-      console.log(data);
     });
 
 }]);

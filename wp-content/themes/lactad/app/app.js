@@ -412,7 +412,16 @@ var app = angular.module('app', [
     .state('app.home', {
       url: '',
       templateUrl: root.views + 'pages/home.html',
-      controller: 'HomeController'
+      controller: 'HomeController',
+      resolve: {
+        changes: ['$posts', function($posts) {
+          // get mudancas-de-horario posts
+          $posts.category('post', 'mudanca-de-horario').then(function(data) {
+            console.log(data);
+            return data;
+          });
+        }]
+      }
     })
     .state('error', {
       url: '/404',
