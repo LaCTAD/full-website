@@ -414,7 +414,7 @@ var app = angular.module('app', [
       templateUrl: root.views + 'pages/home.html',
       controller: 'HomeController',
       resolve: {
-        changes: ['$posts' '$rootScope', function($posts, $rootScope) {
+        changes: ['$posts', '$rootScope', function($posts, $rootScope) {
           // get mudancas-de-horario posts
           $posts.category('post', 'mudanca-de-horario').then(function(data) {
             $rootScope.changes = data;
