@@ -63,8 +63,12 @@
   padding: 10px 0;
   background: #e74c3c;
   text-align: center;
-  & a {
+  & a,
+  & a:active,
+  & a:focus,
+  & a:hover {
     color: white;
+    font-weight: bold;
     font-size: 0.9em;
   }
 }

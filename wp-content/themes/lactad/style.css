@@ -1561,8 +1561,9 @@ form .btn-border-dark {
   padding: 10px 0;
   background: #e74c3c;
   text-align: center; }
-  .warning a {
+  .warning a, .warning a:active, .warning a:focus, .warning a:hover {
     color: white;
+    font-weight: bold;
     font-size: 0.9em; }
 
 /*# sourceMappingURL=style.css.map */
