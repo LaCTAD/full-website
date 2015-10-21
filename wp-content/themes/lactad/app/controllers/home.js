@@ -6,6 +6,7 @@ app.controller('HomeController', [
     console.log("rota home");
 
     $scope.changes = changes;
+    console.dir($scope.changes);
 
     var locked = 0;
 
