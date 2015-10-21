@@ -20,7 +20,7 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-  <div class="warning" ng-if="mudancas.length > 0">
+  <div class="warning" ng-show="mudancas.length > 0">
     <div class="row">
       <div class="col-xs-12">
       {{mudancas[0].title}}
