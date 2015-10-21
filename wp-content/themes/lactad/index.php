@@ -20,7 +20,7 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-  <div class="warning">
+  <div class="warning" ng-if="changes">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
