@@ -58,3 +58,13 @@
 .number-unit {
   text-align: center;
 }
+
+.warning {
+  padding: 10px 0;
+  background: #e74c3c;
+  text-align: center;
+  & a {
+    color: white;
+    font-size: 0.9em;
+  }
+}
