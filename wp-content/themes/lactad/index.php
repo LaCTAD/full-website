@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> ng-app="app">
 <head>
+    <meta name="google-site-verification" content="fAXI1fM5LUVPtVqv8yhtzCACWDLvWRU6P1F9WBwOSpQ" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
