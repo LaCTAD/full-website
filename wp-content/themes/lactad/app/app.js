@@ -94,6 +94,8 @@ var app = angular.module('app', [
         SLUG: 'services',
         DESC: 'Check out the reliable services offered by our {{page}} area',
         BUTTON_REQUEST: 'Service Request',
+        BUTTON_PRICE: 'Estimate Price',
+        BUTTON_SAMPLE: 'Sample Sending',
         TITLE_MODAL: 'Request for Service'
       },
       EQUIPS: {
@@ -224,6 +226,8 @@ var app = angular.module('app', [
         SLUG: 'servicos',
         DESC: 'Confira os serviços oferecidos pela {{page}}',
         BUTTON_REQUEST: 'Solicitar Serviço',
+        BUTTON_PRICE: 'Estimar Preço',
+        BUTTON_SAMPLE: 'Envio de Amostras',
         TITLE_MODAL: 'Solicitação de Serviço'
       },
       EQUIPS: {

@@ -804,6 +804,7 @@ table {
 header {
   position: relative;
   z-index: 10;
+  height: 62px;
   text-align: right;
   background: white; }
 

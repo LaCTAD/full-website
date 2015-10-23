@@ -17,6 +17,18 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
   }
 
+  $scope.showModalSample = function() {
+    ModalService.showModal({
+      templateUrl: root.views + "modals/sample.modal.html",
+      controller: "ModalController"
+    }).then(function(modal) {
+      modal.element.modal();
+      modal.close.then(function(result) {
+        console.log(result);
+      });
+    });
+  }
+
   $scope.showModalAbout = function() {
     ModalService.showModal({
       templateUrl: root.views + "modals/about.modal.html",

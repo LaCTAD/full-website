@@ -74,7 +74,6 @@
                   <a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.services.slug, item: null })" translate="{{pages.services.name}}"></a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.equipments.slug, item: null })" translate="{{pages.equipments.name}}"></a></li>
-                <!-- <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.biocel.slug, single: 'faq', item: null })">FAQ</a></li>
               </ul>
             </li>
@@ -83,7 +82,6 @@
               <ul class="submenu">
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.services.slug, item: null })" translate="{{pages.services.name}}"></a></li>
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.equipments.slug, item: null })" translate="{{pages.equipments.name}}"></a></li>
-                <!-- <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: pages.teams.slug})">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.genomica.slug, single: 'faq'})">FAQ</a></li>
               </ul>
             </li>
@@ -94,7 +92,6 @@
                   <a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.services.slug, item: null })" translate="{{pages.services.name}}"></a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.equipments.slug, item: null })" translate="{{pages.equipments.name}}"></a></li>
-                <!-- <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.proteomica.slug, single: 'faq', item: null})">FAQ</a></li>
               </ul>
             </li>
@@ -105,7 +102,6 @@
                   <a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.services.slug, item: null })" translate="{{pages.services.name}}"></a>
                 </li>
                 <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.equipments.slug, item: null })" translate="{{pages.equipments.name}}"></a></li>
-                <!-- <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: pages.teams.slug, item: null })">{{'PAGES.TEAM.NAME' | translate}}</a></li> -->
                 <li><a ui-sref="app.page.single({ page: pages.bioinformatica.slug, single: 'faq', item: null })">FAQ</a></li>
               </ul>
             </li>
