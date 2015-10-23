@@ -24,7 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <a ui-sref="app.page.single({ page: 'blog', single: changes[0].slug })">ATENÇÃO: {{changes[0].title}}</a>
+          <a ui-sref="app.page.single({ page: 'blog', single: changes[0].slug })" ng-bind="{{ ATENÇÃO: changes[0].title }}"></a>
         </div>
       </div>
     </div>
