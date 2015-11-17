@@ -17,7 +17,7 @@ app.controller('HomeController', [
           number: 14
         }, 2500);
         jQuery("#research").stop().animateNumber({
-          number: 350
+          number: 359
         }, 2500);
         jQuery("#courses").stop().animateNumber({
           number: 15
