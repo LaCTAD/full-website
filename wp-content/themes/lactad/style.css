@@ -1561,6 +1561,9 @@ form .btn-border-dark {
     right: 0;
     bottom: 0; }
 
+.citation {
+  border-bottom: 1px solid #eeeeee; }
+
 .statistics {
   position: relative;
   background: url("assets/img/ext.jpg") no-repeat;
