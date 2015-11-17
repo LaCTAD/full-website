@@ -23,7 +23,7 @@ var app = angular.module('app', [
         BUTTON_CONTACT: 'Contact Us',
         TITLE1: 'in Numbers',
         TITLE2: 'States Assisteds',
-        TITLE3: 'Satisfied Researchers',
+        TITLE3: 'Researchers Served',
         TITLE4: 'Sequenced Terabases',
         TITLE5: 'Concluded Courses'
       },
@@ -155,7 +155,7 @@ var app = angular.module('app', [
         BUTTON_CONTACT: 'Entre em Contato',
         TITLE1: 'em Números',
         TITLE2: 'Estados Atendidos',
-        TITLE3: 'Pesquisadores Satisfeitos',
+        TITLE3: 'Pesquisadores Atendidos',
         TITLE4: 'Terabases Sequenciadas',
         TITLE5: 'Cursos Oferecidos'
       },
