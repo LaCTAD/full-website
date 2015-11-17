@@ -1344,7 +1344,7 @@ form .btn-border-dark {
     margin: 15px 0; }
 
 .clipping {
-  margin: calc(2em - 18px) 0 0 2em; }
+  margin: calc(2em - 18px) 0 2em 0; }
 
 .clip {
   margin: 15px 0; }
