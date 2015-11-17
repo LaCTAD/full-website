@@ -201,6 +201,9 @@ div {
   z-index: 2; }
 
 /* COLORS */
+.light {
+  color: white; }
+
 /* TYPOGRAPHY */
 body {
   font-size: 16px;
@@ -251,6 +254,9 @@ p {
   margin: 0 0 1.25em 0;
   padding: 0; }
 
+.align-justify {
+  text-align: justify; }
+
 .align-center {
   text-align: center; }
 
@@ -259,9 +265,6 @@ p {
 
 .align-left {
   text-align: left; }
-
-.light {
-  color: white; }
 
 /* ANIMATIONS */
 /* VIEW */
@@ -675,7 +678,7 @@ body {
   display: block;
   margin: 20px auto;
   margin-bottom: 0;
-  width: 110px; }
+  width: 174px; }
 
 .btn-pagination {
   text-align: center; }

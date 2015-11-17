@@ -118,8 +118,8 @@
               <img ng-src="{{activeItem.image.sizes.medium}}" height="{{ activeItem.image.height <= 300 ? 'auto' : '300' }}" width="{{ activeItem.image.height <= 300 ? '100%' : 'auto' }}"/>
             </div>
 
-            <div ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="activeItem.content"></div>
-            <div ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_content"></div>
+            <div class="align-justify" ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="activeItem.content"></div>
+            <div class="align-justify" ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_content"></div>
 
           </div>
         </div>

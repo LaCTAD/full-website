@@ -24,8 +24,8 @@
           <a class="btn-border-dark" style="margin-bottom: 0;" href="" ng-click="showModalEvent()" ng-if="registrationOpen">{{'PAGES.EVENTS.BUTTON_REGISTER' | translate}}</a>
           <a class="btn-border-dark disabled" style="margin-bottom: 0;" href="" ng-if="!registrationOpen && (language != 'en' || event.english.english_title == false)">Inscrições Encerradas</a>
           <a class="btn-border-dark disabled" style="margin-bottom: 0;" href="" ng-if="!registrationOpen && (language == 'en' && event.english.english_title != false)">Registration Closed</a>
-          <div class="event-description" ng-bind-html="event.event.description" ng-if="language != 'en'"></div>
-          <div class="event-description" ng-bind-html="event.english.english_content" ng-if="language == 'en' && event.english.english_title != false"></div>
+          <div class="event-description align-justify" ng-bind-html="event.event.description" ng-if="language != 'en'"></div>
+          <div class="event-description align-justify" ng-bind-html="event.english.english_content" ng-if="language == 'en' && event.english.english_title != false"></div>
           <div class="event-description" ng-if="language == 'en' && event.english.english_title == false">Sorry. This post is only avaiable in <a href="" ng-click="setLanguage('br')">Portuguese</a>.</div>
         </div>
       </div>
@@ -65,7 +65,7 @@
             </ul>
           </div>
           <h2 ng-bind-html="activeItem.title"></h2>
-          <div ng-bind-html="activeItem.content"></div>
+          <div class="align-justify" ng-bind-html="activeItem.content"></div>
         </div>
       </div>
     </div>

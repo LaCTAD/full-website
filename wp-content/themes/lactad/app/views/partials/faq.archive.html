@@ -8,8 +8,8 @@
           </div>
           <div class="faq-question" style="color: {{page.color}}" href="" ng-if="language != 'en' || post.english.english_title == false">{{faq.title}}</div>
           <div class="faq-question" style="color: {{page.color}}" href="" ng-if="language == 'en' && post.english.english_title != false">{{faq.english.english_title}}</div>
-          <div class="faq-answer" ng-bind-html="faq.content" ng-if="language != 'en' || faq.english.english_title == false"></div>
-          <div class="faq-answer" ng-bind-html="faq.english.english_content" ng-if="language == 'en' && faq.english.english_title != false"></div>
+          <div class="faq-answer align-justify" ng-bind-html="faq.content" ng-if="language != 'en' || faq.english.english_title == false"></div>
+          <div class="faq-answer align-justify" ng-bind-html="faq.english.english_content" ng-if="language == 'en' && faq.english.english_title != false"></div>
         </li>
       </ul>
       <div ng-if="faqs.length == 0">Nenhuma pergunta cadastrada</div>

@@ -15,8 +15,8 @@
       <div class="equip-content col-xs-12 col-sm-6 show-medium">
         <h3 ng-if="language != 'en' || post.english.english_title == false" style="color: {{page.color}}" ng-bind-html="equipment.title"></h3>
         <h3 ng-if="language == 'en' && post.english.english_title != false" style="color: {{page.color}}" ng-bind-html="equipment.english.english_title"></h3>
-        <div ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="(equipment.excerpt | limitTo:209) + '...'"></div>
-        <div ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="(equipment.english.english_content | limitTo:209) + '...'"></div>
+        <div class="align-justify" ng-if="language != 'en' || post.english.english_title == false" ng-bind-html="(equipment.excerpt | limitTo:209) + '...'"></div>
+        <div class="align-justify" ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="(equipment.english.english_content | limitTo:209) + '...'"></div>
         <a ng-if="language != 'en' || post.english.english_title == false" class="btn-border-dark {{page.id == 'biologia-celular' ? 'btn-bio' : (page.id == 'genomica' ? 'btn-genomica' : (page.id == 'proteomica' ? 'btn-proteomica' : (page.id == 'bioinformatica' ? 'btn-bioinformatica' : '')))}}" ui-sref="app.page.single({ page: page.slug, single: pages.equipments.slug, item: equipment.slug })">Saiba mais</a>
         <a ng-if="language == 'en' && post.english.english_title != false" class="btn-border-dark {{page.id == 'biologia-celular' ? 'btn-bio' : (page.id == 'genomica' ? 'btn-genomica' : (page.id == 'proteomica' ? 'btn-proteomica' : (page.id == 'bioinformatica' ? 'btn-bioinformatica' : '')))}}" ui-sref="app.page.single({ page: page.slug, single: pages.equipments.slug, item: equipment.english.english_slug })">More Details</a>
       </div>
