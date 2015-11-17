@@ -133,6 +133,10 @@ section {
 }
 
 .well {
+  color: $color-text;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
   cursor: pointer;
   padding: 15px 30px;
   margin-bottom: 15px;
