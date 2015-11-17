@@ -7,6 +7,8 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
     switch($state.params.page) {
       case 'sobre':
       case 'about':
+      case 'citacao':
+      case 'citation':
       case 'blog':
       case 'eventos':
       case 'events':
@@ -63,6 +65,13 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
           id: 'sobre',
           name: $translate.instant('PAGES.ABOUT.NAME'),
           slug: $translate.instant('PAGES.ABOUT.SLUG'),
+          color: '#2ecc71'
+        },
+        citation: {
+          id: 'citacao',
+          name: $translate.instant('PAGES.CITATION.NAME'),
+          slug: $translate.instant('PAGES.CITATION.SLUG'),
+          desc: $translate.instant('PAGES.CITATION.DESC'),
           color: '#2ecc71'
         },
         management: {
@@ -190,6 +199,9 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
             break;
           case 'sobre':
             $rootScope.page = $rootScope.pages.about;
+            break;
+          case 'citacao':
+            $rootScope.page = $rootScope.pages.citation;
             break;
           case 'gestao':
             $rootScope.page = $rootScope.pages.management;
