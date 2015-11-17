@@ -878,6 +878,7 @@ header {
   opacity: 1; }
 
 .submenu {
+  padding-left: 0;
   border: 1px solid #eee;
   border-top: none;
   display: none;
@@ -1134,6 +1135,9 @@ footer {
   padding: 20px 0;
   margin-top: 20px; }
 
+.footer-details {
+  padding-left: 0; }
+
 /* Components */
 /* Pages */
 .about {
@@ -1157,6 +1161,7 @@ footer {
 }*/
 .post-list,
 .event-list {
+  padding-left: 0;
   margin-bottom: 22.5px;
   list-style: none; }
 
@@ -1342,7 +1347,8 @@ form .btn-border-dark {
   margin: 30px auto; }
 
 .contact-details {
-  list-style: none; }
+  list-style: none;
+  padding-left: 0; }
   .contact-details li {
     margin: 15px 0; }
 
@@ -1397,6 +1403,7 @@ form .btn-border-dark {
     padding: 0 15px 15px 15px; } }
 
 .sidemenu {
+  padding-left: 0;
   margin-top: 6px;
   list-style: none; }
   .sidemenu li {
@@ -1448,6 +1455,7 @@ form .btn-border-dark {
     background: #f5f7f7; }
 
 .dropdown-content {
+  padding-left: 0;
   margin-top: -1px;
   border: 1px solid #eff0f1;
   list-style: none; }
@@ -1477,6 +1485,7 @@ form .btn-border-dark {
   text-align: center; }
 
 .faq-list {
+  padding-left: 0;
   list-style: none; }
 
 .faq {

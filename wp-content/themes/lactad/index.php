@@ -182,7 +182,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <ul>
+          <ul class="footer-details">
             <li>LaCTAD</li>
             <li>Universidade Estadual de Campinas – Unicamp</li>
             <li>Dr. André Tosello, 550 – CEP: 13083-886</li>
