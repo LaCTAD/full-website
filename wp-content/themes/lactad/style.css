@@ -220,6 +220,11 @@ body {
   font-size: 1.3em;
   margin: 2em 0; }
 
+.citation-headline {
+  margin: 0; }
+  .citation-headline .fa {
+    margin: 0 5px; }
+
 h1, h2, h3 {
   color: #34495e;
   font-family: 'Montserrat', sans-serif;

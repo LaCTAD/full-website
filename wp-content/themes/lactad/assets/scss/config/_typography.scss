@@ -17,6 +17,13 @@ body {
   margin: 2em 0;
 }
 
+.citation-headline {
+  margin: 0;
+  .fa {
+    margin: 0 5px;
+  }
+}
+
 h1, h2, h3 {
   color: $color-primary-light;
   font-family: 'Montserrat', sans-serif;
