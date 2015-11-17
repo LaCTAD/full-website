@@ -6,3 +6,4 @@ LaCTAD's theme for its new website. Using wordpress and Angular.
 MIT licensing!
 
 ## Author
+Felipe Rodrigues and David Fugimoto
