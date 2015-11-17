@@ -13,7 +13,8 @@ var app = angular.module('app', [
       TITLE: 'LaCTAD - The Central Laboratory of High Performance Technologies',
       BUTTON_LANG_EN: 'English',
       BUTTON_LANG_BR: 'Portuguese',
-      COPYRIGHT: '© 2015 LaCTAD -  All rights reserved'
+      COPYRIGHT: '© 2015 LaCTAD -  All rights reserved',
+      ABOUT: 'About'
     },
     PAGES: {
       INDEX: {
@@ -28,7 +29,7 @@ var app = angular.module('app', [
         TITLE5: 'Concluded Courses'
       },
       ABOUT: {
-        NAME: 'About',
+        NAME: 'The LaCTAD',
         SLUG: 'about',
         DESC: 'We work in the areas of Cell Biology, Genomics, Proteomics and Bioinformatics offering high quality services to the entire scientific community and private companies',
         TITLE1: 'What is LaCTAD?',
@@ -145,7 +146,8 @@ var app = angular.module('app', [
       TITLE: 'LaCTAD - Laboratório Central de Tecnologias de Alto Desempenho em Ciências da Vida',
       BUTTON_LANG_EN: 'Inglês',
       BUTTON_LANG_BR: 'Português',
-      COPYRIGHT: '© 2015 LaCTAD -  Todos os Direitos Reservados'
+      COPYRIGHT: '© 2015 LaCTAD -  Todos os Direitos Reservados',
+      ABOUT: 'Sobre'
     },
     PAGES: {
       INDEX: {
@@ -165,7 +167,7 @@ var app = angular.module('app', [
         DESC: 'Plano de gestão e compartilhamento do uso dos equipamentos do LaCTAD'
       },
       ABOUT: {
-        NAME: 'Sobre',
+        NAME: 'O LaCTAD',
         SLUG: 'sobre',
         DESC: 'Atuamos nas áreas de Biologia Celular, Genômica, Proteômica e Bioinformática oferecendo serviços de alta qualidade para toda a comunidade científica e empresas privadas',
         TITLE1: 'O que é o LaCTAD?',
