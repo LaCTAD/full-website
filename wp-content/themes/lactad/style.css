@@ -266,6 +266,9 @@ p {
 .align-left {
   text-align: left; }
 
+ul {
+  padding-left: 30px; }
+
 /* ANIMATIONS */
 /* VIEW */
 .view.ng-enter,

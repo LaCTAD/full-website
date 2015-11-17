@@ -130,7 +130,7 @@
         <a href="" translate="{{pages.about.name}}"></a>
         <ul class="submenu-mobile">
           <li><a ui-sref="app.page({ page: pages.about.slug, single: null })" translate="{{ 'GLOBAL.ABOUT' }}"></a></li>
-          <li><a ui-sref="app.page({ page: pages.management.slug, single: null })" translate="{{ pages.management.name }}"></a></li>
+          <li><a ui-sref="app.page({ page: pages.citation.slug, single: null })" translate="{{ pages.citation.name }}"></a></li>
           <li><a ui-sref="app.page({ page: pages.press.slug, single: null })" translate="{{ pages.press.name }}"></a></li>
           <li><a ui-sref="app.page({ page: 'blog', single: null })" translate="{{ pages.blog.name }}"></a></li>
           <li><a ui-sref="app.page({ page: pages.events.slug, single: null })" translate="{{ pages.events.name }}"></a></li>
