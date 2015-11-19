@@ -912,6 +912,7 @@ header {
       color: rgba(0, 0, 0, 0.8); }
 
 .menu-mobile {
+  padding-left: 0;
   display: none;
   list-style: none; }
 
@@ -928,6 +929,7 @@ header {
   color: #5E6869; }
 
 .submenu-mobile {
+  padding-left: 0;
   display: none;
   list-style: none;
   background: #f9f9f9;

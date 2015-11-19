@@ -58,7 +58,7 @@
         <div class="pull-right">
           <ul class="menu hidden-xs">
             <li>
-              <a ng-class="{'active' : isAbout()}" translate="{{ pages.about.name }}"></a>
+              <a ng-class="{'active' : isAbout()}" ui-sref="app.page({ page: pages.about.slug, single: null })" translate="{{ pages.about.name }}"></a>
               <ul class="submenu">
                 <li><a ui-sref="app.page({ page: pages.about.slug, single: null })" translate="{{ 'GLOBAL.ABOUT' }}"></a></li>
                 <li><a ui-sref="app.page({ page: pages.citation.slug, single: null })" translate="{{ pages.citation.name }}"></a></li>
@@ -69,7 +69,7 @@
               </ul>
             </li>
             <li>
-              <a ui-sref-active="active" translate="{{pages.biocel.name}}"></a>
+              <a ui-sref-active="active" ui-sref="app.page({ page: pages.biocel.slug })" translate="{{pages.biocel.name}}"></a>
               <ul class="submenu">
                 <li>
                   <a ui-sref="app.page({ page: pages.biocel.slug })" translate="{{ 'GLOBAL.ABOUT' }}"></a>
@@ -82,7 +82,7 @@
               </ul>
             </li>
             <li>
-              <a ui-sref-active="active" translate="{{pages.genomica.name}}"></a>
+              <a ui-sref-active="active" ui-sref="app.page({ page: pages.genomica.slug })" translate="{{pages.genomica.name}}"></a>
               <ul class="submenu">
                 <li>
                   <a ui-sref="app.page({ page: pages.genomica.slug })" translate="{{ 'GLOBAL.ABOUT' }}"></a>
@@ -93,7 +93,7 @@
               </ul>
             </li>
             <li>
-              <a ui-sref-active="active" translate="{{pages.proteomica.name}}"></a>
+              <a ui-sref-active="active" ui-sref="app.page({ page: pages.proteomica.slug })" translate="{{pages.proteomica.name}}"></a>
               <ul class="submenu">
                 <li>
                   <a ui-sref="app.page({ page: pages.proteomica.slug })" translate="{{ 'GLOBAL.ABOUT' }}"></a>
@@ -106,7 +106,7 @@
               </ul>
             </li>
             <li>
-              <a ui-sref-active="active" translate="{{pages.bioinformatica.name}}"></a>
+              <a ui-sref-active="active" ui-sref="app.page({ page: pages.bioinformatica.slug })" translate="{{pages.bioinformatica.name}}"></a>
               <ul class="submenu">
                 <li>
                   <a ui-sref="app.page({ page: pages.bioinformatica.slug })" translate="{{ 'GLOBAL.ABOUT' }}"></a>
