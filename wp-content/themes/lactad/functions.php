@@ -1,4 +1,9 @@
 <?php
+add_action('wpcf7_before_send_mail', 'hue_br');
+function hue_br()
+{
+    return "HAHAHAHA";
+}
 
 /* Enqueueing scripts */
 function my_scripts() {
