@@ -582,7 +582,7 @@ var app = angular.module('app', [
             if($stateParams.page == 'eventos' || $stateParams.page == 'events') {
               return root.views + 'event/event.post.html';
             } else if($stateParams.page == 'blog') {
-              return root.views + 'blog/blog.post.html';
+              return root.views + 'blog/blog.post.php';
             }
             break;
         }
