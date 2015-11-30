@@ -948,7 +948,13 @@ class GFFormSettings {
 
         self::page_footer();
     }
-
+    function get_columns() {
+                $columns = array(
+                                    'name' => 'Name',
+                                                    'subject' => 'Subject'
+                                                                    );
+                        return $columns;
+                    }
     public static function get_confirmation_ui_settings($confirmation) {
 
         /**
