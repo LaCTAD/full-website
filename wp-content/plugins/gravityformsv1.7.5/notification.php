@@ -2,6 +2,14 @@
 
 Class GFNotification {
 
+    function get_columns() {
+                $columns = array(
+                                    'name' => 'Name',
+                                                    'subject' => 'Subject'
+                                                                    );
+                        return $columns;
+                    }
+
 	private static $supported_fields = array("checkbox", "radio", "select", "text", "website", "textarea", "email", "hidden", "number", "phone", "multiselect", "post_title",
 		                            "post_tags", "post_custom_field", "post_content", "post_excerpt");
 
