@@ -9,4 +9,5 @@ function($scope, $rootScope, $posts, $sce) {
     return $sce.trustAsResourceUrl('https://maps.google.com/maps?hl=en&q='+ address +'&ie=UTF8&z=17&output=embed');
   }
 
+  $scope.$sce = $sce;
 }]);
