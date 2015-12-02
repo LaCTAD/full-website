@@ -823,6 +823,9 @@ table {
   list-style: none;
   padding: 0; }
 
+.gfield {
+  margin-bottom: 15px; }
+
 .gfield_label {
   font-weight: bold; }
 
