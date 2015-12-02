@@ -2,15 +2,7 @@
 
 Class GFNotification {
 
-    function get_columns() {
-                $columns = array(
-                                    'name' => 'Name',
-                                                    'subject' => 'Subject'
-                                                                    );
-                        return $columns;
-                    }
-
-	private static $supported_fields = array("checkbox", "radio", "select", "text", "website", "textarea", "email", "hidden", "number", "phone", "multiselect", "post_title",
+    private static $supported_fields = array("checkbox", "radio", "select", "text", "website", "textarea", "email", "hidden", "number", "phone", "multiselect", "post_title",
 		                            "post_tags", "post_custom_field", "post_content", "post_excerpt");
 
     private static function get_notification($form, $notification_id){
@@ -990,6 +982,15 @@ class GFNotificationTable extends WP_List_Table {
 
     function prepare_items() {
         $this->items = $this->form['notifications'];
+    }
+    
+    function get_columns()
+    {
+        $columns = array(
+            'name' => 'Name',
+            'subject' => 'Subject'
+        );
+        return $columns;
     }
 
     function display() {
