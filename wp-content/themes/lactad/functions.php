@@ -405,7 +405,7 @@ function json_api_prepare_post( $post_response, $post, $context ) {
     $post_response['event']['speakers'] = get_field( "event_speakers", $post['ID'] );
     $post_response['event']['registered_users'] = get_field( "registered_users", $post['ID'] );
     $post_response['event']['selected_users'] = get_field( "selected_users", $post['ID'] );
-    $post_response['event']['modal_content'] = get_field( "modal_content", $post['ID'] );
+    $post_response['event']['register_form'] = get_field( "register_form", $post['ID'] );
     $post_response['english']['english_goals'] = get_field( "english_event_goals", $post['ID'] );
     $post_response['english']['english_schedule'] = get_field( "english_event_schedule", $post['ID'] );
     $post_response['english']['english_speakers'] = get_field( "english_event_speakers", $post['ID'] );
