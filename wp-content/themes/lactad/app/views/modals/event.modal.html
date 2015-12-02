@@ -6,60 +6,6 @@
   </div>
   <div class="modal-body">
     <div translate="{{'PAGES.EVENTS.TEXT1'}}"></div>
-    <form method="post" action="send.php">
-      <input name="name" required="required" type="text" placeholder="{{'PAGES.CONTACT.TITLE3' | translate}} *" />
-      <input name="email" required="required" type="email" placeholder="E-mail *" />
-      <input name="date" required="required" type="date" placeholder="Data de Nascimento *" />
-      <input name="address" required="required" type="text" placeholder="Endereço *" />
-      <input name="zip" required="required" type="text" placeholder="CEP *" />
-      <input name="city" required="required" type="text" placeholder="Cidade/Estado *" />
-      <input name="phone" type="text" placeholder="Telefone" />
-      <input name="institution" type="text" placeholder="Instituição *" />
-      <select name="relationship">
-        <option disabled selected>Vínculo com a Instituição *</option>
-        <option>Estagiário/Bolsista</option>
-        <option>Estudante de Graduação</option>
-        <option>Estudante de Mestrado</option>
-        <option>Estudante de Doutorado</option>
-        <option>Estudante de Pós-doutorado</option>
-        <option>Professor</option>
-        <option>Funcionário</option>
-        <option>Outro (especifique)</option>
-      </select>
-      <input name="other-relationship" type="text" placeholder="Vínculo com a Instituição" />
-      <select name="programming">
-        <option disabled selected>Programa em alguma linguagem? *</option>
-        <option>Sim</option>
-        <option>Não</option>
-      </select>
-      <input name="programming-yes" type="text" placeholder="Programa em quais linguagens?" />
-      <select name="linux">
-        <option disabled selected>Nível de experiência com o uso do Linux?</option>
-        <option>Nenhuma</option>
-        <option>Uso apenas o ambiente gráfico</option>
-        <option>Uso tanto o ambiente gráfico quanto o modo texto</option>
-      </select>
-      <input name="lattes" type="text" placeholder="Link para o Currículo Lattes" />
-      <label for="curriculum">
-        Currículo *
-      </label>
-      <br>
-      <input name="curriculum" type="file">
-      <br>
-      <label for="school">
-        Histórico Escolar
-      </label>
-      <br>
-      <input name="school" type="file">
-      <br>
-      <label for="letter">
-        Carta de Interesse *
-      </label>
-      <br>
-      <input name="letter" type="file" />
-      <input name="type" type="hidden" value="event">
-      <br>
-      <button type="submit" class="btn-border-dark">{{'PAGES.EVENTS.BUTTON_REGISTER' | translate}}</button>
-    </form>
+    <div class="align-justify" ng-bind-html="$sce.trustAsHtml(pages.events.subpages.registered.name)"></div>
   </div>
 </div>
