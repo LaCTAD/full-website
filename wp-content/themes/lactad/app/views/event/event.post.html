@@ -21,7 +21,7 @@
           <h1 class="post-title" ng-if="language == 'en' && event.english.english_title != false">{{event.english.english_title}}</h1>
           <div class="event-details"><i class="fa fa-map-marker"></i> {{event.event.location}}</div>
           <div class="event-details"><i class="fa fa-calendar-o"></i> {{event.event.date | date:'dd/MM/yyyy'}}</div>
-          <a class="btn-border-dark" style="margin-bottom: 0;" href="" ng-click="showModalEvent()" ng-if="registrationOpen">{{'PAGES.EVENTS.BUTTON_REGISTER' | translate}}</a>
+          <a class="btn-border-dark" style="margin-bottom: 0;" href="" ng-click="showModalEvent()">{{'PAGES.EVENTS.BUTTON_REGISTER' | translate}}</a>
           <a class="btn-border-dark disabled" style="margin-bottom: 0;" href="" ng-if="!registrationOpen && (language != 'en' || event.english.english_title == false)">Inscrições Encerradas</a>
           <a class="btn-border-dark disabled" style="margin-bottom: 0;" href="" ng-if="!registrationOpen && (language == 'en' && event.english.english_title != false)">Registration Closed</a>
           <div class="event-description align-justify" ng-bind-html="event.event.description" ng-if="language != 'en'"></div>
