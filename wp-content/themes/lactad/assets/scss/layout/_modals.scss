@@ -57,3 +57,41 @@
     float: right;
   }
 }
+
+.gform-fields,
+.gfield {
+  list-style: none;
+  padding: 0;
+}
+
+.gfield-label {
+  font-weight: bold;
+}
+
+.gform_button {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  margin: 20px 0;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  border-radius: 200px;
+  transition: all .3s;
+  outline: none;
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+  &.disabled,
+  &[disabled='disabled'] {
+    background-color: $color-text-light;
+    border-color: $color-text-light;
+    color: $color-text;
+    cursor: default;
+    &:hover {
+      background-color: $color-text-light;
+      color: $color-text;
+    }
+  }
+}

@@ -818,6 +818,37 @@ table {
     font-size: 1.1em;
     float: right; }
 
+.gform-fields,
+.gfield {
+  list-style: none;
+  padding: 0; }
+
+.gfield-label {
+  font-weight: bold; }
+
+.gform_button {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #27ae60;
+  color: #27ae60;
+  margin: 20px 0;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  border-radius: 200px;
+  transition: all .3s;
+  outline: none; }
+  .gform_button:hover {
+    background-color: #27ae60;
+    color: white; }
+  .gform_button.disabled, .gform_button[disabled='disabled'] {
+    background-color: #d9dcde;
+    border-color: #d9dcde;
+    color: #5E6869;
+    cursor: default; }
+    .gform_button.disabled:hover, .gform_button[disabled='disabled']:hover {
+      background-color: #d9dcde;
+      color: #5E6869; }
+
 .pre-header {
   padding: 10px 0;
   border-bottom: 1px solid #f5f7f7;
