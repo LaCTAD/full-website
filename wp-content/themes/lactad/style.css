@@ -818,15 +818,16 @@ table {
     font-size: 1.1em;
     float: right; }
 
-.gform-fields,
-.gfield {
+.gform_fields,
+.gfield_checkbox {
   list-style: none;
   padding: 0; }
 
-.gfield-label {
+.gfield_label {
   font-weight: bold; }
 
 .gform_button {
+  background: transparent;
   display: inline-block;
   padding: 10px 30px;
   border: 2px solid #27ae60;
