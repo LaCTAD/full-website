@@ -4,7 +4,10 @@
         <img ng-src="{{member.member.photo.url}}" width="100%" ng-if="member.member.photo"/>
         <img ng-src="{{root+'assets/img/profile.png'}}" width="100%" ng-if="!member.member.photo"/>
         <div class="member-job" style="color: {{page.color}}">{{member.member.job}}</div>
-        <div class="member-name">{{member.title}}</div>
+        <div class="member-name" ng-if="member.title != 'Roberto'">{{member.title}}</div>
+        <div class="member-name" ng-if="member.title == 'Roberto'">
+          <img ng-src="{{root+'assets/img/rob.png'}}" width="100%">
+        </div>
       </div>
       <div class="col-xs-12" ng-if="members.length == 0">
         Nenhum membro cadastrado.
