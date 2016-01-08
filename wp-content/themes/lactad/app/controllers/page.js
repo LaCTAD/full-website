@@ -53,7 +53,9 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
 
     console.log('haha');
-    jQuery('#gform_2').css({'background-color':'red'});
+    jQuery('document').on('hover', '.modal', function() {
+      console.log('uhu');
+    });
   };
 
   $scope.contact = {};
