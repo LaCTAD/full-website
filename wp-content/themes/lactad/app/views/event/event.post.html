@@ -75,10 +75,11 @@
 <script type="text/javascript">
   jQuery(function(){
     console.log('hey!');
-    jQuery('document').on('submit', '#gform_2', function(event) {
+    jQuery('document').on('mouseover mouseout', '#gform_2', function(event) {
       event.preventDefault();
       event.stopPropagation();
-      console.log('para tuuudo!');
+      alert('para tuuudo!');
+      return false;
     });
   });
 </script>
