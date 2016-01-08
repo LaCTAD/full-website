@@ -55,18 +55,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     jQuery('body').on('submit', 'form:first', function(event) {
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
-      var inputHasContent = true;
-      jQuery(this).find("input").each(function() {
-        if(!jQuery(this).val()) {
-          inputHasContent = false;
-          return false;
-        }
-        inputHasContent = true;
-      })
-      if (inputHasContent == false) {
-        event.preventDefault();
-        alert('Por favor, preencha todos os campos antes de enviar o formulário!');
-      } else if (hasFile == false) {
+      if (hasFile == false) {
         event.preventDefault();
         alert('Por favor, anexe um arquivo antes de enviar o formulário!');
       } else if (dateCorrect == false) {
