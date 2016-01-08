@@ -61,6 +61,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
           inputHasContent = false;
           return false;
         }
+        inputHasContent = true;
       })
       if (inputHasContent == false) {
         event.preventDefault();
