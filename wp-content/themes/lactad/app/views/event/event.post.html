@@ -65,7 +65,7 @@
             </ul>
           </div>
           <h2 ng-bind-html="activeItem.title"></h2>
-          <div class="align-justify" ng-bind-html="$sce.trustAsHtml(activeItem.content)"></div>
+          <div id="form-container" class="align-justify" ng-bind-html="$sce.trustAsHtml(activeItem.content)"></div>
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@
 </div>
 <script type="text/javascript">
   jQuery(function(){
-    jQuery('form:first').on('submit', function(event) {
+    jQuery('#form-container form').on('submit', function(event) {
       event.preventDefault();
       console.log('para tuuudo!');
     });
