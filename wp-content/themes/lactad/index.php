@@ -256,16 +256,6 @@
     jQuery('.submenu-mobile > li > a').on('click', function(event) {
       jQuery('.menu-trigger').click();
     });
-
-    // Controla o form de evento
-    console.log('hehe');
-    setTimeout(function() {
-      jQuery('document').on('click', '#gform_2', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        alert('para tuuudo!');
-      });
-    }, 3000);
   });
 </script>
 
