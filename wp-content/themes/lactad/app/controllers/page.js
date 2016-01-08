@@ -57,15 +57,15 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var inputHasContent = jQuery(this).find("input").val().length;
-      if (hasFile == false) {
+      if (inputHasContent == 0) {
+        event.preventDefault();
+        alert('Por favor, preencha todos os campos antes de enviar o formulário!');
+      } else if (hasFile == false) {
         event.preventDefault();
         alert('Por favor, anexe um arquivo antes de enviar o formulário!');
       } else if (dateCorrect == false) {
         event.preventDefault();
         alert('Por favor, insira uma data válida e no formato dd/mm/yyyy!');
-      } else if (inputHasContent == 0) {
-        event.preventDefault();
-        alert('Por favor, preencha todos os campos antes de enviar o formulário!');
       }
     });
 
