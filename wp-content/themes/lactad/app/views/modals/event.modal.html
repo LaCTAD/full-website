@@ -9,14 +9,3 @@
     <div class="align-justify" ng-bind-html="$sce.trustAsHtml(content)"></div>
   </div>
 </div>
-<script type="text/javascript">
-  jQuery(function(){
-    console.log('hey!');
-    jQuery('document').on('mouseover mouseout', '#gform_2', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      alert('para tuuudo!');
-      return false;
-    });
-  });
-</script>

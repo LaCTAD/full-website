@@ -256,6 +256,13 @@
     jQuery('.submenu-mobile > li > a').on('click', function(event) {
       jQuery('.menu-trigger').click();
     });
+
+    // Controla o form de evento
+    jQuery('document').on('mouseover mouseout', '#gform_2', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      alert('para tuuudo!');
+    });
   });
 </script>
 
