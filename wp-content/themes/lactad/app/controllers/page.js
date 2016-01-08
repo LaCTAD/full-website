@@ -53,7 +53,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
 
     console.log('haha');
-    jQuery('body').on('mouseover mouseout', '#gform_2', function(event) {
+    jQuery('#event-modal').on('mouseover mouseout', 'form', function(event) {
       event.preventDefault();
       event.stopPropagation();
       alert('para tuuudo!');
