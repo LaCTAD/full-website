@@ -53,11 +53,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
 
     console.log('haha');
-    jQuery('document').on('mouseover mouseout', '#gform_2', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      alert('para tuuudo!');
-    });
+    jQuery('#gform_2').css({'background-color':'red'});
   };
 
   $scope.contact = {};
