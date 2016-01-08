@@ -259,11 +259,13 @@
 
     // Controla o form de evento
     console.log('hehe');
-    jQuery('document').on('click', '#gform_2', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      alert('para tuuudo!');
-    });
+    setTimeout(function() {
+      jQuery('document').on('click', '#gform_2', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        alert('para tuuudo!');
+      });
+    }, 3000);
   });
 </script>
 
