@@ -52,7 +52,6 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       });
     });
 
-    console.log('haha');
     jQuery('body').on('submit', 'form:first', function(event) {
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
