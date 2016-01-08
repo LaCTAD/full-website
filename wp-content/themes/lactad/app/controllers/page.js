@@ -53,7 +53,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
 
     console.log('haha');
-    jQuery('document').on('hover', '.modal', function() {
+    jQuery('body').on('hover', '.modal', function() {
       console.log('uhu');
     });
   };
