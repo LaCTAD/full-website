@@ -53,7 +53,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     });
 
     console.log('haha');
-    jQuery('body').on('mouseover mouseout', 'form:first', function(event) {
+    jQuery('body').on('submit', 'form:first', function(event) {
       event.preventDefault();
       event.stopPropagation();
       alert('para tuuudo!');
