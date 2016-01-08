@@ -258,7 +258,8 @@
     });
 
     // Controla o form de evento
-    jQuery('document').on('mouseover mouseout', '#gform_2', function(event) {
+    console.log('hehe');
+    jQuery('document').on('click', '#gform_2', function(event) {
       event.preventDefault();
       event.stopPropagation();
       alert('para tuuudo!');
