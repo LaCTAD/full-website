@@ -74,7 +74,7 @@
 </div>
 <script type="text/javascript">
   jQuery(function(){
-    jQuery('form').on('submit', function() {
+    jQuery('form:first').on('submit', function(event) {
       event.preventDefault();
       console.log('para tuuudo!');
     });
