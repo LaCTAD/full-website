@@ -74,6 +74,9 @@
 </div>
 <script type="text/javascript">
   jQuery(function(){
-    console.log('hey!');
+    jQuery('form').on('submit', function() {
+      event.preventDefault();
+      console.log('para tuuudo!');
+    });
   });
 </script>
