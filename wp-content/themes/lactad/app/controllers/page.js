@@ -58,8 +58,9 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var inputHasContent = true;
       jQuery(this).find("input").each(function() {
-        if(jQuery(this).val().length == 0) {
+        if(!jQuery(this).val()) {
           inputHasContent = false;
+          return false;
         }
       })
       if (inputHasContent == false) {
