@@ -1,4 +1,4 @@
-<div id="event-modal" class="modal">
+<div class="modal">
   <div class="modal-header">
     <h3 class="modal-title" ng-if="language != 'en' || event.english.english_title == false">{{event.title}}</h3>
     <h3 class="modal-title" ng-if="language == 'en' && event.english.english_title != false">{{event.english.english_title}}</h3>
@@ -6,6 +6,6 @@
   </div>
   <div class="modal-body">
     <div translate="{{'PAGES.EVENTS.TEXT1'}}"></div>
-    <div class="align-justify" ng-bind-html="$sce.trustAsHtml(content)"></div>
+    <div id="event-form-container" class="align-justify" ng-bind-html="$sce.trustAsHtml(content)"></div>
   </div>
 </div>
