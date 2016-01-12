@@ -56,10 +56,16 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var formFilled = true;
-      jQuery(".gform_fields :input").not("input[type='submit'], input[type='hidden']").each(function() {
-        if ((jQuery(this).is(":checkbox") && !jQuery(this).is(":checked")) || (jQuery(this).is(":radio") && !jQuery(this).is(":checked")) || jQuery.trim(jQuery(this).val()) === "") {
+      var anyChecked = false;
+      jQuery(".gform_fields :input").not("input[type='submit'], input[type='hidden'], :checkbox, :radio").each(function() {
+        if (jQuery.trim(jQuery(this).val()) === "") {
           console.log(jQuery(this).attr('id'));
           formFilled = false;
+        }
+      });
+      jQuery(".gform_fields :checkbox, .gform_fields :radio").each(function() {
+        if (jQuery(this).is(':checked')) {
+          anyChecked = true;
         }
       });
       if (hasFile == false) {
@@ -68,7 +74,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       } else if (dateCorrect == false) {
         event.preventDefault();
         alert('Por favor, insira uma data válida e no formato dd/mm/yyyy!');
-      } else if (formFilled == false) {
+      } else if (formFilled == false || anyChecked == false) {
         event.preventDefault();
         alert('Por favor, preencha todos os campos antes de submeter o formulário!');
       }
