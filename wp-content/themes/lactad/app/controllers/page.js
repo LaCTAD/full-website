@@ -56,8 +56,8 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var formFilled = true;
-      jQuery("input, textarea").each(function() {
-        console.log(jQuery(this).attr('class'));
+      jQuery("input, textarea").not("input[type='submit'], input[type='hidden']").each(function() {
+        console.log(jQuery(this).attr('name'));
         if (jQuery(this).val() == '') {
           formFilled = false;
         } else if (!jQuery(this).is(':checked')) {
