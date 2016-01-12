@@ -57,6 +57,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var formFilled = true;
       jQuery("input, textarea").each(function() {
+        console.log(jQuery(this).attr('class'));
         if (jQuery(this).val() == '') {
           formFilled = false;
         } else if (!jQuery(this).is(':checked')) {
