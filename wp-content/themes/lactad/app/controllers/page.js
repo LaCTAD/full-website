@@ -72,10 +72,6 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
             checkboxesChecked = true;
           }
         });
-        if (checkboxesChecked == false) {
-          event.preventDefault();
-          alert('Por favor, preencha todos os campos do tipo checkbox antes de submeter o formulário!');
-        }
       }
       if(hasRadios.length) {
         jQuery(".gform_fields :radio").each(function() {
@@ -83,10 +79,6 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
             radiosChecked = true;
           }
         });
-        if (radiosChecked == false) {
-          event.preventDefault();
-          alert('Por favor, preencha todos os campos do tipo radio antes de submeter o formulário!');
-        }
       }
       if (hasFile == false) {
         event.preventDefault();
@@ -94,7 +86,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       } else if (dateCorrect == false) {
         event.preventDefault();
         alert('Por favor, insira uma data válida e no formato dd/mm/yyyy!');
-      } else if (formFilled == false) {
+      } else if (formFilled == false || (hasRadios.length && radiosChecked == false) || (hasCheckboxes.length && checkboxesChecked == false)) {
         event.preventDefault();
         alert('Por favor, preencha todos os campos antes de submeter o formulário!');
       }
