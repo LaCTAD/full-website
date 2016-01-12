@@ -55,11 +55,12 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
     jQuery('body').on('submit', 'form:first', function(event) {
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
-      var radioChecked = jQuery("input[type='radio']").is(':checked');
-      var inputHasValue = true;
-      jQuery("input").not(".datepicker, input[type='file'], input[type='radio']").each(function() {
-        if(jQuery(this).val() == '') {
-          inputHasValue = false;
+      var formFilled = true;
+      jQuery("input, textarea").each(function() {
+        if (jQuery(this).val() == '') {
+          formFilled = false;
+        } else if (!jQuery(this).is(':checked')) {
+          formFilled = false;
         }
       });
       if (hasFile == false) {
@@ -68,10 +69,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       } else if (dateCorrect == false) {
         event.preventDefault();
         alert('Por favor, insira uma data válida e no formato dd/mm/yyyy!');
-      } else if (radioChecked == false) {
-        event.preventDefault();
-        alert('Por favor, preencha com Sim ou Não o campo sobre experiência com Linux!');
-      } else if (inputHasValue == false) {
+      } else if (formFilled == false) {
         event.preventDefault();
         alert('Por favor, preencha todos os campos antes de submeter o formulário!');
       }
