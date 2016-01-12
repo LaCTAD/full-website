@@ -57,8 +57,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var formFilled = true;
       jQuery(".gform_fields :input").not("input[type='submit'], input[type='hidden']").each(function() {
-        if ((jQuery(this).is(":checkbox") && !jQuery(this).is(":checked")) || jQuery.trim(jQuery(this).val()) === "") {
-          console.log(jQuery(this).attr('id'));
+        if ((jQuery(this).is(":checkbox") && !jQuery(this).is(":checked")) || (jQuery(this).is(":radio") && !jQuery(this).is(":checked")) || jQuery.trim(jQuery(this).val()) === "") {
           formFilled = false;
         }
       });
