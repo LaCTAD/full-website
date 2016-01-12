@@ -57,7 +57,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var formFilled = true;
       jQuery("input, textarea").not("input[type='submit'], input[type='hidden']").each(function() {
-        if (jQuery(this).val() == '') {
+        if (jQuery.trim(jQuery(this).val()).length > 0) {
           console.log('input ou textarea');
           console.log(jQuery(this).attr('name'));
           formFilled = false;
