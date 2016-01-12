@@ -56,25 +56,45 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
       var hasFile = jQuery(this).find("input[type='file']").val();
       var dateCorrect = isDate(jQuery(this).find("input.datepicker").val());
       var formFilled = true;
-      var anyChecked = false;
+      var hasCheckboxes = jQuery(this).find(':checkbox');
+      var checkboxesChecked = false;
+      var hasRadios = jQuery(this).find(':radio');
+      var radiosChecked = false;
       jQuery(".gform_fields :input").not("input[type='submit'], input[type='hidden'], :checkbox, :radio").each(function() {
         if (jQuery.trim(jQuery(this).val()) === "") {
           console.log(jQuery(this).attr('id'));
           formFilled = false;
         }
       });
-      jQuery(".gform_fields :checkbox, .gform_fields :radio").each(function() {
-        if (jQuery(this).is(':checked')) {
-          anyChecked = true;
+      if(hasCheckboxes.length) {
+        jQuery(".gform_fields :checkbox").each(function() {
+          if (jQuery(this).is(':checked')) {
+            checkboxesChecked = true;
+          }
+        });
+        if (checkboxesChecked == false) {
+          event.preventDefault();
+          alert('Por favor, preencha todos os campos do tipo checkbox antes de submeter o formulário!');
         }
-      });
+      }
+      if(hasRadios.length) {
+        jQuery(".gform_fields :radio").each(function() {
+          if (jQuery(this).is(':checked')) {
+            radiosChecked = true;
+          }
+        });
+        if (radiosChecked == false) {
+          event.preventDefault();
+          alert('Por favor, preencha todos os campos do tipo radio antes de submeter o formulário!');
+        }
+      }
       if (hasFile == false) {
         event.preventDefault();
         alert('Por favor, anexe um arquivo antes de enviar o formulário!');
       } else if (dateCorrect == false) {
         event.preventDefault();
         alert('Por favor, insira uma data válida e no formato dd/mm/yyyy!');
-      } else if (formFilled == false || anyChecked == false) {
+      } else if (formFilled == false) {
         event.preventDefault();
         alert('Por favor, preencha todos os campos antes de submeter o formulário!');
       }
