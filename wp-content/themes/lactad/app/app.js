@@ -598,7 +598,7 @@ var app = angular.module('app', [
                   if(data[i].english.english_slug == $stateParams.single) {
                     $rootScope.noEventEng = false;
                     $rootScope.event = data[i];
-                    $rootScope.registrationOpen = moment().isBefore($rootScope.event.event.register_close_date);
+                    $rootScope.registrationOpen = moment().isSameOrBefore($rootScope.event.event.register_close_date);
                     $rootScope.page.single = $rootScope.event.slug;
                     $rootScope.page.english_single = $rootScope.event.english.english_slug;
                     $rootScope.activeItem = {};
@@ -648,7 +648,7 @@ var app = angular.module('app', [
                 if($rootScope.noEventEng == true) {
                   $posts.typeName('events', $stateParams.single).then(function(data) {
                     $rootScope.event = data[0];
-                    $rootScope.registrationOpen = moment().isBefore($rootScope.event.event.register_close_date);
+                    $rootScope.registrationOpen = moment().isSameOrBefore($rootScope.event.event.register_close_date);
                     $rootScope.page.single = $rootScope.event.slug;
                     $rootScope.page.english_single = $rootScope.event.slug;
                     $rootScope.activeItem = {};
@@ -719,7 +719,7 @@ var app = angular.module('app', [
             } else {
               $posts.typeName('events', $stateParams.single).then(function(data) {
                 $rootScope.event = data[0];
-                $rootScope.registrationOpen = moment().isBefore($rootScope.event.event.register_close_date);
+                $rootScope.registrationOpen = moment().isSameOrBefore($rootScope.event.event.register_close_date);
                 $rootScope.page.single = $rootScope.event.slug;
                 if($rootScope.event.english.english_slug) {
                   $rootScope.page.english_single = $rootScope.event.english.english_slug;
