@@ -26,6 +26,6 @@
     "angular-modal-service": "~0.6.6",
     "jquery-animatenumber": "~0.0.10",
     "jquery_appear": "~0.3.6",
-    "moment": "~2.10.3"
+    "moment": "latest"
   }
 }
