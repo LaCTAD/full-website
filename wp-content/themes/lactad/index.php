@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
-    <script async defer src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
     <?php wp_head(); ?>
 
     <!-- Hotjar Tracking Code for www.lactad.unicamp.br -->

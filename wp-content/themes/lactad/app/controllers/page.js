@@ -132,7 +132,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
   }
 
   $scope.sendMail = function() {
-    $scope.contact['g-recaptcha-response'] = grecaptcha.getResponse();
+    //$scope.contact['g-recaptcha-response'] = grecaptcha.getResponse();
     console.log($scope.contact);
     if($scope.contact.name != '' && $scope.contact.email != '' && $scope.contact.subject != '' && $scope.contact.message != '') {
       jQuery.ajax({
@@ -140,13 +140,13 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
         url: root.root + "send.php",
         data: $scope.contact,
         success: function() {
-          if($scope.contact['g-recaptcha-response'].length != 0) {
+          //if($scope.contact['g-recaptcha-response'].length != 0) {
             console.log('sucesso!');
             jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
-          } else {
-            console.log('erro!');
-            jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Erro ao enviar a mensagem!</b> Por favor, preencha o Captcha corretamente!</p>");
-          }
+         // } else {
+        //    console.log('erro!');
+        //    jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Erro ao enviar a mensagem!</b> Por favor, preencha o Captcha corretamente!</p>");
+         // }
         }
       });
     }
