@@ -18,7 +18,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
 	<?php wp_head(); ?>
-    <script src=“https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit“ async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
 <!-- Hotjar Tracking Code for www.lactad.unicamp.br -->
 <script>
     (function(h,o,t,j,a,r){
