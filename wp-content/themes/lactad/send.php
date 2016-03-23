@@ -6,9 +6,9 @@
     $emails = CONTACT_EMAILS;
     $emails = explode(', ', $emails);
 
-	$recaptcha = new \ReCaptcha\ReCaptcha('6LcZfQcTAAAAADvQsJYFsGvgRdX68KOIIWN9D4NO');
-	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-    if ($resp->isSuccess())
+//	$recaptcha = new \ReCaptcha\ReCaptcha('6LcZfQcTAAAAADvQsJYFsGvgRdX68KOIIWN9D4NO');
+//	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+    if (1 == 1)
     {
 	    $email = new PHPMailer;
         $email->IsSendmail();

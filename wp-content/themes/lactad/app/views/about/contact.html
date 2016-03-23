@@ -21,7 +21,7 @@
             <input required="required" name="subject" ng-model="contact.subject" type="text" placeholder="{{'PAGES.CONTACT.TITLE4' | translate}}" />
             <textarea required="required" name="message" ng-model="contact.message" rows="5" placeholder="{{'PAGES.CONTACT.TITLE5' | translate}}"></textarea>
             <input name="file" type="file" onchange="angular.element(this).scope().fileNameChanged(this.files[0])" />
-            <div class="g-recaptcha" data-sitekey="6LcZfQcTAAAAANYA1qpoqWNb3NNHVwjNZO7ZDsgq"></div>
+            <!--<div class="g-recaptcha" data-sitekey="6LcZfQcTAAAAANYA1qpoqWNb3NNHVwjNZO7ZDsgq"></div>-->
             <div class="log-message"></div>
             <button type="submit" class="btn-border-dark" ng-click="sendMail()">{{'PAGES.CONTACT.BUTTON_SEND' | translate}}</button>
           </form>
