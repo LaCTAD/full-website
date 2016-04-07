@@ -10,15 +10,16 @@
 //	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
     if (1 == 1)
 	{
-		$sender_email = utf8_decode($_POST['email']);
-		$sender_name = utf8_decode($_POST['name']);
-		$sender = "Email enviado por $sender_name <$sender_email>"
-	    $email = new PHPMailer;
+	$sender_email = utf8_decode($_POST['email']);
+	$sender_name = utf8_decode($_POST['name']);
+	$sender = "Email enviado por $sender_name <$sender_email>";
+	$message = utf8_decode($_POST['message']);
+	$message .= "\n\r$sender";
+	$email = new PHPMailer;
         $email->IsSendmail();
         $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
         $email->Subject   = utf8_decode($_POST['subject']);
-		$email->Body      = utf8_decode($_POST['message']);
-		$email->Body = $email->Body + "\n\r $sender"
+	$email->Body      = $message;
         foreach ($emails as $email_address)
         {
             $email->AddAddress($email_address);
@@ -44,6 +45,7 @@
 		{
 			echo "Não foi possível enviar o e-mail.";
 			echo "<b>Informações do erro:</b> " . $email->ErrorInfo;
+			echo $message;
 		}
     }
     else
