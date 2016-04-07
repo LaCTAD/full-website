@@ -9,12 +9,16 @@
 //	$recaptcha = new \ReCaptcha\ReCaptcha('6LcZfQcTAAAAADvQsJYFsGvgRdX68KOIIWN9D4NO');
 //	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
     if (1 == 1)
-    {
+	{
+		$sender_email = utf8_decode($_POST['email']);
+		$sender_name = utf8_decode($_POST['name']);
+		$sender = "Email enviado por $sender_name <$sender_email>"
 	    $email = new PHPMailer;
         $email->IsSendmail();
         $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
         $email->Subject   = utf8_decode($_POST['subject']);
-        $email->Body      = utf8_decode($_POST['message']);
+		$email->Body      = utf8_decode($_POST['message']);
+		$email->Body = $email->Body + "\n\r $sender"
         foreach ($emails as $email_address)
         {
             $email->AddAddress($email_address);
