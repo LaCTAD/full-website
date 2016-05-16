@@ -46,6 +46,10 @@ var app = angular.module('app', [
         TEXT6: '<ul><li>Act with agility, clarity, competence, flexibility, honesty, commitment and ethics;</li><li>Ensuring the confidentiality of user information;</li><li>Value and respect people;</li><li>Encouraging interdisciplinary and teamwork at all levels;</li><li>Optimize the use of resources;</li><li>Create an environment with  stimulating participation to decision making;</li><li>Exercising creativity and innovativeness;</li><li>Create propitious environment to education and environmental preservation;</li><li>Encourage the continued development of the employees.</li></ul>',
         TEXT7: '<p>The LaCTAD is funded by Unicamp and FAPESP. The physical infrastructure and staff needed to operate the LaCTAD are provided by UNICAMP, while the equipment is provided by FAPESP Multi-User Equipment Program.</p><p>With the installation of LaCTAD, UNICAMP intends to boost research institution providing to its researchers an odd infrastructure with  professional management, which should enable the associated projects, complementary projects and the scientific community  the ability to generate and process large volumes of biological information making possible a broader interpretation of biological phenomena.</p>'
       },
+      CONFIRMATION: {
+        NAME: 'Confirmation',
+        SLUG: 'confirmation'
+      },
       CITATION: {
         NAME: 'Paper Citation',
         SLUG: 'citation',
@@ -190,6 +194,10 @@ var app = angular.module('app', [
         TEXT5: 'Consolidar-se como referência de excelência e confiabilidade por meio da prestação de serviços de alta qualidade e operar de forma autossustentável.',
         TEXT6: '<ul><li><b>Profissionalismo:</b> Atuar com agilidade, clareza, competência, flexibilidade, honestidade, comprometimento e ética;</li><li><b>Respeito:</b> Valorizar e respeitar as pessoas, ser um ambiente propício à educação e preservação ambiental, otimizar o uso dos recursos;</li><li><b>Confiabilidade:</b> Garantir a confidencialidade das informações dos usuários;</li><li><b>Inovação:</b> Exercitar a criatividade e a capacidade de inovação;</li><li><b>Desenvolvimento:</b> Estimular o desenvolvimento contínuo dos funcionários, criar um ambiente de estímulo à participação para a tomada de decisões, incentivar a interdisciplinaridade e o trabalho em grupo em todos os níveis.</li></ul>',
         TEXT7: '<p>O LaCTAD é financiado pela Unicamp e pela FAPESP.  A infra-estrutura física e o pessoal necessário para operar o LaCTAD são fornecidos pela UNICAMP, enquanto que os equipamentos são fornecidos pelo programa Equipamentos Multiusuários da FAPESP.</p><p>Com a instalação do LaCTAD, a UNICAMP pretende impulsionar as pesquisas da instituição disponibilizando aos seus pesquisadores uma infra-estrutura impar, com administração profissional, que deverá possibilitar aos projetos associados, projetos complementares e a toda a comunidade a capacidade de gerar e processar grandes volumes de informação biológica possibilitando uma interpretação mais abrangente dos fenômenos biológicos.</p>'
+      },
+      CONFIRMATION: {
+        NAME: 'Confirmação',
+        SLUG: 'confirmacao'
       },
       CITATION: {
         NAME: 'Como citar o LaCTAD',
@@ -343,6 +351,12 @@ var app = angular.module('app', [
                   slug: $translate.instant('PAGES.CONTACT.SLUG'),
                   color: '#2ecc71'
                 },
+                confirmation: {
+                  id: 'confirmation',
+                  name: $translate.instant('PAGES.CONFIRMATION.NAME'),
+                  slug: $translate.instant('PAGES.CONFIRMATION.SLUG'),
+                  color: '#2ecc71'
+                },
                 biocel: {
                   id: 'biologia-celular',
                   name: $translate.instant('PAGES.BIOCEL.NAME'),
@@ -482,6 +496,7 @@ var app = angular.module('app', [
           case 'contact':
             return root.views + 'about/contact.html';
             break;
+          case 'confirmacao':
           case 'confirmation':
             return root.views + 'pages/confirmation.html';
             break;
@@ -521,6 +536,10 @@ var app = angular.module('app', [
             case 'contato':
             case 'contact':
               $rootScope.page = $rootScope.pages.contact;
+              break;
+            case 'cofirmacao':
+            case 'confirmation':
+              $rootScope.page = $rootScope.pages.confirmation;
               break;
             case 'midia':
             case 'press':
