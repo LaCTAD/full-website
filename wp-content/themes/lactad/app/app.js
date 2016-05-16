@@ -483,8 +483,8 @@ var app = angular.module('app', [
             return root.views + 'about/contact.html';
             break;
           case 'confirmation':
-              return root.views + 'pages/confirmation.html';
-              break;
+            return root.views + 'pages/confirmation.html';
+            break;
           case 'midia':
           case 'press':
             return root.views + 'about/press.html';
