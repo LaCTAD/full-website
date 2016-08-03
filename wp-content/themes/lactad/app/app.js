@@ -867,7 +867,11 @@ var app = angular.module('app', [
                 }
               } else {
                 $rootScope.hasItem = false;
-                $rootScope.activeItem = data[0];
+                if($rootScope.items.length) {
+                  $rootScope.activeItem = data[0];
+                  $rootScope.page.item = data[0].slug;
+                  $rootScope.page.english_item = data[0].english.english_slug;
+                }
               }
             });
           }
