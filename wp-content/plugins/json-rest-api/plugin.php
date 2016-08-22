@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP REST API
  * Description: JSON-based REST API for WordPress, developed as part of GSoC 2013.
- * Version: 1.2.4
+ * Version: 1.2.5
  * Author: WP REST API Team
  * Author URI: http://wp-api.org/
  * Plugin URI: https://github.com/WP-API/WP-API
@@ -13,7 +13,7 @@
  *
  * @var string
  */
-define( 'JSON_API_VERSION', '1.2.4' );
+define( 'JSON_API_VERSION', '1.2.5' );
 
 /**
  * Include our files for the API.
@@ -105,6 +105,8 @@ function json_api_default_filters( $server ) {
 	// Post meta.
 	$wp_json_post_meta = new WP_JSON_Meta_Posts( $server );
 	add_filter( 'json_endpoints',    array( $wp_json_post_meta, 'register_routes'    ), 0 );
+	add_filter( 'json_prepare_post', array( $wp_json_post_meta, 'add_post_meta_data' ), 10, 3 );
+	add_filter( 'json_insert_post',  array( $wp_json_post_meta, 'insert_post_meta'   ), 10, 2 );
 
 	// Media.
 	$wp_json_media = new WP_JSON_Media( $server );
@@ -521,10 +523,7 @@ function json_check_post_permission( $post, $capability = 'read' ) {
 			// Can we read the parent if we're inheriting?
 			if ( 'inherit' === $post['post_status'] && $post['post_parent'] > 0 ) {
 				$parent = get_post( $post['post_parent'], ARRAY_A );
-
-				if ( json_check_post_permission( $parent, 'read' ) ) {
-					$permission = true;
-				}
+				return json_check_post_permission( $parent, 'read' );
 			}
 
 			// If we don't have a parent, but the status is set to inherit, assume

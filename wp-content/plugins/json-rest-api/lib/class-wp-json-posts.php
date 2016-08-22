@@ -832,7 +832,7 @@ class WP_JSON_Posts {
 		}
 
 		// Post title
-		if ( isset( $data['title'] ) ) {
+		if ( ! empty( $data['title'] ) ) {
 			$post['post_title'] = $data['title'];
 		}
 
