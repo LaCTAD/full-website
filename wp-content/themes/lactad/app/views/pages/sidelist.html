@@ -208,7 +208,7 @@
 
             <div ng-if="page.single == 'servicos' || page.single == 'services'">
               <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-disabled="!activeItem.iframe_url" ng-click="showModalService(activeItem.iframe_url)" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}" ng-if="page.id != 'genomica' || page.item != ('sequenciamento-sanger-eletroforese-capilar' || 'chain-termination-sequencing-by-capillary-electrophoresis' || '') "></button>
-              <a class="btn-border-dark" href="http://www.lactad.unicamp.br/3730/cgi-bin/CadastraClientes.cgi?login_sistema=site" target="_blank" ng-if="page.id == 'genomica' && page.item == ('sequenciamento-sanger-eletroforese-capilar' || 'chain-termination-sequencing-by-capillary-electrophoresis' || '')" ng-bind="'Cadastro'"></a>
+              <a class="btn-border-dark" href="http://www.lactad.unicamp.br/3730/cgi-bin/CadastraClientes.cgi?login_sistema=site" target="_blank" ng-if="page.id == 'genomica'" ng-bind="'Cadastro'"></a>
               <a class="btn-border-dark" href="/estimativa" target="_blank" ng-if="page.id == 'genomica'" translate="{{'PAGES.SERVICES.BUTTON_PRICE'}}"></a>
               <!-- <button class="btn-border-dark" ng-click="showModalSample()" target="_blank" ng-if="page.id == 'genomica'" translate="{{'PAGES.SERVICES.BUTTON_SAMPLE'}}"></button> -->
             </div>
