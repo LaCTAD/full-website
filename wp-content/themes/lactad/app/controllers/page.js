@@ -1,7 +1,25 @@
-app.controller('PageController', function($scope, $rootScope, $http, $state, $stateParams, $translate, $posts, page, language, ModalService, $sce) {
+app.controller('PageController', function($scope, $rootScope, $http, $state, $stateParams, $translate, $posts, page, language, ModalService, $sce, $window) {
 
   if(page == null) {
     $state.go('error');
+  }
+
+  $scope.showModalTerms = function(url, type) {
+    ModalService.showModal({
+      templateUrl: root.views + "modals/terms.modal.html",
+      controller: "ModalController"
+    }).then(function(modal) {
+      modal.element.modal();
+      modal.close.then(function(result) {
+        console.log(result);
+        if (result === 'Accept' && type === 'iframe') {
+          $scope.showModalService(url);
+          $window.scrollTo(0, 0);
+        } else if (result === 'Accept' && type === 'link') {
+          $window.location.href = url;
+        }
+      });
+    });
   }
 
   $scope.showModalService = function(url) {

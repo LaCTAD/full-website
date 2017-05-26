@@ -782,12 +782,13 @@ table {
   box-shadow: 0px 1px 1px 0px rgba(94, 104, 105, 0.5);
   transition: all 1s;
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 12;
   background: white;
   width: 60%;
+  margin-bottom: 20px;
   min-height: 200px; }
   @media screen and (max-width: 800px) {
     .modal {
@@ -795,6 +796,17 @@ table {
 
 .modal-body {
   padding: 30px; }
+
+.modal-footer {
+  background-color: #F9FAFC;
+  padding: 0 30px;
+  text-align: right;
+  overflow: hidden;
+  border-radius: 0 0 3px 3px; }
+  .modal-footer button {
+    margin-bottom: 20px; }
+    .modal-footer button:last-child {
+      margin-right: 0; }
 
 .modal-header {
   position: relative;

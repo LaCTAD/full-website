@@ -17,6 +17,12 @@ var app = angular.module('app', [
       ABOUT: 'About'
     },
     PAGES: {
+      TERMS: {
+        NAME: "Accepctance Terms for the use of LaCTAD's Service",
+        TEXT: "",
+        ACCEPT: "Accept and Continue",
+        REJECT: "Reject"
+      },
       INDEX: {
         HEADLINE: 'We are a multiuser laboratory ready for you',
         SUBHEADLINE: 'We work in the areas of Cell Biology, Genomics, Proteomics and Bioinformatics offering high quality services to the entire scientific community and private companies',
@@ -162,6 +168,21 @@ var app = angular.module('app', [
       ABOUT: 'Sobre'
     },
     PAGES: {
+      TERMS: {
+        NAME: "Termo de aceite para utilização dos serviços do LaCTAD",
+        TEXT: "<p>Os serviços prestados pelo LaCTAD são realizados de acordo com a(s) proposta(s) e orçamento(s) aprovados pelo pesquisador responsável. A inclusão ou alteração de serviços durante a execução do projeto deverá ser solicitada por escrito e analisada pela equipe do LaCTAD responsável pela sua execução, podendo implicar na alteração do valor originalmente estabelecido. Desta maneira, caso seja acordada alguma alteração posterior, esta deverá ser aprovada pelo pesquisador responsável e ser devidamente registrada e incluída à proposta inicial em Termo Aditivo, passando a fazer parte efetiva do contrato de prestação de serviços.</p>" +
+        "<p>A responsabilidade pela preparação (extração, purificação, quantificação, etc), armazenamento, transporte, entrega e, quando for o caso, a retirada do restante de suas amostras do LaCTAD é do pesquisador responsável pelo projeto. O LaCTAD não se responsabiliza por qualquer injúria ou degradação sofrida pelas amostras no período anterior a sua chegada e recebimento  no LaCTAD.</p>" + 
+        "<p>A qualidade dos resultados dos serviços depende diretamente da qualidade do material fornecido pelo pesquisador responsável. Desta forma, caso as amostras recebidas não atendam aos parâmetros mínimos de qualidade exigidos para a realização dos serviços solicitados, a equipe do LaCTAD entrará em contato com o pesquisador responsável pelo projeto para que seja efetuada a sua substituição.</p>" +
+        "<p>Desde que as amostras entregues ao LaCTAD atendam aos parâmetros mínimos de qualidade exigidos para a realização dos serviços, o LaCTAD se compromete a entregar os resultados com qualidade nos padrões internacionais exigidos para publicação em qualquer dos periódicos técnicos e científicos de grande impacto, sempre dentro do limite técnico dos equipamentos disponíveis para a realização das análises.</p>" +
+        "<p>O LaCTAD não se responsabiliza por qualquer manipulação inadequada ou fraudulenta dos resultados entregues ao pesquisador responsável para qualquer finalidade.</p>" +
+        "<p>Os resultados dos serviços contratados são disponibilizados através do envio de um e-mail para o pesquisador responsável informando o link, login e senha para download dos resultados. A responsabilidade pelo download, armazenamento e transporte dos resultados é do pesquisador responsável pelo projeto.</p>" +
+        "<p>Por questões de segurança, o LaCTAD manterá uma cópia dos dados do pesquisador, a qual ficará armazenada por um prazo máximo de 3 meses, contados a partir da data de entrega dos resultados. Após este prazo, o pesquisador responsável é devidamente informado por e-mail e os dados são descartados definitivamente da base de dados do LaCTAD.</p>" +
+        "<p>O LaCTAD mantém sigilo sobre todas as informações e amostras submetidas para a realização dos serviços contratados e os resultados gerados são propriedade exclusiva do pesquisador requerente. No entanto, o LaCTAD se reserva o direito de utilizar os dados para validar os métodos e protocolos utilizados. O LaCTAD não se responsabiliza pela confidencialidade de dados disponibilizados pelo pesquisador responsável para terceiros. O LaCTAD somente disponibilizará os resultados para terceiros em caso de determinação judicial devidamente comprovada.</p>" +
+        "<p>No caso de projetos de pesquisa envolvendo estudos com humanos e/ou animais, o pesquisador é responsável pela obtenção das aprovações necessárias das respectivas Comissões de Ética e Biossegurança da(s) entidade(s) na(s) qual(is) o referido projeto de pesquisa está sendo desenvolvido e declara possuir todos os comprovantes de aprovação necessários para os experimentos solicitados.</p>" +
+        "<p>É fundamental que o pesquisador cite o LaCTAD nas publicações resultantes dos serviços utilizados, pois o LaCTAD é mantido com verbas públicas oriundas da UNICAMP, FAPESP, FINEP, dentre outras agências de fomento, e, por isso, precisa prestar contas continuamente para comprovar a utilização dos serviços/equipamentos disponíveis e garatir que a sua plataforma técnica possa ser constantemente atualizada. As instruções para citação do LaCTAD nos diversos tipos de publicações está no site: <a target='_blank' href='http://www.lactad.unicamp.br/br/citacao'>http://www.lactad.unicamp.br/br/citacao</a></p>",
+        ACCEPT: "Aceitar e Continuar",
+        REJECT: "Rejeitar"
+      },
       INDEX: {
         HEADLINE: 'Somos um laboratório multiusuário pronto para atender você',
         SUBHEADLINE: 'Atuamos nas áreas de Biologia Celular, Genômica, Proteômica e Bioinformática oferecendo serviços de alta qualidade para toda a comunidade científica e empresas privadas',
