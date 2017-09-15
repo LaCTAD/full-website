@@ -378,6 +378,12 @@ var app = angular.module('app', [
                   slug: $translate.instant('PAGES.PRESS.SLUG'),
                   color: '#2ecc71'
                 },
+                articles: {
+                  id: 'publicacoes',
+                  name: $translate.instant('PAGES.ARTICLES.NAME'),
+                  slug: $translate.instant('PAGES.ARTICLES.SLUG'),
+                  color: '#2ecc71'
+                },
                 contact: {
                   id: 'contato',
                   name: $translate.instant('PAGES.CONTACT.NAME'),
@@ -583,6 +589,13 @@ var app = angular.module('app', [
               $rootScope.page = $rootScope.pages.press;
               $posts.type('clippings').then(function(data) {
                 $rootScope.clippings = data;
+              });
+              break;
+            case 'publicacoes':
+            case 'articles':
+              $rootScope.page = $rootScope.pages.articles;
+              $posts.type('articles').then(function(data) {
+                $rootScope.articles = data;
               });
               break;
             case 'cell-biology':
