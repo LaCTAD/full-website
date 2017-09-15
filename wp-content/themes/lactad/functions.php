@@ -443,7 +443,7 @@ function json_api_prepare_post( $post_response, $post, $context ) {
     $post_response['image'] = get_field( "image", $post['ID'] );
   }
 
-  if(get_post_type($post['ID']) == 'clippings' || 'articles') {
+  if(get_post_type($post['ID']) == 'clippings' || get_post_type($post['ID']) == 'articles') {
     $post_response['external_link'] = get_field( "external_link", $post['ID'] );
     $post_response['date_published'] = get_field( "date_published", $post['ID'] );
   }
