@@ -75,6 +75,11 @@ var app = angular.module('app', [
         SLUG: 'press',
         DESC: 'See what the media is talking about us'
       },
+      ARTICLES: {
+        NAME: 'Articles',
+        SLUG: 'articles',
+        DESC: 'Take a look into articles and papers with a citation about LaCTAD'
+      },
       CONTACT: {
         NAME: 'Contact',
         SLUG: 'contact',
@@ -234,6 +239,11 @@ var app = angular.module('app', [
         NAME: 'LaCTAD na mídia',
         SLUG: 'midia',
         DESC: 'Veja o que a mídia tem falado sobre nós'
+      },
+      ARTICLES: {
+        NAME: 'Publicações',
+        SLUG: 'publicacoes',
+        DESC: 'Veja algumas publicações citando o LaCTAD'
       },
       CONTACT: {
         NAME: 'Contato',
@@ -526,6 +536,10 @@ var app = angular.module('app', [
           case 'midia':
           case 'press':
             return root.views + 'about/press.html';
+            break;
+          case 'publicacoes':
+          case 'articles':
+            return root.views + 'about/articles.html';
             break;
           default:
             return root.views + 'pages/page.html';

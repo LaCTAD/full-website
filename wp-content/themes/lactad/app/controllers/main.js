@@ -14,6 +14,8 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
       case 'events':
       case 'midia':
       case 'press':
+      case 'publicacoes':
+      case 'articles':
       case 'contato':
       case 'contact':
       case 'gestao':
@@ -85,6 +87,12 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
           id: 'midia',
           name: $translate.instant('PAGES.PRESS.NAME'),
           slug: $translate.instant('PAGES.PRESS.SLUG'),
+          color: '#2ecc71'
+        },
+        articles: {
+          id: 'publicacoes',
+          name: $translate.instant('PAGES.ARTICLES.NAME'),
+          slug: $translate.instant('PAGES.ARTICLES.SLUG'),
           color: '#2ecc71'
         },
         contact: {
@@ -211,6 +219,9 @@ app.controller('MainController', function($scope, $rootScope, $http, $stateParam
             break;
           case 'midia':
             $rootScope.page = $rootScope.pages.press;
+            break;
+          case 'publicacoes':
+            $rootScope.page = $rootScope.pages.articles;
             break;
           case 'biologia-celular':
             $rootScope.page = $rootScope.pages.biocel;

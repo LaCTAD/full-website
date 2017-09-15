@@ -259,6 +259,28 @@ function create_custom_post_types() {
     )
   );
 
+  /* Creating Artiles as a Custom Post Type */
+  register_post_type( 'articles',
+    array(
+      'labels' => array(
+        'name' => __( 'Articles' ),
+        'singular_name' => __( 'Clipping' ),
+        'add_new_item' => __('Add New Clipping'),
+        'edit_item' => __('Edit Clipping'),
+        'new_item' => __('New Clipping'),
+        'view_item' => __('View Clipping'),
+        'search_items' => __('Search Articles'),
+        'not_found' => __('No Articles found.'),
+        'not_found_in_trash' => __('No Articles found in Trash.'),
+      ),
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'articles'),
+    )
+  );
+
   /* Creating Event as a Custom Post Type */
   register_post_type( 'events',
     array(
@@ -421,7 +443,7 @@ function json_api_prepare_post( $post_response, $post, $context ) {
     $post_response['image'] = get_field( "image", $post['ID'] );
   }
 
-  if(get_post_type($post['ID']) == 'clippings') {
+  if(get_post_type($post['ID']) == 'clippings' || 'articles') {
     $post_response['external_link'] = get_field( "external_link", $post['ID'] );
     $post_response['date_published'] = get_field( "date_published", $post['ID'] );
   }
