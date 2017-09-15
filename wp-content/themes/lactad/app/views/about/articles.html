@@ -10,7 +10,7 @@
   </section>
   <section class="clipping">
     <div class="container">
-      <div class="row" ng-repeat="article in articles">
+      <div class="row" ng-repeat="article in articles" ng-if="articles.length">
         <div class="clip clearfix">
           <div class="col-xs-12 col-sm-4 clip-image" ng-class="article.featured_image ? 'col-sm-4' : 'hidden'">
             <img ng-src="{{article.featured_image.source}}" height="50px">
@@ -20,6 +20,11 @@
             <a class="post-title" href="{{article.external_link}}" target="_blank">{{article.title}}</a>
             <div class="post-entry" ng-bind-html="(article.content | htmlToPlaintext | limitTo:100) + (article.content.length > 100 ? '...' : '')"></div>
           </div>
+        </div>
+      </div>
+      <div class="row" ng-if="!articles.length">
+        <div class="col-xs-12">
+          {{'PAGES.ARTICLES.EMPTY' | translate}}
         </div>
       </div>
     </div>

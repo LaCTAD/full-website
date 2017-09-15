@@ -78,7 +78,8 @@ var app = angular.module('app', [
       ARTICLES: {
         NAME: 'Articles',
         SLUG: 'articles',
-        DESC: 'Take a look into articles and papers with a citation about LaCTAD'
+        DESC: 'Take a look into articles and papers with a citation about LaCTAD',
+        EMPTY: "Sorry, there's no articles yet."
       },
       CONTACT: {
         NAME: 'Contact',
@@ -243,7 +244,8 @@ var app = angular.module('app', [
       ARTICLES: {
         NAME: 'Publicações',
         SLUG: 'publicacoes',
-        DESC: 'Veja algumas publicações citando o LaCTAD'
+        DESC: 'Veja algumas publicações citando o LaCTAD',
+        EMPTY: "Desculpa, não temos nenhuma publicação ainda."
       },
       CONTACT: {
         NAME: 'Contato',
