@@ -1,31 +1,27 @@
 <div class="page">
-  
-    <section class="subheader subheader-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="headline">{{pages.citation.name}}</div>
+  <section class="subheader subheader-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="headline">{{'PAGES.ARTICLES.NAME' | translate}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="clipping">
+    <div class="container">
+      <div class="row" ng-repeat="article in articles">
+        <div class="clip clearfix">
+          <div class="col-xs-12 col-sm-4 clip-image">
+            <img ng-src="{{article.featured_image.source}}" height="50px">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <div class="post-date">{{article.date_published | date:'dd/MM/yyyy'}}</div>
+            <a class="post-title" href="{{article.external_link}}" target="_blank">{{article.title}}</a>
+            <div class="post-entry" ng-bind-html="(article.content | htmlToPlaintext | limitTo:100) + '...'"></div>
           </div>
         </div>
       </div>
-    </section>
-  
-    <section class="about">
-      <div class="container">
-        <h2>{{pages.citation.desc}}</h2>
-        <div class="row">
-          <div class="col-xs-12 align-justify" translate="{{'PAGES.CITATION.TEXT1'}}"></div>
-        </div>
-      </div>
-    </section>
-  
-    <section class="financing">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 align-justify" translate="{{'PAGES.CITATION.TEXT2'}}"></div>
-          <div class="col-xs-12 col-sm-6 align-justify" translate="{{'PAGES.CITATION.TEXT3'}}"></div>
-        </div>
-      </div>
-    </section>
-  
-  </div>
+    </div>
+  </section>
+</div>

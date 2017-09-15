@@ -74,6 +74,7 @@
                 <li><a ui-sref="app.page({ page: pages.about.slug, single: null })" translate="{{ 'GLOBAL.ABOUT' }}"></a></li>
                 <li><a ui-sref="app.page({ page: pages.citation.slug, single: null })" translate="{{ pages.citation.name }}"></a></li>
                 <li><a ui-sref="app.page({ page: pages.press.slug, single: null })" translate="{{ pages.press.name }}"></a></li>
+                <li><a ui-sref="app.page({ page: pages.articles.slug, single: null })" translate="{{ pages.articles.name }}"></a></li>
                 <li><a ui-sref="app.page({ page: 'blog', single: null })" translate="{{ pages.blog.name }}"></a></li>
                 <li><a ui-sref="app.page({ page: pages.events.slug, single: null })" translate="{{ pages.events.name }}"></a></li>
                 <li><a ui-sref="app.page({ page: pages.contact.slug, single: null })" translate="{{ pages.contact.name }}"></a></li>
