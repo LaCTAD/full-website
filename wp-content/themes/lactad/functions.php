@@ -264,11 +264,11 @@ function create_custom_post_types() {
     array(
       'labels' => array(
         'name' => __( 'Articles' ),
-        'singular_name' => __( 'Clipping' ),
-        'add_new_item' => __('Add New Clipping'),
-        'edit_item' => __('Edit Clipping'),
-        'new_item' => __('New Clipping'),
-        'view_item' => __('View Clipping'),
+        'singular_name' => __( 'Article' ),
+        'add_new_item' => __('Add New Article'),
+        'edit_item' => __('Edit Article'),
+        'new_item' => __('New Article'),
+        'view_item' => __('View Article'),
         'search_items' => __('Search Articles'),
         'not_found' => __('No Articles found.'),
         'not_found_in_trash' => __('No Articles found in Trash.'),
