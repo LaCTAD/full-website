@@ -596,7 +596,7 @@ var app = angular.module('app', [
             case 'publicacoes':
             case 'articles':
               $rootScope.page = $rootScope.pages.articles;
-              $posts.type('articles').then(function(data) {
+              $posts.typeAll('articles').then(function(data) {
                 $rootScope.articles = data;
               });
               break;

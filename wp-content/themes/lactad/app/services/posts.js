@@ -20,6 +20,11 @@ app.factory('$posts', ['$http', function($http) {
           return response.data;
         });
      },
+     typeAll: function(type) {
+        return $http.get('wp-json/posts?type=' + type + '&filter[posts_per_page]=-1', { cache: true }).then(function(response) {
+          return response.data;
+        });
+     },
      typeName: function(type, name) {
         return $http.get('wp-json/posts?type=' + type + '&filter[name]=' + name, { cache: true }).then(function(response) {
           return response.data;
