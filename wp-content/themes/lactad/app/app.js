@@ -139,7 +139,7 @@ var app = angular.module('app', [
         NAME: 'Events',
         SLUG: 'events',
         BUTTON_REGISTER: 'Register',
-        TEXT1: 'All fields with * are required. Students must attach their school records. Maximum file size of 2 MB (.doc, .docx or .PDF).',
+        TEXT1: 'All fields with * are required.',
         SUBPAGES: {
           GOALS: {
             NAME: 'Goals',
@@ -305,7 +305,7 @@ var app = angular.module('app', [
         NAME: 'Eventos',
         SLUG: 'eventos',
         BUTTON_REGISTER: 'Inscrever',
-        TEXT1: 'Os campos assinalados com * são obrigatórios. Alunos de graduação devem anexar histórico escolar completo (disciplinas, notas e eventuais reprovações) Arquivos com no máximo 2 MB nos formatos Word (.doc e .docx) ou PDF.',
+        TEXT1: 'Os campos assinalados com * são obrigatórios.',
         SUBPAGES: {
           GOALS: {
             NAME: 'Objetivo',
