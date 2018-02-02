@@ -3,8 +3,7 @@
     require_once('assets/php/PHPMailer/PHPMailerAutoload.php');
     require('../../../wp-config.php');
 
-    $emails = CONTACT_EMAILS;
-    $emails = explode(', ', $emails);
+    $emails = ['lactad.bioinfo@reitoria.unicamp.br', 'bidu.pub@gmail.com', 'adm.lactad@reitoria.unicamp.br'];
 
 	$sender_email = utf8_decode($_POST['email']);
 	$sender_name = utf8_decode($_POST['name']);
@@ -16,9 +15,9 @@
     $email->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $email->SMTPAuth = true;                               // Enable SMTP authentication
     $email->Username = 'relatorioslactad@gmail.com';                 // SMTP username
-    $email->Password = PASSWORD;                           // SMTP password
+    $email->Password = '!A$Dk*mPP';                           // SMTP password
     $email->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $email->Port = 465;     
+    $email->Port = 587;
     $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
     $email->Subject   = utf8_decode($_POST['subject']);
 	$email->Body      = $message;
