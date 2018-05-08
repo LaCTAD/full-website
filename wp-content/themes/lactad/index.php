@@ -199,7 +199,7 @@
             <li>Universidade Estadual de Campinas – Unicamp</li>
             <li>Dr. André Tosello, 550 – CEP: 13083-886</li>
             <li>Cidade Universitária Zeferino Vaz – Barão Geraldo</li>
-            <li>Caixa Postal 6107 – Campinas/SP</li>
+<!--            <li>Caixa Postal 6107 – Campinas/SP</li> -->
             <li>Fone: +55  19  3521-5234</li>
           </ul>
         </div>
