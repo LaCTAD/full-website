@@ -15,7 +15,7 @@
     $email->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $email->SMTPAuth = true;                               // Enable SMTP authentication
     $email->Username = 'relatorioslactad@gmail.com';                 // SMTP username
-    $email->Password = '!A$Dk*mPP';                           // SMTP password
+    $email->Password = 'Fe#3Bi!1Ja@2Tu&7';                           // SMTP password
     $email->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $email->Port = 587;
     $email->setFrom("lactad@reitoria.unicamp.br", "Site LaCTAD");
