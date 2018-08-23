@@ -14,13 +14,13 @@ app.controller('HomeController', [
           }
         }, 2500);
         jQuery("#region").stop().animateNumber({
-          number: 14
+          number: 16
         }, 2500);
         jQuery("#research").stop().animateNumber({
-          number: 359
+          number: 561 
         }, 2500);
         jQuery("#courses").stop().animateNumber({
-          number: 15
+          number: 16
         }, 2500);
         locked = 1;
       } else if (jQuery(this).scrollTop() == 0) {
