@@ -162,8 +162,9 @@
             <h2 ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_title"></h2>
 
             <div ng-if="page.single == 'servicos' || page.single == 'services'">
-              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}" ng-if="page.id != 'genomica'"></button>
-              <button class="btn-border-dark" ng-click="showModalTerms('http://www.lactad.unicamp.br/Genomica/cgi-bin/CadastraClientes.cgi?login_sistema=site', 'link')" translate="{{'PAGES.SERVICES.BUTTON_REGISTER'}}" ng-if="page.id === 'genomica'"></button>
+              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id != 'genomica' && page.id != 'bioinformatica'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}"></button> 
+              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id == 'bioinformatica'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST2'}}"></button> 
+              <button class="btn-border-dark" ng-click="showModalTerms('http://www.lactad.unicamp.br/Genomica/cgi-bin/CadastraClientes.cgi?login_sistema=site', 'link')" translate="{{'PAGES.SERVICES.BUTTON_REGISTER'}}" ng-if="page.id == 'genomica'"></button>
               <a class="btn-border-dark" href="/estimativa" target="_blank" ng-if="page.id == 'genomica'" translate="{{'PAGES.SERVICES.BUTTON_PRICE'}}"></a>
               <!-- <button class="btn-border-dark" ng-click="showModalSample()" target="_blank" ng-if="page.id == 'genomica'" translate="{{'PAGES.SERVICES.BUTTON_SAMPLE'}}"></button> -->
             </div>
