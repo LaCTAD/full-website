@@ -91,6 +91,8 @@ var app = angular.module('app', [
         TITLE5: 'Message',
         TEXT1: 'Fill the form below to contact us. For services requests go to the Service page on the desired Area.',
         TEXT2: '<i class="fa fa-briefcase"></i><b>Work with us:</b> Be a part of our team sending us your Curriculum Vitae attached to the Contact Form.',
+	TEXT3: 'By agreeing to our terms of service, which is already in compliance with the <a HREF="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm" TARGET="_blank" >General Law of Data Protection (GLDP)</a>, you will agree to receive our communications exclusively for the use of LaCTADs services, events and promotions. It is important to emphasize that your data will not be shared, either with partners, Unicamp units, etc. You may request at any time to delete, change and view your registration.',
+        TEXT4: 'I agree',
         BUTTON_SEND: 'Send'
       },
       BIOCEL: {
@@ -186,7 +188,8 @@ var app = angular.module('app', [
         "<p>Por questões de segurança, o LaCTAD manterá uma cópia dos dados do pesquisador, a qual ficará armazenada por um prazo máximo de 3 meses, contados a partir da data de entrega dos resultados. Após este prazo, os dados serão descartados definitivamente da base de dados do LaCTAD sem aviso prévio.</p>" +
         "<p>O LaCTAD mantém sigilo sobre todas as informações e amostras submetidas para a realização dos serviços contratados e os resultados gerados são propriedade exclusiva do pesquisador requerente. No entanto, o LaCTAD se reserva o direito de utilizar os dados para validar os métodos e protocolos utilizados. O LaCTAD não se responsabiliza pela confidencialidade de dados disponibilizados pelo pesquisador responsável para terceiros. O LaCTAD somente disponibilizará os resultados para terceiros em caso de determinação judicial devidamente comprovada.</p>" +
         "<p>No caso de projetos de pesquisa envolvendo estudos com humanos e/ou animais, o pesquisador é responsável pela obtenção das aprovações necessárias das respectivas Comissões de Ética e Biossegurança da(s) entidade(s) na(s) qual(is) o referido projeto de pesquisa está sendo desenvolvido e declara possuir todos os comprovantes de aprovação necessários para os experimentos solicitados.</p>" +
-        "<p>É fundamental que o pesquisador cite o LaCTAD nas publicações resultantes dos serviços utilizados, pois o LaCTAD é mantido com verbas públicas oriundas da UNICAMP, FAPESP, FINEP, dentre outras agências de fomento, e, por isso, precisa prestar contas continuamente para comprovar a utilização dos serviços/equipamentos disponíveis e garatir que a sua plataforma técnica possa ser constantemente atualizada. As instruções para citação do LaCTAD nos diversos tipos de publicações está no site: <a target='_blank' href='http://www.lactad.unicamp.br/br/citacao'>http://www.lactad.unicamp.br/br/citacao</a></p>",
+        "<p>É fundamental que o pesquisador cite o LaCTAD nas publicações resultantes dos serviços utilizados, pois o LaCTAD é mantido com verbas públicas oriundas da UNICAMP, FAPESP, FINEP, dentre outras agências de fomento, e, por isso, precisa prestar contas continuamente para comprovar a utilização dos serviços/equipamentos disponíveis e garatir que a sua plataforma técnica possa ser constantemente atualizada. As instruções para citação do LaCTAD nos diversos tipos de publicações está no site: <a target='_blank' href='http://www.lactad.unicamp.br/br/citacao'>http://www.lactad.unicamp.br/br/citacao</a></p>" +
+        "<p>Ao concordar com nossos termos de serviços, que já está em conformidade com a <a target='_blank' href='http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm'>Lei Geral de Proteção de Dados (LGPD)</a>, o usuário concordará em receber nossos comunicados exclusivamente para uso de divulgação dos serviços, eventos e promoções do LaCTAD. É importante frisar que seus dados não serão compartilhados, seja com parceiros, unidades da Unicamp, etc. Você poderá solicitar a qualquer momento sua exclusão, alteração e visualização do seu cadastro.</p>",
         ACCEPT: "Aceitar e Continuar",
         REJECT: "Rejeitar"
       },
@@ -258,6 +261,8 @@ var app = angular.module('app', [
         TITLE5: 'Mensagem',
         TEXT1: 'Preencha o Formulário abaixo para entrar em contato conosco. Para Orçamento ou Solicitação de nossos Serviços acesse a página de Serviços da respectiva Área de Interesse.',
         TEXT2: '<i class="fa fa-briefcase"></i><b>Trabalhe Conosco:</b> Faça parte da equipe do LaCTAD, envie seu Curriculum Vitae no formulário de contato.',
+        TEXT3: 'Ao concordar com nossos termos de serviços, que já está em conformidade com a <a HREF="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm" TARGET="_blank" >Lei Geral de Proteção de Dados (LGPD)</a>, o usuário concordará em receber nossos comunicados exclusivamente para uso de divulgação dos serviços, eventos e promoções do LaCTAD. É importante frisar que seus dados não serão compartilhados, seja com parceiros, unidades da Unicamp, etc. Você poderá solicitar a qualquer momento sua exclusão, alteração e visualização do seu cadastro.',
+        TEXT4: 'Eu concordo', 
         BUTTON_SEND: 'Enviar'
       },
       BIOCEL: {
