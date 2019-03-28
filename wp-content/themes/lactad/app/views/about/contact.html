@@ -23,6 +23,9 @@
             <input name="file" type="file" onchange="angular.element(this).scope().fileNameChanged(this.files[0])" />
             <!--<div class="g-recaptcha" data-sitekey="6LcZfQcTAAAAANYA1qpoqWNb3NNHVwjNZO7ZDsgq"></div>-->
             <div class="log-message"></div>
+            <br>
+   	    <div align="justify"> <font size="2,5"><p translate="{{'PAGES.CONTACT.TEXT3' | translate}}"></p></div></font> 
+	    <center><input type="checkbox" name="checkterm" value="ct">    {{'PAGES.CONTACT.TEXT4' | translate}}</center>
             <button type="submit" class="btn-border-dark" ng-click="sendMail()">{{'PAGES.CONTACT.BUTTON_SEND' | translate}}</button>
           </form>
         </div>
