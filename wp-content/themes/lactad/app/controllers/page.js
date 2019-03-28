@@ -152,22 +152,29 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
   $scope.sendMail = function() {
     //$scope.contact['g-recaptcha-response'] = grecaptcha.getResponse();
     console.log($scope.contact);
-    if($scope.contact.name != '' && $scope.contact.email != '' && $scope.contact.subject != '' && $scope.contact.message != '') {
-      jQuery.ajax({
-        type: "POST",
-        url: root.root + "send.php",
-        data: $scope.contact,
-        success: function() {
-          //if($scope.contact['g-recaptcha-response'].length != 0) {
-            console.log('sucesso!');
-            jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
-         // } else {
-        //    console.log('erro!');
-        //    jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Erro ao enviar a mensagem!</b> Por favor, preencha o Captcha corretamente!</p>");
-         // }
-        }
-      });
-    }
-  }
+
+    var check = document.getElementsByName("checkterm");
+ 
+    for(var i=0; i<check.length; i++){
+	if (check[i].checked == false){    
+		alert ("Você precisa estar de acordo com os nossos termos de serviços.")
+    	} else if (check[i].checked == true && $scope.contact.name != undefined && $scope.contact.email != undefined && $scope.contact.subject != undefined && $scope.contact.message != undefined) {
+      		jQuery.ajax({
+        	type: "POST",
+        	url: root.root + "send.php",
+        	data: $scope.contact,
+        	success: function() {
+          	//if($scope.contact['g-recaptcha-response'].length != 0) {
+            	console.log('sucesso!');
+            	jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
+         	// } else {
+       	        //    console.log('erro!');
+        	//    jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Erro ao enviar a mensagem!</b> Por favor, preencha o Captcha corretamente!</p>");
+         	// }
+        	}
+      		});
+    	}
+   }
+ }
 
 });
