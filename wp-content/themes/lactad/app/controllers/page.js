@@ -166,7 +166,7 @@ app.controller('PageController', function($scope, $rootScope, $http, $state, $st
         	success: function() {
           	//if($scope.contact['g-recaptcha-response'].length != 0) {
             	console.log('sucesso!');
-            	jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Mensagem enviada com sucesso!</b> Em breve retornaremos seu email com uma resposta. Obrigado.</p>");
+            	jQuery('.log-message').html(alert ("Mensagem enviada com sucesso!\n\nEm breve retornaremos seu e-mail com uma resposta. Obrigado."));
          	// } else {
        	        //    console.log('erro!');
         	//    jQuery('.log-message').html("<p style='margin: 30px 0;'><b>Erro ao enviar a mensagem!</b> Por favor, preencha o Captcha corretamente!</p>");
