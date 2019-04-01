@@ -15,6 +15,7 @@
       <div class="row" ng-if="page.id == 'biologia-celular' &&  (page.single == 'servicos' || page.single == 'services')">
         <div class="col-xs-12">
           <div ng-if="language != 'en'">
+             <p><font color="#FF0000" size=+1>A partir do dia 01/04/2019, para utilização dos serviços de Biologia Celular, é necessário fazer um cadastro no site. Com o cadastro realizado (uma única vez por usuário), todas as solicitações de serviços de Biologia Celular podem ser feitas fazendo o login no site.</font></p>
             <h3>Nossos custos de Biologia Celular – válidos a partir de 18/03/2019</h3>
             <table>
               <thead>
@@ -75,6 +76,7 @@
             <small>*Para a mesma análise em várias placas e ensaios de <i>time-lapse</i>, consulte-nos.</small>
           </div>
           <div ng-if="language == 'en'">
+             <p><font color="#FF0000" size=+1>From 01/04/2019, to use Cellular Biology services, it is necessary to make a registration on the website. With the registration made (once per user), all requests for Cellular Biology services can be made by logging into the site.</font></p>
             <h3>Costs of Cell Biology service - since March/2019</h3>
             <table>
               <thead>
@@ -94,25 +96,16 @@
                   <td>HCS 96 wells (Acquisition+LaCTAD analysis)*</td>
                   <td>R$ 1586,38</td>
                   <td>R$ 2379,58</td>
-
-                  <td>R$ 1442,17</td>
-                  <td>R$ 2163,25</td>
                 </tr>
                 <tr>
                   <td>HCS 384 wells (Acquisition+user analysis)</td>
                   <td>R$ 1549,96</td>
                   <td>R$ 2324,94</td>
-
-                  <td>R$ 1409,05</td>
-                  <td>R$ 2113,58</td>
                 </tr>
                 <tr>
                   <td>HCS 384 wells (Acquisition+LaCTAD analysis)*</td>
                   <td>R$ 2976,58</td>
                   <td>R$ 4464,86</td>
-
-                  <td>R$ 2705,98</td>
-                  <td>R$ 4058,97</td>
                 </tr>
                 <tr>
                   <td>Microplate Reader</td>
@@ -171,9 +164,11 @@
             <h2 ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_title"></h2>
 
             <div ng-if="page.single == 'servicos' || page.single == 'services'">
-              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id != 'genomica' && page.id != 'bioinformatica'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}"></button> 
+              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id != 'genomica' && page.id != 'bioinformatica' && page.id != biologia-celular'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}"></button> 
               <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id == 'bioinformatica'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST2'}}"></button> 
-              <button class="btn-border-dark" ng-click="showModalTerms('http://www.lactad.unicamp.br/Genomica/cgi-bin/CadastraClientes.cgi?login_sistema=site', 'link')" translate="{{'PAGES.SERVICES.BUTTON_REGISTER'}}" ng-if="page.id == 'genomica'"></button>
+              <button class="btn-border-dark" ng-click="showModalTerms('http://www.lactad.unicamp.br/Genomica/cgi-bin/CadastraClientes.cgi?login_sistema=site', 'link')" translate="{{'PAGES.SERVICES.BUTTON_REGISTER'}}" ng-if="page.id == 'genomica' || page.id == 'biologia-celular'"></button>
+               <button class="btn-border-dark" onClick="location='https://www.lactad.unicamp.br/Genomica/cgi-bin/login.cgi'" translate="{{'PAGES.SERVICES.BUTTON_LOGIN'}}" ng-if="page.id == 'genomica' || page.id == 'biologia-celular'"></button>
+
               <a class="btn-border-dark" href="/estimativa" target="_blank" ng-if="page.id == 'genomica'" translate="{{'PAGES.SERVICES.BUTTON_PRICE'}}"></a>
               <!-- <button class="btn-border-dark" ng-click="showModalSample()" target="_blank" ng-if="page.id == 'genomica'" translate="{{'PAGES.SERVICES.BUTTON_SAMPLE'}}"></button> -->
             </div>
