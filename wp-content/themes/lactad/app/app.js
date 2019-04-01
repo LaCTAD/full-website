@@ -124,6 +124,7 @@ var app = angular.module('app', [
         BUTTON_PRICE: 'Estimate Price',
         BUTTON_SAMPLE: 'Sample Sending',
         BUTTON_REGISTER: 'Registration',
+        BUTTON_LOGIN: 'Login',
         TITLE_MODAL: 'Request for Service'
       },
       EQUIPS: {
@@ -294,6 +295,7 @@ var app = angular.module('app', [
         BUTTON_PRICE: 'Estimar Preço',
         BUTTON_SAMPLE: 'Envio de Amostras',
         BUTTON_REGISTER: 'Cadastro',
+        BUTTON_LOGIN: 'Login',
         TITLE_MODAL: 'Solicitação de Serviço'
       },
       EQUIPS: {
