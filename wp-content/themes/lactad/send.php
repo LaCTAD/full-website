@@ -3,7 +3,7 @@
     require_once('assets/php/PHPMailer/PHPMailerAutoload.php');
     require('../../../wp-config.php');
 
-    $emails = ['lactad.bioinfo@reitoria.unicamp.br', 'adm.lactad@reitoria.unicamp.br'];
+    $emails = ['vagnerko@unicamp.br', 'adm.lactad@reitoria.unicamp.br'];
 
 	$sender_email = utf8_decode($_POST['email']);
 	$sender_name = utf8_decode($_POST['name']);
@@ -12,6 +12,7 @@
 	$message .= "\n\r$sender";
     $email = new PHPMailer;
     $email->isSMTP();                                      // Set mailer to use SMTP
+$email->SMTPDebug = 2;
     $email->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $email->SMTPAuth = true;                               // Enable SMTP authentication
     $email->Username = 'relatorioslactad@gmail.com';                 // SMTP username
