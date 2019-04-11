@@ -1127,7 +1127,7 @@ header {
 
 .subheader-about {
   position: relative;
-  background: url("assets/img/ext2.jpg") no-repeat;
+  background: url("assets/img/ext.jpg") no-repeat;
   background-size: cover;
   background-position: 0 50%;
   background-color: #ffffff;
@@ -1591,7 +1591,7 @@ form .btn-border-dark {
 /* HOME */
 .home .subheader {
   position: relative;
-  background: url("assets/img/ext2.jpg") no-repeat;
+  background: url("assets/img/ext.jpg") no-repeat;
   background-size: cover;
   background-position: 0 50%; }
   .home .subheader:before {
@@ -1609,7 +1609,7 @@ form .btn-border-dark {
 
 .statistics {
   position: relative;
-  background: url("assets/img/ext.jpg") no-repeat;
+  background: url("assets/img/ext2.jpg") no-repeat;
   background-size: cover;
   background-position: 0 50%;
   background-color: #ffffff;
