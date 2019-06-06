@@ -91,8 +91,9 @@ var app = angular.module('app', [
         TITLE5: 'Message',
         TEXT1: 'Fill the form below to contact us. For services requests go to the Service page on the desired Area.',
         TEXT2: '<i class="fa fa-briefcase"></i><b>Work with us:</b> Be a part of our team sending us your Curriculum Vitae attached to the Contact Form.',
-	TEXT3: 'By agreeing to our terms of service, which is already in compliance with the <a HREF="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm" TARGET="_blank" >General Law of Data Protection (GLDP)</a>, you will agree to receive our communications exclusively for the use of LaCTADs services, events and promotions. It is important to emphasize that your data will not be shared, either with partners, Unicamp units, etc. You may request at any time to delete, change and view your registration.',
-        TEXT4: 'I agree',
+	TEXT3: 'To send an attachment, please wait for our contact email to respond.',
+        TEXT4: 'By agreeing to our terms of service, which is already in compliance with the <a HREF="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm" TARGET="_blank" >General Law of Data Protection (GLDP)</a>, you will agree to receive our communications exclusively for the use of LaCTADs services, events and promotions. It is important to emphasize that your data will not be shared, either with partners, Unicamp units, etc. You may request at any time to delete, change and view your registration.',
+	TEXT5: 'I agree',
         BUTTON_SEND: 'Send'
       },
       BIOCEL: {
@@ -262,8 +263,9 @@ var app = angular.module('app', [
         TITLE5: 'Mensagem',
         TEXT1: 'Preencha o Formulário abaixo para entrar em contato conosco. Para Orçamento ou Solicitação de nossos Serviços acesse a página de Serviços da respectiva Área de Interesse.',
         TEXT2: '<i class="fa fa-briefcase"></i><b>Trabalhe Conosco:</b> Faça parte da equipe do LaCTAD, envie seu Curriculum Vitae no formulário de contato.',
-        TEXT3: 'Ao concordar com nossos termos de serviços, que já está em conformidade com a <a HREF="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm" TARGET="_blank" >Lei Geral de Proteção de Dados (LGPD)</a>, o usuário concordará em receber nossos comunicados exclusivamente para uso de divulgação dos serviços, eventos e promoções do LaCTAD. É importante frisar que seus dados não serão compartilhados, seja com parceiros, unidades da Unicamp, etc. Você poderá solicitar a qualquer momento sua exclusão, alteração e visualização do seu cadastro.',
-        TEXT4: 'Eu concordo', 
+        TEXT3: 'Para enviar um anexo, aguarde nosso email de contato para respondê-lo.',
+        TEXT4: 'Ao concordar com nossos termos de serviços, que já está em conformidade com a <a HREF="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm" TARGET="_blank" >Lei Geral de Proteção de Dados (LGPD)</a>, o usuário concordará em receber nossos comunicados exclusivamente para uso de divulgação dos serviços, eventos e promoções do LaCTAD. É importante frisar que seus dados não serão compartilhados, seja com parceiros, unidades da Unicamp, etc. Você poderá solicitar a qualquer momento sua exclusão, alteração e visualização do seu cadastro.',
+	TEXT5: 'Eu concordo', 
         BUTTON_SEND: 'Enviar'
       },
       BIOCEL: {
