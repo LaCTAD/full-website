@@ -165,10 +165,10 @@
             <h2 ng-if="language == 'en' && post.english.english_title != false" ng-bind-html="activeItem.english.english_title"></h2>
 
             <div ng-if="page.single == 'servicos' || page.single == 'services'">
-              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id != 'genomica' && page.id != 'bioinformatica' && page.id != biologia-celular'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}"></button> 
+              <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id != 'genomica' && page.id != 'bioinformatica' && page.id != 'biologia-celular' && page.id != 'proteomica'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST'}}"></button> 
               <button class="btn-border-dark" ng-class="{'disabled' : !activeItem.iframe_url}" ng-if="activeItem.iframe_url && page.id == 'bioinformatica'" ng-click="showModalTerms(activeItem.iframe_url, 'iframe')" translate="{{'PAGES.SERVICES.BUTTON_REQUEST2'}}"></button> 
-              <button class="btn-border-dark" ng-click="showModalTerms('http://www.lactad.unicamp.br/Genomica/cgi-bin/CadastraClientes.cgi?login_sistema=site', 'link')" translate="{{'PAGES.SERVICES.BUTTON_REGISTER'}}" ng-if="page.id == 'genomica' || page.id == 'biologia-celular'"></button>
-               <button class="btn-border-dark" onClick="location='https://www.lactad.unicamp.br/Genomica/cgi-bin/login.cgi'" translate="{{'PAGES.SERVICES.BUTTON_LOGIN'}}" ng-if="page.id == 'genomica' || page.id == 'biologia-celular'"></button>
+              <button class="btn-border-dark" ng-click="showModalTerms('http://www.lactad.unicamp.br/Genomica/cgi-bin/CadastraClientes.cgi?login_sistema=site', 'link')" translate="{{'PAGES.SERVICES.BUTTON_REGISTER'}}" ng-if="page.id == 'genomica' || page.id == 'biologia-celular' || page.id == 'proteomica'"></button>
+               <button class="btn-border-dark" onClick="location='https://www.lactad.unicamp.br/Genomica/cgi-bin/login.cgi'" translate="{{'PAGES.SERVICES.BUTTON_LOGIN'}}" ng-if="page.id == 'genomica' || page.id == 'biologia-celular' || page.id == 'proteomica'"></button>
 
 
               <a class="btn-border-dark" href="https://www.lactad.unicamp.br/Genomica/cgi-bin/Estimador/EstimadorIllumina.cgi" target="_blank" ng-if="page.item == 'sequenciamento-de-nova-geracao'" translate="{{'PAGES.SERVICES.BUTTON_PRICE'}}"></a>
