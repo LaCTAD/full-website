@@ -20,7 +20,7 @@ app.controller('HomeController', [
           number: 561 
         }, 2500);
         jQuery("#courses").stop().animateNumber({
-          number: 16
+          number: 19
         }, 2500);
         locked = 1;
       } else if (jQuery(this).scrollTop() == 0) {
