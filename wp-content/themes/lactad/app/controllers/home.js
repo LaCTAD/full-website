@@ -8,7 +8,7 @@ app.controller('HomeController', [
     jQuery(window).scroll(function() {
       if (jQuery(this).scrollTop() < 700 && locked == 0) {
         jQuery('#tera').stop().animateNumber({
-          number: 26.22,
+          number: 30.09,
           numberStep: function(now, tween) {
             jQuery(tween.elem).text(now.toFixed(2));
           }
